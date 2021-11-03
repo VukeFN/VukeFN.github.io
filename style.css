@@ -1,0 +1,14 @@
+* {
+    font-family: Roboto;
+    background-color: steelblue;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    font-size: 40px;
+}
+
+.form h1 {
+    text-align: left;
+}
