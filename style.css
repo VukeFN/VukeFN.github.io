@@ -125,10 +125,9 @@ main {
 
 .video {
     display: flex;
-    padding-top: 20px;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    margin-top: 20px;
     flex-direction: column;
 }
 
