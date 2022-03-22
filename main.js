@@ -5,7 +5,7 @@ function openNav() {
     document
         .getElementById("nav-menu-icon")
         .setAttribute("onclick", "closeNav()");
-    document.getElementById("nav-menu").style.height = "20%";
+    document.getElementById("nav-menu").style.height = "150px";
     document.getElementById("nav-menu").style.boxShadow =
         "3px 4px 5px 6px var(--main-clr)";
     document.getElementById("nav-menu").style.right = "20px";

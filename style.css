@@ -215,7 +215,7 @@ main {
     .nav-menu {
         position: fixed;
         height: 0;
-        width: 250px;
+        width: 150px;
         background-color: var(--main-clr);
         top: 80px;
         right: 20px;
@@ -227,8 +227,9 @@ main {
         transition: 0.5s;
         overflow-y: hidden;
     }
-    .item {
+    .nav-menu .item {
         padding: 10px 0;
         text-align: center;
+        font-size: 1rem;
     }
 }
