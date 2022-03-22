@@ -193,7 +193,7 @@ main {
         height: 45px;
         width: 135px;
     }
-    .logo>img {
+    .logo>a>img {
         height: 45px;
         width: 135px;
     }
