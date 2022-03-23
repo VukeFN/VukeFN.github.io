@@ -184,6 +184,7 @@ main {
     header {
         display: flex;
         align-items: center;
+        box-shadow: 0 6px 4px -2px var(--main-clr);
     }
     .nav {
         width: 100%;
