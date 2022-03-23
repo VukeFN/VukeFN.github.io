@@ -3,14 +3,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @font-face {
     font-family: 'alarm_clock';
-    src: url('./Fonts/alarm_clock-webfont.woff2') format('woff2');
+    src: url('./Fonts/alarm_clock-webfont.woff2');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Burbank';
-    src: url('./Fonts/BurbankBigRegular-Black.woff2') format('woff2');
+    src: url('./Fonts/BurbankBigRegular-Black.woff2');
     font-weight: 900;
     font-style: normal;
 }
