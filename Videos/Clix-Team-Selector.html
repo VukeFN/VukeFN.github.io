@@ -1,14 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../video.css" />
     <link rel="icon" href="../Images/Website Icon.png" />
-    <script src="../main.js"></script>
+    <script src="../video.js"></script>
     <title>VukeFN | Videos</title>
 </head>
 
-<body>
+<body id="body">
     <header>
         <nav class="nav">
             <div class="logo">
@@ -47,11 +50,11 @@
 
     <!-- ========== MAIN ========== -->
     <main id="main">
-        <section class="devices">
+        <section>
             <div class="devices-sec1">
                 <h2>Start Area</h2>
                 <div class="sec-devices">
-                    <div id="" data-channel="one" class="TRIGGER"></div>
+                    <div onclick="openDeviceSettings()" id="" data-channel="one" class="TRIGGER"></div>
                     <div id="" data-channel="two" class="SCORE-MANAGER"></div>
                     <div id="" data-channel="three" class="TEAM-SETTINGS"></div>
                     <div id="" data-channel="four" class=""></div>
@@ -60,7 +63,7 @@
             <div class="devices-sec2">
                 <h2>Loadout Selection Area</h2>
                 <div class="sec-devices">
-                    <div id="" data-channel="one" class="TRIGGER"></div>
+                    <div id="" data-channel="one" class="TRIGGER">CH 04</div>
                     <div id="" data-channel="two" class="MUTATOR-ZONE"></div>
                     <div id="" data-channel="three" class=""></div>
                     <div id="" data-channel="four" class=""></div>
@@ -87,38 +90,56 @@
                 <div id="" data-channel="three" class=""></div>
                 <div id="" data-channel="four" class=""></div>
             </div>
-
         </section>
 
         <!-- ========== SETTINGS ========== -->
-        <section class="settings">
-            <div class="settings-select-title">
-                Select A Device To View Settings
-            </div>
+        <section class="settings" id="settings">
             <div class="settings-title">
-                <h2>Customize</h2>
+                <h2>CUSTOMIZE</h2>
                 <span class="device-name">Trigger</span>
             </div>
-            <div class="settings-item">
-                Hey
+            <ul class="items">
+                <li class="item">
+                    <h2>Activate On Game Start</h2>
+                    <span>yes</span>
+                </li>
+                <li class="item">
+                    <h2>Activate On Game Start</h2>
+                    <span>yes</span>
+                </li>
+                <li class="item">
+                    <h2>Activate On Game Start</h2>
+                    <span>yes</span>
+                </li>
+                <li class="item">
+                    <h2>Activate On Game Start</h2>
+                    <span>yes</span>
+                </li>
+                <li class="item">
+                    <h2>Activate On Game Start</h2>
+                    <span>yes</span>
+                </li>
+            </ul>
+        </section>
+
+        <!-- ========== ISLAND SETTINGS ========== -->
+
+        <section class="island-settings">
+            <div class="tab">
+                <h2>Island Settings</h2>
+                <h3>Hey</h3>
+            </div>
+            <div class="tab">
+                <h2>Game Settings</h2>
+                <h3>Hey</h3>
+                <h3>Hey</h3>
+                <h3>Hey</h3>
+                <h3>Hey</h3>
             </div>
         </section>
     </main>
 
-    <!-- ========== ISLAND SETTINGS ========== -->
-    <section class="island-settings">
-        <div class="island-settings-tab">
-            <h2>Island Settings</h2>
-            <h3>Hey</h3>
-        </div>
-        <div class="island-settings-tab">
-            <h2>Game Settings</h2>
-            <h3>Hey</h3>
-            <h3>Hey</h3>
-            <h3>Hey</h3>
-            <h3>Hey</h3>
-        </div>
-    </section>
+    <!-- ========== SCRIPTS ========== -->
 
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>

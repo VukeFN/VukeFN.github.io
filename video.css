@@ -2,8 +2,17 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @font-face {
+    font-family: 'alarm_clock';
+    src: url('fonts/alarm_clock-webfont.woff2') format('woff2'), url('fonts/alarm_clock-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
     font-family: 'Burbank';
-    src: url(./Fonts/BurbankBigRegular-Black.woff2);
+    src: url('fonts/BurbankBigRegular-Black.woff2') format('woff2'), url('fonts/BurbankBigRegular-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
 }
 
 :root {
@@ -109,17 +118,10 @@ nav {
 
 main {
     background-color: var(--off-main-clr);
-    display: flex;
-    gap: 1rem;
 }
 
 
 /* ===== DEVICES SECTION ===== */
-
-.devices {
-    width: 70%;
-    border-right: 2px white solid;
-}
 
 .devices-sec1 {
     height: 230px;
@@ -154,7 +156,6 @@ main {
     padding: 10px 0 0 40px;
     letter-spacing: -0.10rem;
     font-family: 'alarm_clock';
-    z-index: 1;
 }
 
 .TRACKER {
@@ -165,10 +166,6 @@ main {
     background-repeat: no-repeat;
     background-position: center;
     cursor: pointer;
-}
-
-.active {
-    filter: drop-shadow(2px 2px 5px rgba(31, 53, 255, 0.95)) drop-shadow(-2px -2px 5px rgba(31, 53, 255, 0.95));
 }
 
 .MUTATOR-ZONE {
@@ -240,50 +237,67 @@ main {
     font-family: 'alarm_clock';
 }
 
+.active {
+    filter: drop-shadow(2px 2px 5px rgba(31, 53, 255, 0.95)) drop-shadow(-2px -2px 5px rgba(31, 53, 255, 0.95));
+}
 
-/* ===== SETTINGS SECTION ===== */
 
-.settings {
-    width: 30%;
+/* ===== DEVICE SETTINGS POP-UP ===== */
+
+section.settings {
+    overflow: visible;
+    width: 0;
     position: fixed;
-    right: 0;
+    left: 0;
     top: 80px;
     height: 100vh;
     overflow-y: hidden;
-    padding: 20px;
+    padding: 0;
     background-color: var(--settings-clr);
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.settings-select-title {
-    background-color: var(--settings-item-clr);
-    padding: 10px;
-    color: var(--settings-font-clr);
-    font-size: 1.5rem;
 }
 
 .settings-title {
-    display: none;
-    padding: 10px;
+    padding: 40px;
+    padding-right: 80px;
+    display: flex;
+    align-items: center;
+    height: 160px;
     background-color: var(--island-bg-clr);
 }
 
 .settings-title h2 {
+    font-size: 3rem;
     flex-grow: 1;
-    font-size: 1.5rem;
 }
 
 .device-name {
+    font-size: 2rem;
+    margin-left: auto;
+    background-color: #00AAFF;
+    padding-left: 35px;
+    padding-right: 35px;
+}
+
+.settings .items {
+    padding-top: 10px;
+    padding: 10px 20px 20px 20px;
+}
+
+.settings .items .item {
+    background-color: var(--settings-item-clr);
+    display: flex;
+    padding: 10px 30px 10px 30px;
+    margin-bottom: 0.2rem;
+}
+
+.settings .items .item h2 {
+    color: var(--settings-font-clr);
     font-size: 1.5rem;
 }
 
-.settings-item {
-    display: none;
-    background-color: var(--settings-item-clr);
-    padding: 10px;
-    font-size: 1.5rem;
+.settings .items .item>span {
+    margin-left: auto;
+    color: white;
 }
 
 
@@ -292,30 +306,28 @@ main {
 .island-settings {
     background-color: var(--settings-clr);
     padding: 20px;
-    border-right: 2px white solid;
     border-top: 2px white solid;
-    width: 70%;
+}
+
+.island-settings .tab {
+    display: flex;
+    flex-direction: column;
+    gap: .3rem;
+    margin-bottom: 40px;
 }
 
 .island-settings>:last-child {
     margin-bottom: 0;
 }
 
-.island-settings-tab {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    margin-bottom: 40px;
-}
-
-.island-settings-tab h2 {
+.island-settings .tab h2 {
     background-color: var(--island-bg-clr);
     padding: 10px;
     font-size: 2rem;
     margin-bottom: 10px;
 }
 
-.island-settings-tab h3 {
+.island-settings .tab h3 {
     background-color: var(--settings-item-clr);
     padding: 10px;
     color: var(--settings-font-clr);
