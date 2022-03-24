@@ -1,0 +1,164 @@
+/* ==================== BASE ==================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@font-face {
+    font-family: 'alarm_clock';
+    src: url('./Fonts/alarm_clock-webfont.woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Burbank';
+    src: url('./Fonts/BurbankBigRegular-Black.woff2');
+    font-weight: 900;
+    font-style: normal;
+}
+
+:root {
+    font-size: 16px;
+    --main-clr: #0B090A;
+    --off-main-clr: #121011;
+    --sec-clr: white;
+    --off-sec-clr: #d3d3d3;
+    --settings-clr: #09123C;
+    --settings-item-clr: #2A2E55;
+    --settings-font-clr: #97DCFE;
+    --island-bg-clr: #106DDD;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Burbank";
+    color: white;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    color: var(--off-sec-clr);
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+a:hover {
+    cursor: pointer;
+    color: var(--sec-clr);
+    transition: 0.2s;
+}
+
+li {
+    list-style: none;
+}
+
+
+/* ==================== WEBSITE ==================== */
+
+
+/* ========== HEADER ========== */
+
+header {
+    min-height: 80px;
+    background-color: var(--main-clr);
+    background-image: url(./Images/Wigglie\ thing.png);
+    background-size: cover;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    box-shadow: 0 6px 4px -2px var(--main-clr);
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    height: 40px;
+    width: 240px;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
+
+.logo:hover {
+    cursor: pointer;
+}
+
+.nav-list {
+    display: flex;
+    flex-direction: row;
+}
+
+.item {
+    padding: 0 40px;
+    font-size: 25px;
+    list-style: none;
+}
+
+.item>a {
+    font-family: 'Montserrat';
+    font-weight: bold;
+}
+
+.nav-menu-button {
+    display: none;
+}
+
+
+/* ========== MAIN ========== */
+
+main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    background-color: var(--off-main-clr);
+    padding: 100px;
+    gap: 3rem;
+}
+
+.grid-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+}
+
+.grid-item h1 {
+    font-size: 4rem;
+    margin-bottom: 10px;
+}
+
+.grid-item p {
+    font-family: "Montserrat";
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.grid-item a {
+    padding: 20px;
+    width: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    border: 2px white solid;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.grid-item a:hover {
+    background-color: white;
+    color: var(--off-main-clr);
+    transition: 0.3s;
+}
