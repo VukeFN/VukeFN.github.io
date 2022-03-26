@@ -58,6 +58,11 @@ header {
     box-shadow: 0 6px 4px -2px var(--main-clr);
 }
 
+.social-media {
+    width: 25px;
+    margin: 5px;
+}
+
 nav {
     display: flex;
     justify-content: center;
