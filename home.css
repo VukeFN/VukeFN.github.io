@@ -1,4 +1,4 @@
-/* ==================== BASE ==================== */
+/* ============================== BASE ============================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @font-face {
@@ -41,6 +41,10 @@ html {
     scroll-behavior: smooth;
 }
 
+body {
+    overflow: overlay;
+}
+
 a {
     color: var(--off-sec-clr);
     text-decoration: none;
@@ -58,10 +62,30 @@ li {
 }
 
 
-/* ==================== WEBSITE ==================== */
+/* ========== WEBSITE ========== */
+
+::-webkit-scrollbar {
+    width: 25px;
+}
+
+ ::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(5, 5, 5, 0.7);
+    transition: 0.2s;
+    border-radius: 100vw;
+    border: 7px var(--off-main-clr) solid;
+}
+
+ ::-webkit-scrollbar-thumb:hover {
+    background: rgb(0, 0, 0);
+    transition: 0.2s;
+}
 
 
-/* ========== HEADER ========== */
+/* ============================== HEADER ============================== */
 
 header {
     min-height: 80px;
@@ -75,15 +99,15 @@ header {
     box-shadow: 0 6px 4px -2px var(--main-clr);
 }
 
-.social-media {
-    width: 25px;
-    margin: 5px;
-}
-
 nav {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.sidebar-button {
+    font-size: 2rem;
+    margin: 0 1.5rem;
 }
 
 .logo {
@@ -119,15 +143,150 @@ nav {
 }
 
 
-/* ========== MAIN ========== */
+/* ============================== SIDEBAR ============================== */
+
+
+/* ========== SIDEBAR BASE ========== */
+
+.sidebar-button {
+    cursor: pointer;
+}
+
+.sidebar {
+    width: 0px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background-color: var(--off-main-clr);
+    z-index: 5;
+    overflow-x: hidden;
+    transition: 0.2s;
+    box-shadow: 3px 10px 10px black;
+}
+
+.lower-opacity {
+    position: fixed;
+    left: 0;
+    width: 0;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 4;
+    transition: 0.2s;
+}
+
+
+/* ========== SIDEBAR HEADER ========== */
+
+.sidebar-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 3px rgba(0, 0, 0, 0.1) solid;
+}
+
+.sidebar-header .sidebar-button {
+    font-size: 2rem;
+    margin: 0 1.5rem;
+}
+
+.sidebar-header .sidebar-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+}
+
+
+/* ========== SIDEBAR BODY ========== */
+
+.sidebar-playlists {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    border-bottom: 3px rgba(0, 0, 0, 0.1) solid;
+}
+
+.sidebar-playlists>h2 {
+    font-size: 2rem;
+    font-family: "Montserrat";
+    font-weight: 900;
+}
+
+.sidebar-playlist {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    padding: 10px;
+}
+
+.sidebar-playlist h3 {
+    font-family: "Montserrat";
+    font-weight: 900;
+    font-size: 1rem;
+}
+
+.sidebar-unfinished-videos {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.sidebar-unfinished-videos>h2 {
+    font-size: 2rem;
+    font-family: "Montserrat";
+    font-weight: 900;
+}
+
+.sidebar-unfinished-video {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    padding: 10px;
+}
+
+.sidebar-unfinished-video h3 {
+    font-family: "Montserrat";
+    font-weight: 900;
+    font-size: .75rem;
+}
+
+.sidebar-unfinished-video img {
+    border: 2px solid white;
+    border-radius: 3px;
+}
+
+
+/* ========== SIDEBAR FOOTER ========== */
+
+.sidebar-footer {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 20px;
+    border-top: 3px rgba(0, 0, 0, 0.1) solid;
+}
+
+.social-media {
+    width: 30px;
+}
+
+
+/* ============================== MAIN ============================== */
 
 main {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
     background-color: var(--off-main-clr);
-    padding: 100px;
-    gap: 3rem;
+    padding: 100px 100px 0 100px;
 }
 
 .grid-item {
@@ -135,15 +294,22 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 400px;
+    height: 600px;
+}
+
+.grid-item:first-child {
+    grid-column-start: 1;
+    grid-column-end: 3;
 }
 
 .grid-item h1 {
-    font-size: 4rem;
+    text-align: center;
+    font-size: 5rem;
     margin-bottom: 10px;
 }
 
 .grid-item p {
+    text-align: center;
     font-family: "Montserrat";
     font-size: 2rem;
     font-weight: 600;
@@ -166,4 +332,50 @@ main {
     background-color: white;
     color: var(--off-main-clr);
     transition: 0.3s;
+}
+
+.grid-item img {
+    border: 2px white solid;
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 1100px) {
+    main {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(auto, 1fr);
+    }
+    .grid-item {
+        height: 400px;
+    }
+    .grid-item:nth-child(1) {
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+    .grid-item:nth-child(2) {
+        grid-row-start: 3;
+        grid-row-end: 4;
+        justify-content: flex-start;
+    }
+    .grid-item:nth-child(3) {
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+    .grid-item:nth-child(4) {
+        grid-row-start: 4;
+        grid-row-end: 5;
+    }
+    .grid-item:nth-child(5) {
+        grid-row-start: 5;
+        grid-row-end: 6;
+        justify-content: flex-start;
+    }
+    .grid-item:nth-child(6) {
+        grid-row-start: 7;
+        grid-row-end: 8;
+        justify-content: flex-start;
+    }
+    .grid-item:nth-child(7) {
+        grid-row-start: 6;
+        grid-row-end: 7;
+    }
 }

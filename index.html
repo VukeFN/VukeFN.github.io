@@ -11,23 +11,17 @@
     <title>VukeFN | Videos</title>
 </head>
 
-<body>
+<body id="body">
+    <div id="lower-opacity" class="lower-opacity"></div>
     <header>
         <nav class="nav">
+            <ion-icon name="menu-outline" class="sidebar-button" onclick="openSideBar()"></ion-icon>
             <div class="logo">
                 <a href="https://vukefn.github.io/">
-                    <img src="./Images/Website Logo.png" alt="Website's Logo" height="80" width="240" />
-                </a>
-                <a href="https://youtube.com/c/vukefn" target="blank_">
-                    <img class="social-media" src="./Images/YouTube.png" />
-                </a>
-                <a href="https://discord.gg/uzjyMmG" target="blank_">
-                    <img class="social-media" src="./Images/Discord.png" />
-                </a>
-                <a href="https://twitter.com/vukefn" target="blank_">
-                    <img class="social-media" src="./Images/Twitter.png" />
+                    <img src="./Images/Website Logo.png" alt="Website's Logo" width="180" />
                 </a>
             </div>
+
             <div class="nav-items-div">
                 <ul class="nav-list">
                     <li class="item">
@@ -57,6 +51,107 @@
             </div>
             </ul>
             </div>
+
+            <div id="sidebar" class="sidebar">
+                <div class="sidebar-header">
+                    <ion-icon name="menu-outline" class="sidebar-button" id="sidebar-button" onclick="closeSideBar()"></ion-icon>
+                    <div class="sidebar-logo">
+                        <a href="https://vukefn.github.io/">
+                            <img src="./Images/Website Logo.png" alt="Website's Logo" width="180" />
+                        </a>
+                    </div>
+                </div>
+
+                <div class="sidebar-playlists">
+                    <h2>PLAYLISTS</h2>
+                    <div>
+                        <div class="sidebar-playlist">
+                            <img src="https://img.icons8.com/material-outlined/24/FFFFFF/video-playlist.png" />
+                            <a href="">
+                                <h3>BHE 1v1 MAP</h3>
+                            </a>
+                        </div>
+                        <div class="sidebar-playlist">
+                            <img src="https://img.icons8.com/material-outlined/24/FFFFFF/video-playlist.png" />
+                            <a href="">
+                                <h3>CLIX BOXFIGHTS</h3>
+                            </a>
+                        </div>
+                        <div class="sidebar-playlist">
+                            <img src="https://img.icons8.com/material-outlined/24/FFFFFF/video-playlist.png" />
+                            <a href="">
+                                <h3>FLEA</h3>
+                            </a>
+                        </div>
+                        <div class="sidebar-playlist">
+                            <img src="https://img.icons8.com/material-outlined/24/FFFFFF/video-playlist.png" />
+                            <a href="">
+                                <h3>BHE BOXFIGHTS</h3>
+                            </a>
+                        </div>
+                        <div class="sidebar-playlist">
+                            <img src="https://img.icons8.com/material-outlined/24/FFFFFF/video-playlist.png" />
+                            <a href="">
+                                <h3>BHE SPAWN ISLAND</h3>
+                            </a>
+                        </div>
+                        <div class="sidebar-playlist">
+                            <img src="https://img.icons8.com/material-outlined/24/FFFFFF/video-playlist.png" />
+                            <a href="">
+                                <h3>BHE START ISLAND</h3>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sidebar-unfinished-videos">
+                    <h2>UNFINISHED</h2>
+                    <div>
+                        <div class="sidebar-unfinished-video">
+                            <img src="./Thumbnails/Team Selector Mechanic.jpg" width="40" />
+                            <a href="">
+                                <h3>TEAM SELECTOR (OLD)</h3>
+                            </a>
+                        </div>
+                        <div class="sidebar-unfinished-video">
+                            <img src="./Thumbnails/Team Selector Mechanic.jpg" width="40" />
+                            <a href="">
+                                <h3>TEAM SELECTOR (OLD)</h3>
+                            </a>
+                        </div>
+                        <div class="sidebar-unfinished-video">
+                            <img src="./Thumbnails/Team Selector Mechanic.jpg" width="40" />
+                            <a href="">
+                                <h3>TEAM SELECTOR (OLD)</h3>
+                            </a>
+                        </div>
+                        <div class="sidebar-unfinished-video">
+                            <img src="./Thumbnails/Team Selector Mechanic.jpg" width="40" />
+                            <a href="">
+                                <h3>TEAM SELECTOR (OLD)</h3>
+                            </a>
+                        </div>
+                        <div class="sidebar-unfinished-video">
+                            <img src="./Thumbnails/Team Selector Mechanic.jpg" width="40" />
+                            <a href="">
+                                <h3>TEAM SELECTOR (OLD)</h3>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sidebar-footer">
+                    <a href="https://youtube.com/c/vukefn" target="blank_">
+                        <img class="social-media" src="./Images/YouTube.png" />
+                    </a>
+                    <a href="https://discord.gg/uzjyMmG" target="blank_">
+                        <img class="social-media" src="./Images/Discord.png" />
+                    </a>
+                    <a href="https://twitter.com/vukefn" target="blank_">
+                        <img class="social-media" src="./Images/Twitter.png" />
+                    </a>
+                </div>
+            </div>
         </nav>
     </header>
 
@@ -64,14 +159,17 @@
         <section class="grid-item">
             <img src="" alt="welcome image" />
         </section>
-        <section class="grid-item"></section>
         <section class="grid-item">
             <h1>GETTING STARTED!</h1>
             <p>Go to the Videos Page.</p>
             <a href="https://VukeFN.github.io/Videos/videos.html">VIDEOS</a>
         </section>
-        <section class="grid-item"></section>
-        <section class="grid-item"></section>
+        <section class="grid-item">
+            <img src="../Thumbnails/How to Make BHE 1v1 Map (Part 3).png" alt="Thumbnail" class="video-thumbnail" width="540" />
+        </section>
+        <section class="grid-item">
+            <img src="../Thumbnails/How to Make BHE 1v1 Map (Part 3).png" alt="Thumbnail" class="video-thumbnail" width="540" />
+        </section>
         <section class="grid-item">
             <h1>JUST ONE CLICK!</h1>
             <p>Select your desired video in just 1 click.</p>
@@ -80,7 +178,9 @@
             <h1>NO MORE PROBLEMS!</h1>
             <p>Easily check the solution for your problem.</p>
         </section>
-        <section class="grid-item"></section>
+        <section class="grid-item">
+            <img src="../Thumbnails/How to Make BHE 1v1 Map (Part 3).png" alt="Thumbnail" class="video-thumbnail" width="540" />
+        </section>
     </main>
 
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>

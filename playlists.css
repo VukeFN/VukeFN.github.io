@@ -24,10 +24,6 @@ html {
     scroll-behavior: smooth;
 }
 
-body {
-    overflow: overlay;
-}
-
 a {
     color: var(--off-sec-clr);
     text-decoration: none;
@@ -47,26 +43,6 @@ li {
 
 /* ==================== WEBSITE ==================== */
 
-::-webkit-scrollbar {
-    width: 25px;
-}
-
- ::-webkit-scrollbar-track {
-    background: transparent;
-}
-
-::-webkit-scrollbar-thumb {
-    background: rgba(5, 5, 5, 0.7);
-    transition: 0.2s;
-    border-radius: 100vw;
-    border: 7px var(--off-main-clr) solid;
-}
-
- ::-webkit-scrollbar-thumb:hover {
-    background: rgb(0, 0, 0);
-    transition: 0.2s;
-}
-
 
 /* ========== HEADER ========== */
 
@@ -82,15 +58,15 @@ header {
     box-shadow: 0 6px 4px -2px var(--main-clr);
 }
 
+.social-media {
+    width: 25px;
+    margin: 5px 5px 5px 5px;
+}
+
 nav {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.sidebar-button {
-    font-size: 2rem;
-    margin: 0 1.5rem;
 }
 
 .logo {
@@ -116,11 +92,6 @@ nav {
     list-style: none;
 }
 
-.item>a {
-    font-family: 'Montserrat';
-    font-weight: bold;
-}
-
 .nav-menu-button {
     display: none;
 }
@@ -134,148 +105,18 @@ nav {
 }
 
 
-/* ============================== SIDEBAR ============================== */
-
-
-/* ========== SIDEBAR BASE ========== */
-
-.sidebar-button {
-    cursor: pointer;
-}
-
-.sidebar {
-    width: 0px;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    top: 0;
-    left: 0;
-    position: fixed;
-    background-color: var(--off-main-clr);
-    z-index: 5;
-    overflow-x: hidden;
-    transition: 0.2s;
-    box-shadow: 3px 10px 10px black;
-}
-
-.lower-opacity {
-    position: fixed;
-    left: 0;
-    width: 0;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.4);
-    z-index: 4;
-    transition: 0.2s;
-}
-
-
-/* ========== SIDEBAR HEADER ========== */
-
-.sidebar-header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    border-bottom: 3px rgba(0, 0, 0, 0.1) solid;
-}
-
-.sidebar-header .sidebar-button {
-    font-size: 2rem;
-    margin: 0 1.5rem;
-}
-
-.sidebar-header .sidebar-logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 40px;
-}
-
-
-/* ========== SIDEBAR BODY ========== */
-
-.sidebar-playlists {
-    padding: 20px;
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    border-bottom: 3px rgba(0, 0, 0, 0.1) solid;
-}
-
-.sidebar-playlists>h2 {
-    font-size: 2rem;
-    font-family: "Montserrat";
-    font-weight: 900;
-}
-
-.sidebar-playlist {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 1rem;
-    padding: 10px;
-}
-
-.sidebar-playlist h3 {
-    font-family: "Montserrat";
-    font-weight: 900;
-    font-size: 1rem;
-}
-
-.sidebar-unfinished-videos {
-    padding: 20px;
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-}
-
-.sidebar-unfinished-videos>h2 {
-    font-size: 2rem;
-    font-family: "Montserrat";
-    font-weight: 900;
-}
-
-.sidebar-unfinished-video {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 1rem;
-    padding: 10px;
-}
-
-.sidebar-unfinished-video h3 {
-    font-family: "Montserrat";
-    font-weight: 900;
-    font-size: .75rem;
-}
-
-.sidebar-unfinished-video img {
-    border: 2px solid white;
-    border-radius: 3px;
-}
-
-
-/* ========== SIDEBAR FOOTER ========== */
-
-.sidebar-footer {
-    position: absolute;
-    bottom: 0;
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    padding: 20px;
-    border-top: 3px rgba(0, 0, 0, 0.1) solid;
-}
-
-.social-media {
-    width: 30px;
-}
-
-
 /* ========== MAIN ========== */
 
 main {
     background-color: var(--off-main-clr);
     display: flex;
     justify-content: center;
+    padding: 30px;
+}
+
+main section h2 {
+    padding: 10px;
+    background-color: var(--main-clr);
 }
 
 .page-title {
@@ -284,12 +125,11 @@ main {
 }
 
 .videos-grid {
-    padding: 30px;
     margin-right: auto;
     margin-left: auto;
     display: grid;
     gap: 1rem;
-    grid-template-columns: repeat(auto, 216px);
+    grid-template-columns: repeat(5, 216px);
     grid-auto-rows: 1fr;
 }
 

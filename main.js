@@ -20,3 +20,31 @@ function closeNav() {
     document.getElementById("nav-menu").style.right = "0";
     document.getElementById("nav-menu").style.padding = "0";
 }
+
+function openSideBar() {
+    document.getElementById("sidebar").style.width = "300px";
+    document.getElementById("body").style.overflowY = "hidden";
+    document.getElementById("body").style.height = "100%";
+    document.getElementById("lower-opacity").style.width = "calc(100vw - 300px)";
+    document.getElementById("lower-opacity").style.left = "300px";
+}
+
+function closeSideBar() {
+    document.getElementById("sidebar").style.width = "0px";
+    document.getElementById("body").style.overflowY = "overlay";
+    document.getElementById("body").style.removeProperty = "height";
+    document.getElementById("lower-opacity").style.width = "0";
+    document.getElementById("lower-opacity").style.left = "0";
+}
+
+function openDeviceSettings() {
+    document.getElementById("settings").style.width = "50%";
+    document.getElementById("body").style.overflowY = "hidden";
+    document.getElementById("body").style.height = "100%";
+}
+
+function closeDeviceSettings() {
+    document.getElementById("settings").style.width = "0";
+    document.getElementById("body").style.overflowY = "visible";
+    document.getElementById("body").style.removeProperty = "height";
+}
