@@ -105,7 +105,7 @@ nav {
     align-items: center;
 }
 
-.sidebar-button {
+header .sidebar-button {
     font-size: 2rem;
     margin: 0 1.5rem;
 }
@@ -190,7 +190,6 @@ nav {
 
 .sidebar-header .sidebar-button {
     font-size: 2rem;
-    margin: 0 1.5rem;
 }
 
 .sidebar-header .sidebar-logo {
@@ -265,8 +264,7 @@ nav {
 /* ========== SIDEBAR FOOTER ========== */
 
 .sidebar-footer {
-    position: absolute;
-    bottom: 0;
+    margin-top: auto;
     display: flex;
     justify-content: space-around;
     width: 100%;
