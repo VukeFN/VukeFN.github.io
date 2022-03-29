@@ -84,6 +84,80 @@ li {
     transition: 0.2s;
 }
 
+#preloader {
+    width: 100%;
+    height: 100vh;
+    background: var(--off-main-clr);
+    text-align: center;
+    z-index: 100;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    font-family: "Montserrat";
+    font-weight: 900;
+    text-transform: uppercase;
+    transition: 2s;
+}
+
+#website-intro {
+    display: block;
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+    height: 100vh;
+    background: var(--off-main-clr);
+    animation: hey 1s;
+    animation-delay: 2.2s;
+    animation-fill-mode: forwards;
+    box-shadow: 3px 10px 10px black;
+}
+
+#website-intro img {
+    top: 43.7vh;
+    left: 40%;
+    width: 360px;
+    position: absolute;
+    transition: 0.2s;
+    animation: fadein 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadein {
+    0% {
+        position: absolute;
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+        top: 43.7vh;
+        left: 40%;
+        width: 360px;
+    }
+    90% {
+        top: 8px;
+        left: 100px;
+        width: 180px;
+        opacity: 1;
+    }
+    100% {
+        top: 8px;
+        left: 100px;
+        width: 180px;
+        opacity: 0;
+    }
+}
+
+@keyframes hey {
+    0% {
+        height: 100vh;
+    }
+    100% {
+        height: 0;
+    }
+}
+
 
 /* ============================== HEADER ============================== */
 
@@ -112,7 +186,7 @@ header .sidebar-button {
 
 .logo {
     height: 40px;
-    width: 240px;
+    width: 180px;
     flex-grow: 1;
     display: flex;
     align-items: center;
@@ -298,6 +372,9 @@ main {
 .grid-item:first-child {
     grid-column-start: 1;
     grid-column-end: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .grid-item h1 {
@@ -335,6 +412,11 @@ main {
 .grid-item img {
     border: 2px white solid;
     border-radius: 5px;
+}
+
+.welcome {
+    border: none !important;
+    width: 80vw;
 }
 
 @media screen and (max-width: 1100px) {

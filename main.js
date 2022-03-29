@@ -48,3 +48,7 @@ function closeDeviceSettings() {
     document.getElementById("body").style.overflowY = "visible";
     document.getElementById("body").style.removeProperty = "height";
 }
+
+window.addEventListener("load", function() {
+    document.getElementById("preloader").style.display = "none";
+});
