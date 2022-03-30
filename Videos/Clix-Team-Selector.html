@@ -7,26 +7,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../video.css" />
     <link rel="icon" href="../Images/Website Icon.png" />
-    <script src="../video.js"></script>
+    <script src="../main.js"></script>
     <title>VukeFN | Videos</title>
 </head>
 
 <body id="body">
+    <div id="preloader">loading...</div>
+    <div id="lower-opacity" class="lower-opacity" onclick="closeSideBar()"></div>
     <header>
         <nav class="nav">
+            <ion-icon name="menu-outline" class="sidebar-button" onclick="openSideBar()"></ion-icon>
             <div class="logo">
-                <a href="https://vukefn.github.io/"><img src="../Images/Website Logo.png" alt="Website's Logo" height="80" width="240" />
-                </a>
-                <a href="https://youtube.com/c/vukefn" target="blank_">
-                    <img class="social-media" src="../Images/YouTube.png" />
-                </a>
-                <a href="https://discord.gg/uzjyMmG" target="blank_">
-                    <img class="social-media" src="../Images/Discord.png" />
-                </a>
-                <a href="https://twitter.com/vukefn" target="blank_">
-                    <img class="social-media" src="../Images/Twitter.png" />
+                <a href="https://vukefn.github.io/">
+                    <img src="./Images/Website Logo.png" alt="Website's Logo" width="180" />
                 </a>
             </div>
+
             <div class="nav-items-div">
                 <ul class="nav-list">
                     <li class="item">
@@ -55,6 +51,107 @@
                     </li>
             </div>
             </ul>
+            </div>
+
+            <div id="sidebar" class="sidebar">
+                <div class="sidebar-header">
+                    <ion-icon name="menu-outline" class="sidebar-button" id="sidebar-button" onclick="closeSideBar()"></ion-icon>
+                    <div class="sidebar-logo">
+                        <a href="https://vukefn.github.io/">
+                            <img src="./Images/Website Logo.png" alt="Website's Logo" width="180" />
+                        </a>
+                    </div>
+                </div>
+
+                <div class="sidebar-playlists">
+                    <h2>PLAYLISTS</h2>
+                    <div>
+                        <div class="sidebar-playlist">
+                            <img src="https://img.icons8.com/material-outlined/24/FFFFFF/video-playlist.png" />
+                            <a href="">
+                                <h3>BHE 1v1 MAP</h3>
+                            </a>
+                        </div>
+                        <div class="sidebar-playlist">
+                            <img src="https://img.icons8.com/material-outlined/24/FFFFFF/video-playlist.png" />
+                            <a href="">
+                                <h3>CLIX BOXFIGHTS</h3>
+                            </a>
+                        </div>
+                        <div class="sidebar-playlist">
+                            <img src="https://img.icons8.com/material-outlined/24/FFFFFF/video-playlist.png" />
+                            <a href="">
+                                <h3>FLEA</h3>
+                            </a>
+                        </div>
+                        <div class="sidebar-playlist">
+                            <img src="https://img.icons8.com/material-outlined/24/FFFFFF/video-playlist.png" />
+                            <a href="">
+                                <h3>BHE BOXFIGHTS</h3>
+                            </a>
+                        </div>
+                        <div class="sidebar-playlist">
+                            <img src="https://img.icons8.com/material-outlined/24/FFFFFF/video-playlist.png" />
+                            <a href="">
+                                <h3>BHE SPAWN ISLAND</h3>
+                            </a>
+                        </div>
+                        <div class="sidebar-playlist">
+                            <img src="https://img.icons8.com/material-outlined/24/FFFFFF/video-playlist.png" />
+                            <a href="">
+                                <h3>BHE START ISLAND</h3>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sidebar-unfinished-videos">
+                    <h2>UNFINISHED</h2>
+                    <div>
+                        <div class="sidebar-unfinished-video">
+                            <img src="./Thumbnails/Team Selector Mechanic.jpg" width="40" />
+                            <a href="">
+                                <h3>TEAM SELECTOR (OLD)</h3>
+                            </a>
+                        </div>
+                        <div class="sidebar-unfinished-video">
+                            <img src="./Thumbnails/Team Selector Mechanic.jpg" width="40" />
+                            <a href="">
+                                <h3>TEAM SELECTOR (OLD)</h3>
+                            </a>
+                        </div>
+                        <div class="sidebar-unfinished-video">
+                            <img src="./Thumbnails/Team Selector Mechanic.jpg" width="40" />
+                            <a href="">
+                                <h3>TEAM SELECTOR (OLD)</h3>
+                            </a>
+                        </div>
+                        <div class="sidebar-unfinished-video">
+                            <img src="./Thumbnails/Team Selector Mechanic.jpg" width="40" />
+                            <a href="">
+                                <h3>TEAM SELECTOR (OLD)</h3>
+                            </a>
+                        </div>
+                        <div class="sidebar-unfinished-video">
+                            <img src="./Thumbnails/Team Selector Mechanic.jpg" width="40" />
+                            <a href="">
+                                <h3>TEAM SELECTOR (OLD)</h3>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sidebar-footer">
+                    <a href="https://youtube.com/c/vukefn" target="blank_">
+                        <img class="social-media" src="./Images/YouTube.png" />
+                    </a>
+                    <a href="https://discord.gg/uzjyMmG" target="blank_">
+                        <img class="social-media" src="./Images/Discord.png" />
+                    </a>
+                    <a href="https://twitter.com/vukefn" target="blank_">
+                        <img class="social-media" src="./Images/Twitter.png" />
+                    </a>
+                </div>
             </div>
         </nav>
     </header>
@@ -109,6 +206,7 @@
                 <h2>CUSTOMIZE</h2>
                 <span class="device-name">Trigger</span>
             </div>
+
             <ul class="items">
                 <li class="item">
                     <h2>Activate On Game Start</h2>
@@ -131,6 +229,14 @@
                     <span>yes</span>
                 </li>
             </ul>
+
+            <div class="settings-buttons">
+                <div class="gear-btn">
+                    <ion-icon name="settings-sharp"></ion-icon>
+                </div>
+                <div class="ok-btn" onclick="closeDeviceSettings()">ok</div>
+                <div class="cancel-btn" onclick="closeDeviceSettings()">cancel</div>
+            </div>
         </section>
 
         <!-- ========== ISLAND SETTINGS ========== -->

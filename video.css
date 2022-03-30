@@ -60,8 +60,89 @@ li {
 
 /* ==================== WEBSITE ==================== */
 
+::-webkit-scrollbar {
+    width: 25px;
+}
 
-/* ========== HEADER ========== */
+ ::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(5, 5, 5, 0.7);
+    transition: 0.2s;
+    border-radius: 100vw;
+    border: 7px var(--off-main-clr) solid;
+}
+
+ ::-webkit-scrollbar-thumb:hover {
+    background: rgb(0, 0, 0);
+    transition: 0.2s;
+}
+
+#preloader {
+    width: 100%;
+    height: 100vh;
+    background: var(--off-main-clr);
+    text-align: center;
+    z-index: 100;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    font-family: "Montserrat";
+    font-weight: 900;
+    text-transform: uppercase;
+    transition: 2s;
+}
+
+#website-intro {
+    display: none;
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+    height: 100vh;
+    background: var(--off-main-clr);
+    animation: hey 1.3s;
+    animation-delay: 3.3s;
+    animation-fill-mode: forwards;
+    box-shadow: 3px 10px 10px black;
+}
+
+#website-intro img {
+    top: 43.7vh;
+    left: 40%;
+    width: 360px;
+    position: absolute;
+    transition: 0.2s;
+    animation: fadein 3.8s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+    93% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes hey {
+    0% {
+        height: 100vh;
+    }
+    100% {
+        height: 0;
+    }
+}
+
+
+/* ============================== HEADER ============================== */
 
 header {
     min-height: 80px;
@@ -75,20 +156,20 @@ header {
     box-shadow: 0 6px 4px -2px var(--main-clr);
 }
 
-.social-media {
-    width: 25px;
-    margin: 5px;
-}
-
 nav {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+header .sidebar-button {
+    font-size: 2rem;
+    margin: 0 1.5rem;
+}
+
 .logo {
     height: 40px;
-    width: 240px;
+    width: 180px;
     flex-grow: 1;
     display: flex;
     align-items: center;
@@ -116,6 +197,140 @@ nav {
 
 .nav-menu-button {
     display: none;
+}
+
+
+/* ============================== SIDEBAR ============================== */
+
+
+/* ========== SIDEBAR BASE ========== */
+
+.sidebar-button {
+    cursor: pointer;
+}
+
+.sidebar {
+    width: 0px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background-color: var(--off-main-clr);
+    z-index: 5;
+    overflow-x: hidden;
+    transition: 0.2s;
+    box-shadow: 3px 10px 10px black;
+}
+
+.lower-opacity {
+    position: fixed;
+    left: 0;
+    width: 0;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 4;
+    transition: 0.2s;
+}
+
+
+/* ========== SIDEBAR HEADER ========== */
+
+.sidebar-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 3px rgba(0, 0, 0, 0.1) solid;
+}
+
+.sidebar-header .sidebar-button {
+    font-size: 2rem;
+}
+
+.sidebar-header .sidebar-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+}
+
+
+/* ========== SIDEBAR BODY ========== */
+
+.sidebar-playlists {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    border-bottom: 3px rgba(0, 0, 0, 0.1) solid;
+}
+
+.sidebar-playlists>h2 {
+    font-size: 2rem;
+    font-family: "Montserrat";
+    font-weight: 900;
+}
+
+.sidebar-playlist {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    padding: 10px;
+}
+
+.sidebar-playlist h3 {
+    font-family: "Montserrat";
+    font-weight: 900;
+    font-size: 1rem;
+}
+
+.sidebar-unfinished-videos {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.sidebar-unfinished-videos>h2 {
+    font-size: 2rem;
+    font-family: "Montserrat";
+    font-weight: 900;
+}
+
+.sidebar-unfinished-video {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    padding: 10px;
+}
+
+.sidebar-unfinished-video h3 {
+    font-family: "Montserrat";
+    font-weight: 900;
+    font-size: .75rem;
+}
+
+.sidebar-unfinished-video img {
+    border: 2px solid white;
+    border-radius: 3px;
+}
+
+
+/* ========== SIDEBAR FOOTER ========== */
+
+.sidebar-footer {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 20px;
+    border-top: 3px rgba(0, 0, 0, 0.1) solid;
+}
+
+.social-media {
+    width: 30px;
 }
 
 
@@ -253,9 +468,11 @@ section.settings {
     overflow: visible;
     width: 0;
     position: fixed;
+    display: flex;
+    flex-direction: column;
     left: 0;
     top: 80px;
-    height: 100vh;
+    height: calc(100vh - 80px);
     overflow-y: hidden;
     padding: 0;
     background-color: var(--settings-clr);
@@ -281,17 +498,21 @@ section.settings {
     background-color: #00AAFF;
     padding-left: 35px;
     padding-right: 35px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    transform: rotate(-0.5deg);
 }
 
 .settings .items {
-    padding-top: 10px;
     padding: 10px 20px 20px 20px;
+    position: relative;
+    flex-grow: 1;
 }
 
 .settings .items .item {
     background-color: var(--settings-item-clr);
     display: flex;
-    padding: 10px 30px 10px 30px;
+    padding: 15px 30px 15px 30px;
     margin-bottom: 0.2rem;
 }
 
@@ -303,6 +524,60 @@ section.settings {
 .settings .items .item>span {
     margin-left: auto;
     color: white;
+}
+
+.settings-buttons {
+    position: relative;
+    display: flex;
+    padding: 20px;
+}
+
+.settings-buttons .gear-btn {
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #054AA5;
+    color: #83C7F1;
+    width: 100px;
+    padding: 5px 0;
+    border: rgba(19, 115, 215, 0.4) 5px solid;
+    cursor: pointer;
+}
+
+.settings-buttons .gear-btn>* {
+    font-size: 2.5rem;
+}
+
+.settings-buttons .ok-btn {
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: gold;
+    color: black;
+    width: 100px;
+    padding: 5px 0;
+    border: rgba(255, 215, 150, 0.8) 3px solid;
+    cursor: pointer;
+    margin: 0 7px;
+}
+
+.settings-buttons .cancel-btn {
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #054AA5;
+    color: white;
+    width: 100px;
+    padding: 5px 0;
+    border: rgba(19, 115, 215, 0.4) 5px solid;
+    cursor: pointer;
+    margin: 0 7px;
 }
 
 
