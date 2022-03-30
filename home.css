@@ -103,6 +103,8 @@ li {
 
 #website-intro {
     display: none;
+    justify-content: center;
+    align-items: center;
     position: fixed;
     z-index: 99;
     width: 100%;
@@ -115,10 +117,7 @@ li {
 }
 
 #website-intro img {
-    top: 43.7vh;
-    left: 40%;
-    width: 360px;
-    position: absolute;
+    width: 40vw;
     transition: 0.2s;
     animation: fadein 3.8s;
     animation-fill-mode: forwards;
@@ -399,11 +398,12 @@ main {
 .grid-item img {
     border: 2px white solid;
     border-radius: 5px;
+    width: 540px;
 }
 
 .welcome {
     border: none !important;
-    width: 80vw;
+    width: 70vw !important;
 }
 
 @media screen and (max-width: 1100px) {
@@ -444,5 +444,46 @@ main {
     .grid-item:nth-child(7) {
         grid-row-start: 6;
         grid-row-end: 7;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .nav-items-div {
+        display: none;
+    }
+    .grid-item {
+        height: 300px;
+    }
+    .grid-item img {
+        width: 270px;
+    }
+    .grid-item h1 {
+        text-align: center;
+        font-size: 9vw;
+        margin-bottom: 10px;
+    }
+    .grid-item p {
+        text-align: center;
+        font-family: "Montserrat";
+        font-size: 4vw;
+        font-weight: 600;
+    }
+    main {
+        padding: 10vw;
+    }
+    nav {
+        display: grid;
+        grid-template-rows: repeat(1, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+    }
+    header .sidebar-button {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        margin-left: auto;
+        margin-right: 40px;
+    }
+    header .logo {
+        grid-row-start: 1;
+        grid-row-end: 2;
     }
 }
