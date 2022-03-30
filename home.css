@@ -117,7 +117,7 @@ li {
 }
 
 #website-intro img {
-    width: 40vw;
+    width: 20vw;
     transition: 0.2s;
     animation: fadein 3.8s;
     animation-fill-mode: forwards;
@@ -127,7 +127,7 @@ li {
     0% {
         opacity: 0;
     }
-    93% {
+    90% {
         opacity: 1;
     }
     100% {
