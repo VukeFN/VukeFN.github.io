@@ -51,4 +51,5 @@ function closeDeviceSettings() {
 
 window.addEventListener("load", function() {
     document.getElementById("preloader").style.display = "none";
+    this.document.getElementById("website-intro").style.display = "block";
 });
