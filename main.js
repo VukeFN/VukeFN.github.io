@@ -1,29 +1,13 @@
-function openNav() {
-    document
-        .getElementById("nav-menu-icon")
-        .setAttribute("name", "close-outline");
-    document
-        .getElementById("nav-menu-icon")
-        .setAttribute("onclick", "closeNav()");
-    document.getElementById("nav-menu").style.height = "150px";
-    document.getElementById("nav-menu").style.boxShadow =
-        "3px 4px 5px 6px var(--main-clr)";
-    document.getElementById("nav-menu").style.right = "20px";
-    document.getElementById("nav-menu").style.padding = "20px";
-}
+/* ============================== LOADING PAGE ============================== */
+window.addEventListener("load", function() {
+    document.getElementById("preloader").style.display = "none";
+    this.document.getElementById("website-intro").style.display = "flex";
+});
 
-function closeNav() {
-    document.getElementById("nav-menu-icon").setAttribute("name", "menu-outline");
-    document.getElementById("nav-menu-icon").setAttribute("onclick", "openNav()");
-    document.getElementById("nav-menu").style.height = "0";
-    document.getElementById("nav-menu").style.boxShadow = "none";
-    document.getElementById("nav-menu").style.right = "0";
-    document.getElementById("nav-menu").style.padding = "0";
-}
-
+/* ============================== SIDEBAR ============================== */
 function openSideBar() {
     document.getElementById("sidebar").style.width = "300px";
-    document.getElementById("body").style.overflowY = "hidden";
+    document.getElementById("body").style.overflow = "hidden";
     document.getElementById("body").style.height = "100%";
     document.getElementById("lower-opacity").style.width = "calc(100vw - 300px)";
     document.getElementById("lower-opacity").style.left = "300px";
@@ -31,25 +15,34 @@ function openSideBar() {
 
 function closeSideBar() {
     document.getElementById("sidebar").style.width = "0px";
-    document.getElementById("body").style.overflowY = "overlay";
+    document.getElementById("body").style.overflow = "overlay";
     document.getElementById("body").style.removeProperty = "height";
     document.getElementById("lower-opacity").style.width = "0";
     document.getElementById("lower-opacity").style.left = "0";
 }
 
+/* ============================== DEVICE SETTINGS POPUP ============================== */
+var width = $(window).width();
+console.log(width);
+
 function openDeviceSettings() {
-    document.getElementById("settings").style.width = "50%";
-    document.getElementById("body").style.overflowY = "hidden";
-    document.getElementById("body").style.height = "100%";
+    if (width < 800 || width == 800) {
+        document.getElementById("settings").style.width = "100%";
+        document.getElementById("body").style.overflow = "hidden";
+        document.getElementById("body").style.height = "100%";
+    } else if (width > 800) {
+        document.getElementById("settings").style.width = "50%";
+        document.getElementById("body").style.overflow = "hidden";
+        document.getElementById("body").style.height = "100%";
+        document.getElementById("lower-opacity-settings").style.width = "100vw";
+        document.getElementById("lower-opacity-settings").style.left = "0vw";
+    }
 }
 
 function closeDeviceSettings() {
     document.getElementById("settings").style.width = "0";
-    document.getElementById("body").style.overflowY = "visible";
+    document.getElementById("body").style.overflow = "overlay";
     document.getElementById("body").style.removeProperty = "height";
+    document.getElementById("lower-opacity-settings").style.width = "0";
+    document.getElementById("lower-opacity-settings").style.left = "0";
 }
-
-window.addEventListener("load", function() {
-    document.getElementById("preloader").style.display = "none";
-    document.getElementById("website-intro").style.display = "flex";
-});

@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../video.css" />
     <link rel="icon" href="../Images/Website Icon.png" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
     <script src="../main.js"></script>
     <title>VukeFN | Videos</title>
 </head>
@@ -14,12 +15,13 @@
 <body id="body">
     <div id="preloader">loading...</div>
     <div id="lower-opacity" class="lower-opacity" onclick="closeSideBar()"></div>
+    <div id="lower-opacity-settings" class="lower-opacity" onclick="closeDeviceSettings()"></div>
     <header>
         <nav class="nav">
             <ion-icon name="menu-outline" class="sidebar-button" onclick="openSideBar()"></ion-icon>
             <div class="logo">
                 <a href="https://vukefn.github.io/">
-                    <img src="./Images/Website Logo.png" alt="Website's Logo" width="180" />
+                    <img src="../Images/Website Logo.png" alt="Website's Logo" width="180" />
                 </a>
             </div>
 
@@ -58,7 +60,7 @@
                     <ion-icon name="menu-outline" class="sidebar-button" id="sidebar-button" onclick="closeSideBar()"></ion-icon>
                     <div class="sidebar-logo">
                         <a href="https://vukefn.github.io/">
-                            <img src="./Images/Website Logo.png" alt="Website's Logo" width="180" />
+                            <img src="../Images/Website Logo.png" alt="Website's Logo" width="180" />
                         </a>
                     </div>
                 </div>
@@ -109,31 +111,31 @@
                     <h2>UNFINISHED</h2>
                     <div>
                         <div class="sidebar-unfinished-video">
-                            <img src="./Thumbnails/Team Selector Mechanic.jpg" width="40" />
+                            <img src="../Thumbnails/Team Selector Mechanic.jpg" width="40" />
                             <a href="">
                                 <h3>TEAM SELECTOR (OLD)</h3>
                             </a>
                         </div>
                         <div class="sidebar-unfinished-video">
-                            <img src="./Thumbnails/Team Selector Mechanic.jpg" width="40" />
+                            <img src="../Thumbnails/Team Selector Mechanic.jpg" width="40" />
                             <a href="">
                                 <h3>TEAM SELECTOR (OLD)</h3>
                             </a>
                         </div>
                         <div class="sidebar-unfinished-video">
-                            <img src="./Thumbnails/Team Selector Mechanic.jpg" width="40" />
+                            <img src="../Thumbnails/Team Selector Mechanic.jpg" width="40" />
                             <a href="">
                                 <h3>TEAM SELECTOR (OLD)</h3>
                             </a>
                         </div>
                         <div class="sidebar-unfinished-video">
-                            <img src="./Thumbnails/Team Selector Mechanic.jpg" width="40" />
+                            <img src="../Thumbnails/Team Selector Mechanic.jpg" width="40" />
                             <a href="">
                                 <h3>TEAM SELECTOR (OLD)</h3>
                             </a>
                         </div>
                         <div class="sidebar-unfinished-video">
-                            <img src="./Thumbnails/Team Selector Mechanic.jpg" width="40" />
+                            <img src="../Thumbnails/Team Selector Mechanic.jpg" width="40" />
                             <a href="">
                                 <h3>TEAM SELECTOR (OLD)</h3>
                             </a>
@@ -143,13 +145,13 @@
 
                 <div class="sidebar-footer">
                     <a href="https://youtube.com/c/vukefn" target="blank_">
-                        <img class="social-media" src="./Images/YouTube.png" />
+                        <img class="social-media" src="../Images/YouTube.png" />
                     </a>
                     <a href="https://discord.gg/uzjyMmG" target="blank_">
-                        <img class="social-media" src="./Images/Discord.png" />
+                        <img class="social-media" src="../Images/Discord.png" />
                     </a>
                     <a href="https://twitter.com/vukefn" target="blank_">
-                        <img class="social-media" src="./Images/Twitter.png" />
+                        <img class="social-media" src="../Images/Twitter.png" />
                     </a>
                 </div>
             </div>
@@ -162,41 +164,42 @@
             <div class="devices-sec1">
                 <h2>Start Area</h2>
                 <div class="sec-devices">
-                    <div onclick="openDeviceSettings()" id="" data-channel="one" class="TRIGGER"></div>
-                    <div id="" data-channel="two" class="SCORE-MANAGER"></div>
-                    <div id="" data-channel="three" class="TEAM-SETTINGS"></div>
-                    <div id="" data-channel="four" class=""></div>
+                    <div onclick="openDeviceSettings()" id="" data-channel="one" class="TRIGGER">
+                        device
+                    </div>
                 </div>
             </div>
             <div class="devices-sec2">
                 <h2>Loadout Selection Area</h2>
                 <div class="sec-devices">
-                    <div id="" data-channel="one" class="TRIGGER">CH 04</div>
-                    <div id="" data-channel="two" class="MUTATOR-ZONE"></div>
-                    <div id="" data-channel="three" class=""></div>
-                    <div id="" data-channel="four" class=""></div>
+                    <div onclick="openDeviceSettings()" id="" data-channel="one" class="TRIGGER">
+                        device
+                    </div>
                 </div>
             </div>
             <div class="devices-sec1">
                 <h2>Team Selection Area</h2>
-                <div id="" data-channel="one" class=""></div>
-                <div id="" data-channel="two" class=""></div>
-                <div id="" data-channel="three" class=""></div>
-                <div id="" data-channel="four" class=""></div>
+                <div class="sec-devices">
+                    <div onclick="openDeviceSettings()" id="" data-channel="one" class="TRIGGER">
+                        device
+                    </div>
+                </div>
             </div>
             <div class="devices-sec2">
                 <h2>Round Manager</h2>
-                <div id="" data-channel="one" class=""></div>
-                <div id="" data-channel="two" class=""></div>
-                <div id="" data-channel="three" class=""></div>
-                <div id="" data-channel="four" class=""></div>
+                <div class="sec-devices">
+                    <div onclick="openDeviceSettings()" id="" data-channel="one" class="TRIGGER">
+                        device
+                    </div>
+                </div>
             </div>
             <div class="devices-sec1">
                 <h2>Team Selector Mechanic</h2>
-                <div id="" data-channel="one" class=""></div>
-                <div id="" data-channel="two" class=""></div>
-                <div id="" data-channel="three" class=""></div>
-                <div id="" data-channel="four" class=""></div>
+                <div class="sec-devices">
+                    <div onclick="openDeviceSettings()" id="" data-channel="one" class="TRIGGER">
+                        device
+                    </div>
+                </div>
             </div>
         </section>
 

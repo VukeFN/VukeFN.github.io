@@ -41,6 +41,10 @@ html {
     scroll-behavior: smooth;
 }
 
+body {
+    overflow: overlay;
+}
+
 a {
     color: var(--off-sec-clr);
     text-decoration: none;
@@ -152,7 +156,7 @@ header {
     padding: 20px;
     position: sticky;
     top: 0;
-    z-index: 1;
+    z-index: 3;
     box-shadow: 0 6px 4px -2px var(--main-clr);
 }
 
@@ -230,8 +234,7 @@ header .sidebar-button {
     width: 0;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.4);
-    z-index: 4;
-    transition: 0.2s;
+    z-index: 2;
 }
 
 
@@ -366,99 +369,10 @@ main {
 }
 
 .TRIGGER {
-    height: 120px;
-    width: 125px;
-    background-image: url(./Devices/trigger.png);
-    background-size: cover;
+    background-color: red;
+    height: 100px;
+    width: 100px;
     cursor: pointer;
-    color: rgb(138, 138, 229);
-    font-size: 1.2rem;
-    padding: 10px 0 0 40px;
-    letter-spacing: -0.10rem;
-    font-family: 'alarm_clock';
-}
-
-.TRACKER {
-    height: 120px;
-    width: 125px;
-    background-image: url(./Devices/tracker.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    cursor: pointer;
-}
-
-.MUTATOR-ZONE {
-    height: 120px;
-    width: 120px;
-    background-image: url(./Devices/mutator.png);
-    background-size: cover;
-    cursor: pointer;
-    color: rgb(138, 138, 229);
-    font-size: 1.2rem;
-    padding: 10px 0 0 40px;
-    letter-spacing: -0.10rem;
-    font-family: 'alarm_clock';
-}
-
-.SEQUENCER {
-    height: 120px;
-    width: 120px;
-    background-image: url(./Devices/sequencer.png);
-    background-size: cover;
-    cursor: pointer;
-    color: rgb(138, 138, 229);
-    font-size: 1.2rem;
-    position: relative;
-}
-
-.SCORE-MANAGER {
-    height: 120px;
-    width: 120px;
-    background-image: url(./Devices/score.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center center;
-    cursor: pointer;
-    color: rgb(138, 138, 229);
-    font-size: 1.2rem;
-    padding: 10px 0 0 40px;
-    letter-spacing: -0.10rem;
-    font-family: 'alarm_clock';
-}
-
-.HUD-MESSAGE-DEVICE {
-    height: 120px;
-    width: 120px;
-    background-image: url(./Devices/hud.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center center;
-    cursor: pointer;
-    color: rgb(138, 138, 229);
-    font-size: 1.2rem;
-    padding: 10px 0 0 40px;
-    letter-spacing: -0.10rem;
-    font-family: 'alarm_clock';
-}
-
-.TEAM-SETTINGS {
-    height: 125px;
-    width: 125px;
-    background-image: url(./Devices/team.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center center;
-    cursor: pointer;
-    color: rgb(138, 138, 229);
-    font-size: 1.2rem;
-    padding: 10px 0 0 40px;
-    letter-spacing: -0.10rem;
-    font-family: 'alarm_clock';
-}
-
-.active {
-    filter: drop-shadow(2px 2px 5px rgba(31, 53, 255, 0.95)) drop-shadow(-2px -2px 5px rgba(31, 53, 255, 0.95));
 }
 
 
@@ -476,11 +390,13 @@ section.settings {
     overflow-y: hidden;
     padding: 0;
     background-color: var(--settings-clr);
+    z-index: 3;
+    transition: 0.3s;
 }
 
 .settings-title {
     padding: 40px;
-    padding-right: 80px;
+    padding-right: 10%;
     display: flex;
     align-items: center;
     height: 160px;
@@ -488,12 +404,12 @@ section.settings {
 }
 
 .settings-title h2 {
-    font-size: 3rem;
+    font-size: 200%;
     flex-grow: 1;
 }
 
 .device-name {
-    font-size: 2rem;
+    font-size: 130%;
     margin-left: auto;
     background-color: #00AAFF;
     padding-left: 35px;
@@ -617,63 +533,40 @@ section.settings {
 
 /* ========== RESPONSIVE DESIGN ========== */
 
-@media screen and (max-width: 1695px) {}
-
-@media screen and (max-width: 1455px) {}
-
-@media screen and (max-width: 1065px) {}
-
 @media screen and (max-width: 800px) {
-    header {
-        display: flex;
-        align-items: center;
-        box-shadow: 0 6px 4px -2px var(--main-clr);
-    }
-    .nav {
-        width: 100%;
-    }
-    .logo {
-        flex-grow: 1;
-        height: 45px;
-        width: 135px;
-    }
-    .logo>a>img {
-        height: 45px;
-        width: 135px;
-    }
-    .nav-list {
+    .nav-items-div {
         display: none;
     }
-    .nav-menu-button {
-        display: flex;
-        font-size: 2rem;
-        padding-right: 20px;
+    .grid-item {
+        height: 300px;
     }
-    .nav-menu-button:hover {
-        cursor: pointer;
+    .grid-item img {
+        width: 270px;
     }
-    ion-icon {
-        align-items: center;
-        justify-content: center;
-    }
-    .nav-menu {
-        position: fixed;
-        height: 0;
-        width: 150px;
-        background-color: var(--main-clr);
-        top: 80px;
-        right: 20px;
-        padding: 0;
-        z-index: 2;
-        overflow-x: hidden;
-        box-shadow: none;
-        border-radius: 4px;
-        transition: 0.5s;
-        overflow-y: hidden;
-    }
-    .nav-menu .item {
-        padding: 10px 0;
+    .grid-item h1 {
         text-align: center;
-        font-size: 1rem;
+        font-size: 9vw;
+        margin-bottom: 10px;
+    }
+    .grid-item p {
+        text-align: center;
+        font-family: "Montserrat";
+        font-size: 4vw;
+        font-weight: 600;
+    }
+    nav {
+        display: grid;
+        grid-template-rows: repeat(1, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+    }
+    header .sidebar-button {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        margin-left: auto;
+        margin-right: 40px;
+    }
+    header .logo {
+        grid-row-start: 1;
+        grid-row-end: 2;
     }
 }
