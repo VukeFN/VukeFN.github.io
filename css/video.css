@@ -1,16 +1,16 @@
-/* ============================== BASE ============================== */
+/* ==================== BASE ==================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @font-face {
     font-family: 'alarm_clock';
-    src: url('./Fonts/alarm_clock-webfont.woff2');
+    src: url('../Fonts/alarm_clock-webfont.woff2');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Burbank';
-    src: url('./Fonts/BurbankBigRegular-Black.woff2');
+    src: url('../Fonts/BurbankBigRegular-Black.woff2');
     font-weight: 900;
     font-style: normal;
 }
@@ -33,7 +33,7 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    font-family: "Burbank";
+    font-family: "Burbank", sans-serif;
     color: white;
 }
 
@@ -62,7 +62,7 @@ li {
 }
 
 
-/* ========== WEBSITE ========== */
+/* ==================== WEBSITE ==================== */
 
 ::-webkit-scrollbar {
     width: 25px;
@@ -95,53 +95,10 @@ li {
     justify-content: center;
     align-items: center;
     font-size: 3rem;
-    font-family: "Montserrat";
+    font-family: "Montserrat", sans-serif;
     font-weight: 900;
     text-transform: uppercase;
     transition: 2s;
-}
-
-#website-intro {
-    display: none;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    z-index: 99;
-    width: 100%;
-    height: 100vh;
-    background: var(--off-main-clr);
-    animation: hey 1.3s;
-    animation-delay: 3.3s;
-    animation-fill-mode: forwards;
-    box-shadow: 3px 10px 10px black;
-}
-
-#website-intro img {
-    width: 20vw;
-    transition: 0.2s;
-    animation: fadein 3.8s;
-    animation-fill-mode: forwards;
-}
-
-@keyframes fadein {
-    0% {
-        opacity: 0;
-    }
-    90% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
-}
-
-@keyframes hey {
-    0% {
-        height: 100vh;
-    }
-    100% {
-        height: 0;
-    }
 }
 
 
@@ -150,12 +107,12 @@ li {
 header {
     min-height: 80px;
     background-color: var(--main-clr);
-    background-image: url(./Images/Wigglie\ thing.png);
+    background-image: url(../Images/Wigglie\ thing.png);
     background-size: cover;
     padding: 20px;
     position: sticky;
     top: 0;
-    z-index: 1;
+    z-index: 3;
     box-shadow: 0 6px 4px -2px var(--main-clr);
 }
 
@@ -194,7 +151,7 @@ header .sidebar-button {
 }
 
 .item>a {
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', sans-serif;
     font-weight: bold;
 }
 
@@ -233,8 +190,7 @@ header .sidebar-button {
     width: 0;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.4);
-    z-index: 4;
-    transition: 0.2s;
+    z-index: 2;
 }
 
 
@@ -271,7 +227,7 @@ header .sidebar-button {
 
 .sidebar-playlists>h2 {
     font-size: 2rem;
-    font-family: "Montserrat";
+    font-family: "Montserrat", sans-serif;
     font-weight: 900;
 }
 
@@ -284,7 +240,7 @@ header .sidebar-button {
 }
 
 .sidebar-playlist h3 {
-    font-family: "Montserrat";
+    font-family: "Montserrat", sans-serif;
     font-weight: 900;
     font-size: 1rem;
 }
@@ -297,7 +253,7 @@ header .sidebar-button {
 
 .sidebar-unfinished-videos>h2 {
     font-size: 2rem;
-    font-family: "Montserrat";
+    font-family: "Montserrat", sans-serif;
     font-weight: 900;
 }
 
@@ -310,7 +266,7 @@ header .sidebar-button {
 }
 
 .sidebar-unfinished-video h3 {
-    font-family: "Montserrat";
+    font-family: "Montserrat", sans-serif;
     font-weight: 900;
     font-size: .75rem;
 }
@@ -337,139 +293,205 @@ header .sidebar-button {
 }
 
 
-/* ============================== MAIN ============================== */
+/* ========== MAIN ========== */
 
 main {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
     background-color: var(--off-main-clr);
-    padding: 100px 100px 0 100px;
 }
 
-.grid-item {
+
+/* ===== DEVICES SECTION ===== */
+
+.devices-sec1 {
+    height: 230px;
+    padding: 20px;
+    position: relative;
+    background-color: var(--main-clr);
+}
+
+.devices-sec2 {
+    height: 230px;
+    padding: 20px;
+    background-color: var(--off-main-clr);
+}
+
+.sec-devices {
+    height: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+
+.TRIGGER {
+    background-color: red;
+    height: 100px;
+    width: 100px;
+    cursor: pointer;
+}
+
+
+/* ===== DEVICE SETTINGS POP-UP ===== */
+
+section.settings {
+    overflow: visible;
+    width: 0;
+    position: fixed;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 600px;
+    left: 0;
+    top: 80px;
+    height: calc(100vh - 80px);
+    overflow-y: hidden;
+    padding: 0;
+    background-color: var(--settings-clr);
+    z-index: 3;
+    transition: 0.3s;
 }
 
-.grid-item:first-child {
-    grid-column-start: 1;
-    grid-column-end: 3;
+.settings-title {
+    padding: 40px;
+    padding-right: 10%;
+    display: flex;
+    align-items: center;
+    height: 160px;
+    background-color: var(--island-bg-clr);
+}
+
+.settings-title h2 {
+    font-size: 200%;
+    flex-grow: 1;
+}
+
+.device-name {
+    font-size: 130%;
+    margin-left: auto;
+    background-color: #00AAFF;
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    transform: rotate(-0.5deg);
+}
+
+.settings .items {
+    padding: 10px 20px 20px 20px;
+    position: relative;
+    flex-grow: 1;
+}
+
+.settings .items .item {
+    background-color: var(--settings-item-clr);
+    display: flex;
+    padding: 15px 30px 15px 30px;
+    margin-bottom: 0.2rem;
+}
+
+.settings .items .item h2 {
+    color: var(--settings-font-clr);
+    font-size: 1.5rem;
+}
+
+.settings .items .item>span {
+    margin-left: auto;
+    color: white;
+}
+
+.settings-buttons {
+    position: relative;
+    display: flex;
+    padding: 20px;
+}
+
+.settings-buttons .gear-btn {
+    margin-right: auto;
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    background-color: #054AA5;
+    color: #83C7F1;
+    width: 100px;
+    padding: 5px 0;
+    border: rgba(19, 115, 215, 0.4) 5px solid;
+    cursor: pointer;
 }
 
-.grid-item h1 {
+.settings-buttons .gear-btn>* {
+    font-size: 2.5rem;
+}
+
+.settings-buttons .ok-btn {
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    font-size: 5rem;
+    background-color: gold;
+    color: black;
+    width: 100px;
+    padding: 5px 0;
+    border: rgba(255, 215, 150, 0.8) 3px solid;
+    cursor: pointer;
+    margin-right: 7px;
+}
+
+.settings-buttons .cancel-btn {
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #054AA5;
+    color: white;
+    width: 100px;
+    padding: 5px 0;
+    border: rgba(19, 115, 215, 0.4) 5px solid;
+    cursor: pointer;
+    margin-left: 7px;
+}
+
+
+/* ===== ISLAND SETTINGS SECTION ===== */
+
+.island-settings {
+    background-color: var(--settings-clr);
+    padding: 20px;
+    border-top: 2px white solid;
+}
+
+.island-settings .tab {
+    display: flex;
+    flex-direction: column;
+    gap: .3rem;
+    margin-bottom: 40px;
+}
+
+.island-settings>:last-child {
+    margin-bottom: 0;
+}
+
+.island-settings .tab h2 {
+    background-color: var(--island-bg-clr);
+    padding: 10px;
+    font-size: 2rem;
     margin-bottom: 10px;
 }
 
-.grid-item p {
-    text-align: center;
-    font-family: "Montserrat";
-    font-size: 2rem;
-    font-weight: 600;
+.island-settings .tab h3 {
+    background-color: var(--settings-item-clr);
+    padding: 10px;
+    color: var(--settings-font-clr);
+    font-size: 1.3rem;
 }
 
-.grid-item a {
-    padding: 20px;
-    width: 140px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.2rem;
-    margin-top: 20px;
-    border: 2px white solid;
-    border-radius: 5px;
-    transition: 0.3s;
-}
 
-.grid-item a:hover {
-    background-color: white;
-    color: var(--off-main-clr);
-    transition: 0.3s;
-}
-
-.grid-item img {
-    border: 2px white solid;
-    border-radius: 5px;
-    width: 540px;
-}
-
-.welcome {
-    border: none !important;
-    width: 70vw !important;
-}
-
-@media screen and (max-width: 1100px) {
-    main {
-        grid-template-columns: repeat(1, 1fr);
-        grid-template-rows: repeat(auto, 1fr);
-    }
-    .grid-item {
-        height: 400px;
-    }
-    .grid-item:nth-child(1) {
-        grid-row-start: 1;
-        grid-row-end: 2;
-    }
-    .grid-item:nth-child(2) {
-        grid-row-start: 3;
-        grid-row-end: 4;
-        justify-content: flex-start;
-    }
-    .grid-item:nth-child(3) {
-        grid-row-start: 2;
-        grid-row-end: 3;
-    }
-    .grid-item:nth-child(4) {
-        grid-row-start: 4;
-        grid-row-end: 5;
-    }
-    .grid-item:nth-child(5) {
-        grid-row-start: 5;
-        grid-row-end: 6;
-        justify-content: flex-start;
-    }
-    .grid-item:nth-child(6) {
-        grid-row-start: 7;
-        grid-row-end: 8;
-        justify-content: flex-start;
-    }
-    .grid-item:nth-child(7) {
-        grid-row-start: 6;
-        grid-row-end: 7;
-    }
-}
+/* ========== RESPONSIVE DESIGN ========== */
 
 @media screen and (max-width: 800px) {
     .nav-items-div {
         display: none;
-    }
-    .grid-item {
-        height: 300px;
-    }
-    .grid-item img {
-        width: 270px;
-    }
-    .grid-item h1 {
-        text-align: center;
-        font-size: 9vw;
-        margin-bottom: 10px;
-    }
-    .grid-item p {
-        text-align: center;
-        font-family: "Montserrat";
-        font-size: 4vw;
-        font-weight: 600;
-    }
-    main {
-        padding: 10vw;
     }
     nav {
         display: grid;
@@ -480,10 +502,30 @@ main {
         grid-column-start: 2;
         grid-column-end: 3;
         margin-left: auto;
-        margin-right: 40px;
+        margin-right: 20px;
     }
     header .logo {
         grid-row-start: 1;
         grid-row-end: 2;
+    }
+    .settings .items .item h2 {
+        font-size: .9rem;
+    }
+    .settings .items .item>span {
+        font-size: .9rem;
+    }
+    .settings-buttons .gear-btn {
+        width: 75px;
+    }
+    .settings-buttons .gear-btn>* {
+        font-size: 1.25rem;
+    }
+    .settings-buttons .ok-btn {
+        font-size: 1rem;
+        width: 75px;
+    }
+    .settings-buttons .cancel-btn {
+        font-size: .75rem;
+        width: 75px;
     }
 }

@@ -90,7 +90,7 @@ li {
 header {
     min-height: 80px;
     background-color: var(--main-clr);
-    background-image: url(./Images/Wigglie\ thing.png);
+    background-image: url(../Images/Wigglie\ thing.png);
     background-size: cover;
     padding: 20px;
     position: sticky;
@@ -366,56 +366,22 @@ main {
     .videos-grid {
         grid-template-columns: repeat(1, 216px);
     }
-    header {
-        display: flex;
-        align-items: center;
-        box-shadow: 0 6px 4px -2px var(--main-clr);
-    }
-    .nav {
-        width: 100%;
-    }
-    .logo {
-        flex-grow: 1;
-        height: 45px;
-        width: 135px;
-    }
-    .logo>a>img {
-        height: 45px;
-        width: 135px;
-    }
-    .nav-list {
+    .nav-items-div {
         display: none;
     }
-    .nav-menu-button {
-        display: flex;
-        font-size: 2rem;
-        padding-right: 20px;
+    nav {
+        display: grid;
+        grid-template-rows: repeat(1, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
-    .nav-menu-button:hover {
-        cursor: pointer;
+    header .sidebar-button {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        margin-left: auto;
+        margin-right: 20px;
     }
-    ion-icon {
-        align-items: center;
-        justify-content: center;
-    }
-    .nav-menu {
-        position: fixed;
-        height: 0;
-        width: 150px;
-        background-color: var(--main-clr);
-        top: 80px;
-        right: 20px;
-        padding: 0;
-        z-index: 2;
-        overflow-x: hidden;
-        box-shadow: none;
-        border-radius: 4px;
-        transition: 0.5s;
-        overflow-y: hidden;
-    }
-    .nav-menu .item {
-        padding: 10px 0;
-        text-align: center;
-        font-size: 1rem;
+    header .logo {
+        grid-row-start: 1;
+        grid-row-end: 2;
     }
 }
