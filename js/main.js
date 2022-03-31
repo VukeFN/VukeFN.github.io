@@ -22,10 +22,11 @@ function closeSideBar() {
 }
 
 /* ============================== DEVICE SETTINGS POPUP ============================== */
-var width = $(window).width();
-console.log(width);
 
 function openDeviceSettings() {
+    var width = $(window).width();
+    console.log("the window's width is " + width);
+
     if (width < 800 || width == 800) {
         document.getElementById("settings").style.width = "100%";
         document.getElementById("body").style.overflow = "hidden";
