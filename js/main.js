@@ -47,3 +47,17 @@ function closeDeviceSettings() {
     document.getElementById("lower-opacity-settings").style.width = "0";
     document.getElementById("lower-opacity-settings").style.left = "0";
 }
+
+function openGearPopup() {
+    document.getElementById("gear-popup").style.display = "flex";
+    document
+        .getElementById("gear-btn")
+        .setAttribute("onclick", "closeGearPopup()");
+}
+
+function closeGearPopup() {
+    document.getElementById("gear-popup").style.display = "none";
+    document
+        .getElementById("gear-btn")
+        .setAttribute("onclick", "openGearPopup()");
+}
