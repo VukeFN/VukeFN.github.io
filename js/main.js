@@ -46,6 +46,7 @@ function closeDeviceSettings() {
     document.getElementById("body").style.removeProperty = "height";
     document.getElementById("lower-opacity-settings").style.width = "0";
     document.getElementById("lower-opacity-settings").style.left = "0";
+    closeGearPopup();
 }
 
 function openGearPopup() {

@@ -552,4 +552,28 @@ section.settings {
         font-size: .75rem;
         width: 75px;
     }
+    .gear-popup {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        gap: .5rem;
+        align-items: center;
+        height: 125px;
+        width: 175px;
+        position: absolute;
+        top: 640px;
+        left: 20px;
+        background-color: #054AA5;
+        border: rgba(19, 115, 215, 0.4) 5px solid;
+    }
+    .gear-popup a {
+        padding: 7.5px 10px;
+        width: 80%;
+        border: rgba(19, 115, 215, 0.4) 5px solid;
+        text-align: center;
+        cursor: pointer;
+    }
+    .gear-popup h3 {
+        font-size: 1rem;
+    }
 }

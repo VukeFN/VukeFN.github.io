@@ -287,6 +287,7 @@ header .sidebar-button {
     font-family: "Montserrat", sans-serif;
     font-weight: 900;
     font-size: 1rem;
+    white-space: nowrap;
 }
 
 .sidebar-unfinished-videos {
@@ -313,6 +314,7 @@ header .sidebar-button {
     font-family: "Montserrat", sans-serif;
     font-weight: 900;
     font-size: .75rem;
+    white-space: nowrap;
 }
 
 .sidebar-unfinished-video img {
