@@ -462,7 +462,7 @@ section.settings {
     height: 20%;
     width: 255px;
     position: absolute;
-    top: 570px;
+    bottom: 80px;
     left: 20px;
     background-color: #054AA5;
     border: rgba(19, 115, 215, 0.4) 5px solid;
@@ -561,7 +561,7 @@ section.settings {
         height: 125px;
         width: 175px;
         position: absolute;
-        top: 640px;
+        bottom: 80px;
         left: 20px;
         background-color: #054AA5;
         border: rgba(19, 115, 215, 0.4) 5px solid;
