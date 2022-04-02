@@ -5,10 +5,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/video.css" />
-    <link rel="icon" href="../Images/Website Icon.png" />
+    <link rel="stylesheet" href="/css/video.css" />
+    <link rel="icon" href="/Images/Website Icon.png" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
-    <script src="../js/main.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/video.js"></script>
 
     <title>VukeFN | Videos</title>
 </head>
@@ -16,13 +17,13 @@
 <body id="body">
     <div id="preloader">loading...</div>
     <div id="lower-opacity" class="lower-opacity" onclick="closeSideBar()"></div>
-    <div id="lower-opacity-settings" class="lower-opacity" onclick="closeDeviceSettings()"></div>
+    <div id="lower-opacity-settings" class="lower-opacity"></div>
     <header>
         <nav class="nav">
             <ion-icon name="menu-outline" class="sidebar-button" onclick="openSideBar()"></ion-icon>
             <div class="logo">
                 <a href="https://vukefn.github.io/">
-                    <img src="../Images/Website Logo.png" alt="Website's Logo" width="180" />
+                    <img src="/Images/Website Logo.png" alt="Website's Logo" width="180" />
                 </a>
             </div>
 
@@ -42,7 +43,7 @@
                     <ion-icon name="menu-outline" class="sidebar-button" id="sidebar-button" onclick="closeSideBar()"></ion-icon>
                     <div class="sidebar-logo">
                         <a href="https://vukefn.github.io/">
-                            <img src="../Images/Website Logo.png" alt="Website's Logo" width="180" />
+                            <img src="/Images/Website Logo.png" alt="Website's Logo" width="180" />
                         </a>
                     </div>
                 </div>
@@ -93,31 +94,31 @@
                     <h2>UNFINISHED</h2>
                     <div>
                         <div class="sidebar-unfinished-video">
-                            <img src="../Thumbnails/Team Selector Mechanic.jpg" width="40" />
+                            <img src="/Thumbnails/Team Selector Mechanic.jpg" width="40" />
                             <a href="">
                                 <h3>TEAM SELECTOR (OLD)</h3>
                             </a>
                         </div>
                         <div class="sidebar-unfinished-video">
-                            <img src="../Thumbnails/Team Selector Mechanic.jpg" width="40" />
+                            <img src="/Thumbnails/Team Selector Mechanic.jpg" width="40" />
                             <a href="">
                                 <h3>TEAM SELECTOR (OLD)</h3>
                             </a>
                         </div>
                         <div class="sidebar-unfinished-video">
-                            <img src="../Thumbnails/Team Selector Mechanic.jpg" width="40" />
+                            <img src="/Thumbnails/Team Selector Mechanic.jpg" width="40" />
                             <a href="">
                                 <h3>TEAM SELECTOR (OLD)</h3>
                             </a>
                         </div>
                         <div class="sidebar-unfinished-video">
-                            <img src="../Thumbnails/Team Selector Mechanic.jpg" width="40" />
+                            <img src="/Thumbnails/Team Selector Mechanic.jpg" width="40" />
                             <a href="">
                                 <h3>TEAM SELECTOR (OLD)</h3>
                             </a>
                         </div>
                         <div class="sidebar-unfinished-video">
-                            <img src="../Thumbnails/Team Selector Mechanic.jpg" width="40" />
+                            <img src="/Thumbnails/Team Selector Mechanic.jpg" width="40" />
                             <a href="">
                                 <h3>TEAM SELECTOR (OLD)</h3>
                             </a>
@@ -127,13 +128,13 @@
 
                 <div class="sidebar-footer">
                     <a href="https://youtube.com/c/vukefn" target="blank_">
-                        <img class="social-media" src="../Images/YouTube.png" />
+                        <img class="social-media" src="/Images/YouTube.png" />
                     </a>
                     <a href="https://discord.gg/uzjyMmG" target="blank_">
-                        <img class="social-media" src="../Images/Discord.png" />
+                        <img class="social-media" src="/Images/Discord.png" />
                     </a>
                     <a href="https://twitter.com/vukefn" target="blank_">
-                        <img class="social-media" src="../Images/Twitter.png" />
+                        <img class="social-media" src="/Images/Twitter.png" />
                     </a>
                 </div>
             </div>
@@ -143,56 +144,36 @@
     <!-- ========== MAIN ========== -->
     <main id="main">
         <section>
-            <div class="devices-sec1">
+            <section class="devices-sec1" id="settings1">
                 <h2>Start Area</h2>
                 <div class="sec-devices">
-                    <div onclick="openDeviceSettings()" id="" data-channel="one" class="TRIGGER">
-                        device
-                    </div>
+                    <div id="" data-channel="one" class="SCORE-MANAGER"></div>
+                    <div id="" data-channel="two" class="TRIGGER">CH 04</div>
                 </div>
-            </div>
-            <div class="devices-sec2">
+                </div>
+            </section>
+            <section class="devices-sec2" id="settings2">
                 <h2>Loadout Selection Area</h2>
-                <div class="sec-devices">
-                    <div onclick="openDeviceSettings()" id="" data-channel="one" class="TRIGGER">
-                        device
-                    </div>
-                </div>
-            </div>
-            <div class="devices-sec1">
+            </section>
+            <section class="devices-sec1" id="settings3">
                 <h2>Team Selection Area</h2>
-                <div class="sec-devices">
-                    <div onclick="openDeviceSettings()" id="" data-channel="one" class="TRIGGER">
-                        device
-                    </div>
-                </div>
-            </div>
-            <div class="devices-sec2">
+            </section>
+            <section class="devices-sec2" id="settings4">
                 <h2>Round Manager</h2>
-                <div class="sec-devices">
-                    <div onclick="openDeviceSettings()" id="" data-channel="one" class="TRIGGER">
-                        device
-                    </div>
-                </div>
-            </div>
-            <div class="devices-sec1">
+            </section>
+            <section class="devices-sec1" id="settings5">
                 <h2>Team Selector Mechanic</h2>
-                <div class="sec-devices">
-                    <div onclick="openDeviceSettings()" id="" data-channel="one" class="TRIGGER">
-                        device
-                    </div>
-                </div>
-            </div>
+            </section>
         </section>
 
         <!-- ========== SETTINGS ========== -->
         <section class="settings" id="settings">
-            <div class="settings-title">
-                <h2>CUSTOMIZE</h2>
-                <span class="device-name">Trigger</span>
-            </div>
-
             <ul class="items">
+                <li class="settings-title">
+                    <h2>CUSTOMIZE</h2>
+                    <span class="device-name">Trigger</span>
+                </li>
+
                 <li class="item">
                     <h2>Activate On Game Start</h2>
                     <span>yes</span>
@@ -219,13 +200,16 @@
                 <div class="gear-btn" id="gear-btn" onclick="openGearPopup()">
                     <ion-icon name="settings-sharp"></ion-icon>
                 </div>
-                <div class="ok-btn" onclick="closeDeviceSettings()">ok</div>
-                <div class="cancel-btn" onclick="closeDeviceSettings()">cancel</div>
+                <div class="close ok-btn">ok</div>
+                <div class="close cancel-btn">cancel</div>
             </div>
 
             <div class="gear-popup" id="gear-popup">
-                <a href="https://www.youtube.com/watch?v=YgiAJ-3v0_Y&t=75s" target="blank_">
-                    <h3>Mark as done</h3>
+                <a>
+                    <h3 class="mark-as-done-btn">Mark as done</h3>
+                </a>
+                <a>
+                    <h3 class="unmark-as-done-btn">Unmark as done</h3>
                 </a>
                 <a href="https://www.youtube.com/watch?v=YgiAJ-3v0_Y&t=75s" target="blank_">
                     <h3>Show in video</h3>

@@ -1,7 +1,7 @@
 /* ============================== LOADING PAGE ============================== */
 window.addEventListener("load", function() {
     document.getElementById("preloader").style.display = "none";
-    this.document.getElementById("website-intro").style.display = "flex";
+    document.getElementById("website-intro").style.display = "flex";
 });
 
 /* ============================== SIDEBAR ============================== */
@@ -21,34 +21,7 @@ function closeSideBar() {
     document.getElementById("lower-opacity").style.left = "0";
 }
 
-/* ============================== DEVICE SETTINGS POPUP ============================== */
-
-function openDeviceSettings() {
-    var width = $(window).width();
-    console.log("the window's width is " + width);
-
-    if (width < 800 || width == 800) {
-        document.getElementById("settings").style.width = "100%";
-        document.getElementById("body").style.overflow = "hidden";
-        document.getElementById("body").style.height = "100%";
-    } else if (width > 800) {
-        document.getElementById("settings").style.width = "50%";
-        document.getElementById("body").style.overflow = "hidden";
-        document.getElementById("body").style.height = "100%";
-        document.getElementById("lower-opacity-settings").style.width = "100vw";
-        document.getElementById("lower-opacity-settings").style.left = "0vw";
-    }
-}
-
-function closeDeviceSettings() {
-    document.getElementById("settings").style.width = "0";
-    document.getElementById("body").style.overflow = "overlay";
-    document.getElementById("body").style.removeProperty = "height";
-    document.getElementById("lower-opacity-settings").style.width = "0";
-    document.getElementById("lower-opacity-settings").style.left = "0";
-    closeGearPopup();
-}
-
+/* =============== GEAR POPUP =============== */
 function openGearPopup() {
     document.getElementById("gear-popup").style.display = "flex";
     document
