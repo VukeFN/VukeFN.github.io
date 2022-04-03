@@ -26,6 +26,7 @@ html {
 
 body {
     overflow: overlay;
+    background-color: var(--off-main-clr);
 }
 
 a {
@@ -290,16 +291,24 @@ header .sidebar-button {
 main {
     background-color: var(--off-main-clr);
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1.5fr 4fr 1.5fr;
 }
 
 .ad-desktop1 {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-rows: repeat(auto-fit, 1fr);
+}
+
+.ad-desktop1>div {
+    margin: 30px;
 }
 
 .ad-mobile1 {
+    display: none;
+}
+
+.ad-slot2 {
     display: none;
 }
 
@@ -313,14 +322,14 @@ main {
 }
 
 .videos-grid {
-    margin: 0 20px;
     padding: 30px;
     margin-right: auto;
     margin-left: auto;
     display: grid;
     gap: 1rem;
-    grid-template-columns: repeat(5, 216px);
+    grid-template-columns: repeat(auto-fit, minmax(216px, 1fr));
     grid-auto-rows: 1fr;
+    justify-content: center;
 }
 
 .video {
@@ -344,6 +353,7 @@ main {
     text-align: left;
     font-weight: 600;
     margin-top: 15px;
+    width: 216px;
 }
 
 .video-title:hover {
@@ -353,7 +363,8 @@ main {
 
 /* ========== RESPONSIVE DESIGN ========== */
 
-@media screen and (max-width: 1695px) {
+
+/* @media screen and (max-width: 1695px) {
     .videos-grid {
         grid-template-columns: repeat(4, 216px);
     }
@@ -369,7 +380,7 @@ main {
     .videos-grid {
         grid-template-columns: repeat(2, 216px);
     }
-}
+} */
 
 @media screen and (max-width: 800px) {
     main {
@@ -414,7 +425,10 @@ main {
     .ad-desktop1 {
         display: none;
     }
-    .ad-mobile1 {
+    .ad-slot1 {
+        display: none;
+    }
+    .ad-slot2 {
         display: block;
     }
 }

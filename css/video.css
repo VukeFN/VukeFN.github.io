@@ -496,12 +496,12 @@ section.settings {
     white-space: nowrap;
 }
 
-.settings .items {
+.settings .settings-list {
     position: relative;
     flex-grow: 1;
 }
 
-.settings .items .item {
+.settings .settings-list .item {
     display: flex;
     align-items: center;
     margin: 10px 20px 0 20px;
@@ -510,12 +510,12 @@ section.settings {
     padding: 15px 30px 15px 20px;
 }
 
-.settings .items .item h2 {
+.settings .settings-list .item h2 {
     color: var(--settings-font-clr);
     font-size: 75%;
 }
 
-.settings .items .item>span {
+.settings .settings-list .item>span {
     font-size: 75%;
     margin-left: auto;
     color: white;
