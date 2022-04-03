@@ -417,6 +417,36 @@ main {
     font-family: 'alarm_clock';
 }
 
+.HEALTH-POWERUP {
+    height: 125px;
+    width: 125px;
+    background-image: url(/Devices/health_powerup.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    cursor: pointer;
+    color: rgb(138, 138, 229);
+    font-size: 1.2rem;
+    padding: 10px 0 0 40px;
+    letter-spacing: -0.10rem;
+    font-family: 'alarm_clock';
+}
+
+.PLAYER-SPAWN-PAD {
+    height: 125px;
+    width: 125px;
+    background-image: url(/Devices/player_spawn_pad.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    cursor: pointer;
+    color: rgb(138, 138, 229);
+    font-size: 1.2rem;
+    padding: 10px 0 0 40px;
+    letter-spacing: -0.10rem;
+    font-family: 'alarm_clock';
+}
+
 .marked-as-done {
     opacity: 0.2;
 }
@@ -463,6 +493,7 @@ section.settings {
     padding-top: 5px;
     padding-bottom: 5px;
     transform: rotate(-0.5deg);
+    white-space: nowrap;
 }
 
 .settings .items {
@@ -574,6 +605,7 @@ section.settings {
     background-color: var(--settings-clr);
     padding: 20px;
     border-top: 2px white solid;
+    height: 397px;
 }
 
 .island-settings .tab {
@@ -583,8 +615,11 @@ section.settings {
     margin-bottom: 40px;
 }
 
-.island-settings>:last-child {
-    margin-bottom: 0;
+.island-settings .tab>div {
+    display: flex;
+    background-color: var(--settings-item-clr);
+    padding: 10px 20px;
+    justify-content: space-between;
 }
 
 .island-settings .tab h2 {
@@ -595,9 +630,12 @@ section.settings {
 }
 
 .island-settings .tab h3 {
-    background-color: var(--settings-item-clr);
-    padding: 10px;
     color: var(--settings-font-clr);
+    font-size: 1.3rem;
+}
+
+.island-settings .tab span {
+    color: white;
     font-size: 1.3rem;
 }
 
