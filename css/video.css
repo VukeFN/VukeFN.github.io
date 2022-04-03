@@ -605,7 +605,6 @@ section.settings {
     background-color: var(--settings-clr);
     padding: 20px;
     border-top: 2px white solid;
-    height: 397px;
 }
 
 .island-settings .tab {
