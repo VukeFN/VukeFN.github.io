@@ -397,6 +397,9 @@ main {
         grid-row-start: 1;
         grid-row-end: 2;
     }
+    .ad-mobile1 {
+        display: block;
+    }
     .ad-slot2 {
         display: block;
     }
@@ -411,6 +414,9 @@ main {
     }
     .ad-slot1 {
         display: none;
+    }
+    .ad-mobile1 {
+        display: block;
     }
     .ad-slot2 {
         display: block;
