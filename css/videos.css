@@ -289,8 +289,8 @@ header .sidebar-button {
 
 main {
     background-color: var(--off-main-clr);
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .page-title {
