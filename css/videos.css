@@ -293,10 +293,14 @@ main {
     grid-template-columns: repeat(3, 1fr);
 }
 
-.ad {
+.ad-desktop1 {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(5, 1fr);
+}
+
+.ad-mobile1 {
+    display: none;
 }
 
 .extra {
@@ -407,7 +411,10 @@ main {
     main {
         grid-template-columns: repeat(1, 1fr);
     }
-    .ad {
+    .ad-desktop1 {
         display: none;
+    }
+    .ad-mobile1 {
+        display: block;
     }
 }
