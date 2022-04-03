@@ -521,6 +521,10 @@ section.settings {
     color: white;
 }
 
+.ad-slot3 {
+    display: none;
+}
+
 .settings-buttons {
     position: relative;
     display: flex;

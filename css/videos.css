@@ -363,25 +363,6 @@ main {
 
 /* ========== RESPONSIVE DESIGN ========== */
 
-
-/* @media screen and (max-width: 1695px) {
-    .videos-grid {
-        grid-template-columns: repeat(4, 216px);
-    }
-}
-
-@media screen and (max-width: 1455px) {
-    .videos-grid {
-        grid-template-columns: repeat(3, 216px);
-    }
-}
-
-@media screen and (max-width: 1065px) {
-    .videos-grid {
-        grid-template-columns: repeat(2, 216px);
-    }
-} */
-
 @media screen and (max-width: 800px) {
     main {
         grid-template-columns: repeat(3, 1fr);
@@ -415,6 +396,9 @@ main {
     header .logo {
         grid-row-start: 1;
         grid-row-end: 2;
+    }
+    .ad-slot2 {
+        display: block;
     }
 }
 
