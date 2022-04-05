@@ -43,6 +43,7 @@ html {
 
 body {
     overflow: overlay;
+    overflow-x: hidden;
 }
 
 a {
@@ -524,10 +525,6 @@ section.settings {
     font-size: 75%;
     margin-left: auto;
     color: white;
-}
-
-.ad-slot3 {
-    display: none;
 }
 
 .settings-buttons {
