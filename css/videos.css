@@ -366,15 +366,8 @@ main {
 
 .ad-container-desktop {
     display: grid;
-    grid-template-rows: 1fr .5fr 1fr .5fr 1fr;
-}
-
-.ad-slot-desktop {
-    display: block;
-}
-
-.extra {
-    background-color: red;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(auto-fit, 1fr);
 }
 
 .ad-container-mobile {
@@ -441,7 +434,7 @@ main {
     }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 883px) {
     main {
         grid-template-columns: repeat(3, 1fr);
     }
@@ -465,7 +458,6 @@ main {
     }
     .ad-container-mobile {
         display: block;
-        background-color: red;
     }
     .ad-slot-mobile {
         display: block;
