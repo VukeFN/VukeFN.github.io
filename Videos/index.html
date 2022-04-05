@@ -5,11 +5,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/videos.css" />
-    <link rel="icon" href="../Images/Website Icon.png" />
+    <link rel="stylesheet" href="/css/videos.css" />
+    <link rel="icon" href="/Images/Website Icon.png" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6373919257226739" crossorigin="anonymous"></script>
-    <script src="../js/main.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/videos.js"></script>
     <title>VukeFN | Videos</title>
 </head>
 
@@ -17,11 +18,20 @@
     <div id="preloader">loading...</div>
     <header>
         <nav class="nav">
-            <ion-icon name="menu-outline" class="sidebar-button" onclick="openSideBar()"></ion-icon>
-            <div class="logo">
-                <a href="https://vukefn.github.io/">
-                    <img src="../Images/Website Logo.png" alt="Website's Logo" width="180" />
-                </a>
+            <div class="logo-container">
+                <ion-icon name="menu-outline" class="sidebar-button" onclick="openSideBar()"></ion-icon>
+                <div class="logo">
+                    <a href="https://vukefn.github.io/">
+                        <img src="../Images/Website Logo.png" alt="Website's Logo" width="180" />
+                    </a>
+                </div>
+            </div>
+
+            <div class="search-bar">
+                <input class="search-bar-input" placeholder="Search for a video." type="search" id="search-input1"></input>
+                <button class="search-bar-icon">
+                    <ion-icon name="search-outline" id="search-submit1"></ion-icon>
+                </button>
             </div>
 
             <div class="nav-items-div">
@@ -36,12 +46,20 @@
             </div>
 
             <div id="sidebar" class="sidebar">
+
                 <div class="sidebar-header">
                     <ion-icon name="menu-outline" class="sidebar-button" id="sidebar-button" onclick="closeSideBar()"></ion-icon>
                     <div class="sidebar-logo">
                         <a href="https://vukefn.github.io/">
                             <img src="../Images/Website Logo.png" alt="Website's Logo" width="180" />
                         </a>
+                    </div>
+                </div>
+
+                <div class="sidebar-search">
+                    <input class="search-bar-input" placeholder="Search for a video." type="search" id="search-input2"></input>
+                    <div class="search-bar-icon" id="search-submit2">
+                        <ion-icon name="search-outline"></ion-icon>
                     </div>
                 </div>
 
