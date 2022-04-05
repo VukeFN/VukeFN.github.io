@@ -65,7 +65,7 @@ li {
 /* ==================== WEBSITE ==================== */
 
 ::-webkit-scrollbar {
-    width: 25px;
+    width: 10px;
 }
 
  ::-webkit-scrollbar-track {
@@ -76,12 +76,15 @@ li {
     background: rgba(5, 5, 5, 0.7);
     transition: 0.2s;
     border-radius: 100vw;
-    border: 7px var(--off-main-clr) solid;
 }
 
  ::-webkit-scrollbar-thumb:hover {
     background: rgb(0, 0, 0);
     transition: 0.2s;
+}
+
+::-webkit-scrollbar-button {
+    display: none;
 }
 
 #preloader {
@@ -223,6 +226,7 @@ header .sidebar-button {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     border-bottom: 3px rgba(0, 0, 0, 0.1) solid;
+    overflow-y: scroll;
 }
 
 .sidebar-playlists>h2 {
@@ -249,6 +253,7 @@ header .sidebar-button {
     padding: 20px;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
+    overflow-y: scroll;
 }
 
 .sidebar-unfinished-videos>h2 {

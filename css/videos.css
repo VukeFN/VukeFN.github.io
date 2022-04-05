@@ -49,7 +49,7 @@ li {
 /* ==================== WEBSITE ==================== */
 
 ::-webkit-scrollbar {
-    width: 25px;
+    width: 10px;
 }
 
  ::-webkit-scrollbar-track {
@@ -60,12 +60,15 @@ li {
     background: rgba(5, 5, 5, 0.7);
     transition: 0.2s;
     border-radius: 100vw;
-    border: 7px var(--off-main-clr) solid;
 }
 
  ::-webkit-scrollbar-thumb:hover {
     background: rgb(0, 0, 0);
     transition: 0.2s;
+}
+
+::-webkit-scrollbar-button {
+    display: none;
 }
 
 #preloader {
@@ -177,14 +180,6 @@ header .sidebar-button {
 
 .nav-menu-button {
     display: none;
-}
-
-
-/* ========== PAGE ========== */
-
-.page {
-    display: flex;
-    flex-direction: row;
 }
 
 
@@ -434,7 +429,7 @@ main {
     }
 }
 
-@media screen and (max-width: 883px) {
+@media screen and (max-width: 800px) {
     main {
         grid-template-columns: repeat(3, 1fr);
     }
