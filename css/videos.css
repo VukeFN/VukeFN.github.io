@@ -355,6 +355,9 @@ header .sidebar-button {
 
 main {
     background-color: var(--off-main-clr);
+}
+
+.content {
     display: grid;
     grid-template-columns: 1.5fr 4fr 1.5fr;
 }
@@ -373,20 +376,63 @@ main {
     display: none;
 }
 
+.page-header {
+    width: 100vw;
+    position: relative;
+    padding: 33px;
+    display: flex;
+    align-items: center;
+    background-color: var(--main-clr);
+    box-shadow: 0px 2px 15px 0px #000000;
+}
+
 .page-title {
-    padding: 20px 0 0 33px;
     font-size: 3rem;
+}
+
+.no-video-hint {
+    position: absolute;
+    left: 230px;
+    top: 32px;
+    width: 20px;
+    fill: white;
+}
+
+.no-video-hint:hover {
+    cursor: pointer;
+}
+
+.tooltip {
+    position: absolute;
+    left: 270px;
+    top: 20px;
+    background-color: var(--off-main-clr);
+    box-shadow: 0px 2px 15px 10px #000000;
+    color: white;
+    width: 200px;
+    padding: 20px;
+    border-radius: 7px;
+    font-size: .8rem;
+    opacity: 0;
+    transition: 0.5s ease;
+}
+
+.tooltip::before {
+    content: "";
+    position: absolute;
+    left: -26px;
+    top: 5%;
+    transform: rotate(90deg);
+    border: 13px solid;
+    border-color: #121011 #0000 #0000 #0000;
 }
 
 .videos-grid {
     padding: 30px;
-    margin-right: auto;
-    margin-left: auto;
     display: grid;
-    gap: 1rem;
-    grid-template-columns: repeat(auto-fit, minmax(216px, 1fr));
+    gap: .5rem;
+    grid-template-columns: repeat(auto-fill, minmax(216px, 1fr));
     grid-auto-rows: 1fr;
-    justify-content: center;
 }
 
 .video {
@@ -407,6 +453,7 @@ main {
 }
 
 .video-title {
+    font-size: 1rem;
     text-align: left;
     font-weight: 600;
     margin-top: 15px;
@@ -430,20 +477,8 @@ main {
 }
 
 @media screen and (max-width: 800px) {
-    main {
+    .content {
         grid-template-columns: repeat(3, 1fr);
-    }
-    .page-title {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding-left: 0;
-    }
-    .videos-grid {
-        display: flex;
-        flex-direction: column;
-        width: 216px;
-        padding: 0;
     }
     .nav-items-div {
         display: none;
@@ -459,8 +494,11 @@ main {
     }
 }
 
-@media screen and (max-width: 500px) {
-    main {
+@media screen and (max-width: 600px) {
+    .content {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .videos-grid {
         grid-template-columns: repeat(1, 1fr);
     }
     .ad-container-desktop {
@@ -474,5 +512,14 @@ main {
     }
     .ad-slot-mobile {
         display: block;
+    }
+    .tooltip {
+        left: 80px;
+        top: 70px;
+    }
+    .tooltip::before {
+        top: -25px;
+        left: 145px;
+        transform: rotate(180deg);
     }
 }
