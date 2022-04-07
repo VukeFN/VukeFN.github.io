@@ -513,13 +513,21 @@ main {
     .ad-slot-mobile {
         display: block;
     }
+    .no-video-hint {
+        top: 35px;
+        left: 165px;
+        width: 17px;
+    }
     .tooltip {
-        left: 80px;
+        left: 140px;
         top: 70px;
     }
     .tooltip::before {
         top: -25px;
-        left: 145px;
+        left: 20px;
         transform: rotate(180deg);
+    }
+    .page-title {
+        font-size: 2rem;
     }
 }
