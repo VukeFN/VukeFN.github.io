@@ -305,6 +305,38 @@ main {
     background-color: var(--off-main-clr);
 }
 
+.page-header {
+    display: flex;
+    width: 100vw;
+    position: relative;
+    padding: 33px;
+    display: flex;
+    align-items: center;
+    background-color: var(--main-clr);
+    z-index: 1;
+    box-shadow: 0px 2px 15px 0px #000000;
+}
+
+.page-title {
+    flex-grow: 1;
+    font-family: "Montserrat";
+    font-weight: 900;
+    font-size: 3vw;
+    white-space: wrap;
+}
+
+.watch-on-yt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+}
+
+.watch-on-yt>* {
+    font-family: "Montserrat";
+    font-size: 1.5vw;
+}
+
 
 /* ===== DEVICES SECTION ===== */
 
@@ -312,13 +344,13 @@ main {
     height: 230px;
     padding: 20px;
     position: relative;
-    background-color: var(--main-clr);
+    background-color: var(--off-main-clr);
 }
 
 .devices-sec2 {
     height: 230px;
     padding: 20px;
-    background-color: var(--off-main-clr);
+    background-color: var(--main-clr);
 }
 
 .sec-devices {

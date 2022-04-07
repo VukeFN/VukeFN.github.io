@@ -1,7 +1,10 @@
 /* ============================== LOADING PAGE ============================== */
-window.addEventListener("load", function() {
-    document.getElementById("preloader").style.display = "none";
-    document.getElementById("website-intro").style.display = "flex";
+$(document).ready(function() {
+    $("#preloader").css({ display: "none" });
+    $("#website-intro").css({ display: "flex" });
+
+    const pageTitle = $("title").text().substring(9).toLocaleUpperCase();
+    $(".page-title").text(pageTitle);
 });
 
 /* ============================== SIDEBAR ============================== */

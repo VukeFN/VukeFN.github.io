@@ -144,6 +144,10 @@ header .sidebar-button {
     border-radius: 3px;
 }
 
+.search-bar .search-bar-input::-webkit-search-cancel-button {
+    display: none;
+}
+
 .search-bar .search-bar-icon {
     display: flex;
     justify-content: center;
@@ -254,6 +258,10 @@ header .sidebar-button {
     background-color: var(--off-main-clr);
     border: 2px solid white;
     border-radius: 3px;
+}
+
+.sidebar-search .search-bar-input::-webkit-search-cancel-button {
+    display: none;
 }
 
 .sidebar-search .search-bar-icon {
