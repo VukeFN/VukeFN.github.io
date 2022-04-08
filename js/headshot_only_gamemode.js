@@ -2,6 +2,7 @@ $(document).ready(function() {
     $("div.sec-devices > div").click(function(e) {
         $("div").removeClass("active");
         $(this).addClass("active");
+        checkIfMarkedAsDone();
         let deviceType = $(this).attr("class").split(" ")[0];
         loadSettings(
             $(this).parent().parent().attr("id"),
@@ -77,8 +78,11 @@ function loadSettings(parent, trigger, deviceType) {
     console.log(`parent: ${parent}, channel: ${trigger}`);
     for (let [key, value] of Object.entries(settings[parent][trigger])) {
         $(`<li class="item"><h2>${key}</h2><span>${value}</span></li>`)
+            .not(value)
             .appendTo(".settings ul")
             .slideDown("fast");
+
+        $(".show-in-video").attr("href", settings[parent][trigger].link);
     }
 }
 

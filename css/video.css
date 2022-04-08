@@ -401,6 +401,7 @@ main {
     border-radius: 50%;
     transition: 0.3s;
     cursor: pointer;
+    border: 1px white solid;
 }
 
 .scroll-right {
@@ -428,6 +429,7 @@ main {
     border-radius: 50%;
     transition: 0.3s;
     cursor: pointer;
+    border: 1px white solid;
 }
 
 .TRIGGER {
@@ -540,8 +542,62 @@ main {
     cursor: pointer;
 }
 
+.TIMER {
+    height: 125px;
+    width: 125px;
+    background-image: url(/Devices/timer.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    cursor: pointer;
+}
+
+.BARRIER {
+    height: 125px;
+    width: 125px;
+    background-image: url(/Devices/barrier.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    cursor: pointer;
+}
+
+.MATCHMAKING-PORTAL {
+    height: 125px;
+    width: 125px;
+    background-image: url(/Devices/matchmaking_portal.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    cursor: pointer;
+}
+
+.SWITCH {
+    height: 125px;
+    width: 125px;
+    background-image: url(/Devices/switch.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    cursor: pointer;
+}
+
 .marked-as-done {
     opacity: 0.2;
+}
+
+.devices-sec1 .dividor {
+    width: 4px;
+    height: 80%;
+    margin: 0 10px;
+    background-color: var(--main-clr);
+}
+
+.devices-sec2 .dividor {
+    width: 4px;
+    height: 80%;
+    margin: 0 10px;
+    background-color: var(--off-main-clr);
 }
 
 
@@ -578,7 +634,7 @@ section.settings {
 }
 
 .device-name {
-    font-size: 130%;
+    font-size: 90%;
     margin-left: auto;
     background-color: #00AAFF;
     padding-left: 35px;
@@ -592,6 +648,15 @@ section.settings {
 .settings .settings-list {
     position: relative;
     flex-grow: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.settings .settings-list::-webkit-scrollbar-thumb {
+    width: 10px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 2px;
 }
 
 .settings .settings-list .item {
@@ -605,13 +670,15 @@ section.settings {
 
 .settings .settings-list .item h2 {
     color: var(--settings-font-clr);
-    font-size: 75%;
+    font-size: 60%;
+    overflow-x: visible;
 }
 
 .settings .settings-list .item>span {
-    font-size: 75%;
+    font-size: 60%;
     margin-left: auto;
     color: white;
+    overflow-x: visible;
 }
 
 .settings-buttons {

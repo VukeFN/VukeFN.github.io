@@ -7,11 +7,19 @@ $(document).ready(function() {
     $(".page-title").text(pageTitle);
 
     $(".scroll-left").click(function() {
-        $(".sec-devices").scrollLeft($(".sec-devices").scrollLeft() - 350);
+        const currentParent = $(this).parent([0]).attr("id");
+        console.log(currentParent);
+        $(`#${currentParent} .sec-devices`).scrollLeft(
+            $(`#${currentParent} .sec-devices`).scrollLeft() - 500
+        );
     });
 
     $(".scroll-right").click(function() {
-        $(".sec-devices").scrollLeft($(".sec-devices").scrollLeft() + 350);
+        const currentParent = $(this).parent([0]).attr("id");
+        console.log(currentParent);
+        $(`#${currentParent} .sec-devices`).scrollLeft(
+            $(`#${currentParent} .sec-devices`).scrollLeft() + 500
+        );
     });
 });
 
