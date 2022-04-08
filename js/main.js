@@ -5,6 +5,14 @@ $(document).ready(function() {
 
     const pageTitle = $("title").text().substring(9).toLocaleUpperCase();
     $(".page-title").text(pageTitle);
+
+    $(".scroll-left").click(function() {
+        $(".sec-devices").scrollLeft($(".sec-devices").scrollLeft() - 350);
+    });
+
+    $(".scroll-right").click(function() {
+        $(".sec-devices").scrollLeft($(".sec-devices").scrollLeft() + 350);
+    });
 });
 
 /* ============================== SIDEBAR ============================== */

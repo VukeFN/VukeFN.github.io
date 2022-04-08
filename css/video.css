@@ -350,16 +350,84 @@ main {
 .devices-sec2 {
     height: 230px;
     padding: 20px;
+    position: relative;
     background-color: var(--main-clr);
 }
 
 .sec-devices {
     height: 100%;
     display: flex;
+    flex-wrap: nowrap;
     justify-content: left;
     align-items: center;
-    flex-wrap: wrap;
     gap: 3rem;
+    overflow-x: auto;
+    margin: 0 50px;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    scroll-behavior: smooth;
+}
+
+.sec-devices::-webkit-scrollbar {
+    display: none;
+}
+
+.sec-devices>* {
+    flex: 0 0 auto;
+}
+
+.scroll-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 15px;
+    bottom: 30%;
+    border-radius: 50%;
+    transition: 0.3s;
+    width: 55px;
+    height: 55px;
+}
+
+.scroll-left>* {
+    opacity: .5;
+    font-size: 2.5rem;
+}
+
+.scroll-left:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    opacity: 1;
+    border-radius: 50%;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.scroll-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 15px;
+    bottom: 30%;
+    border-radius: 50%;
+    transition: 0.3s;
+    width: 55px;
+    height: 55px;
+}
+
+.scroll-right>* {
+    opacity: .5;
+    font-size: 2.5rem;
+}
+
+.scroll-right:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    opacity: 1;
+    border-radius: 50%;
+    transition: 0.3s;
+    cursor: pointer;
 }
 
 .TRIGGER {
@@ -392,11 +460,6 @@ main {
     background-image: url(/Devices/mutator.png);
     background-size: cover;
     cursor: pointer;
-    color: rgb(138, 138, 229);
-    font-size: 1.2rem;
-    padding: 10px 0 0 40px;
-    letter-spacing: -0.10rem;
-    font-family: 'alarm_clock';
 }
 
 .SEQUENCER {
@@ -405,9 +468,6 @@ main {
     background-image: url(/Devices/sequencer.png);
     background-size: cover;
     cursor: pointer;
-    color: rgb(138, 138, 229);
-    font-size: 1.2rem;
-    position: relative;
 }
 
 .SCORE-MANAGER {
@@ -418,11 +478,6 @@ main {
     background-repeat: no-repeat;
     background-position: center center;
     cursor: pointer;
-    color: rgb(138, 138, 229);
-    font-size: 1.2rem;
-    padding: 10px 0 0 40px;
-    letter-spacing: -0.10rem;
-    font-family: 'alarm_clock';
 }
 
 .HUD-MESSAGE-DEVICE {
@@ -433,11 +488,6 @@ main {
     background-repeat: no-repeat;
     background-position: center center;
     cursor: pointer;
-    color: rgb(138, 138, 229);
-    font-size: 1.2rem;
-    padding: 10px 0 0 40px;
-    letter-spacing: -0.10rem;
-    font-family: 'alarm_clock';
 }
 
 .TEAM-SETTINGS {
@@ -448,11 +498,6 @@ main {
     background-repeat: no-repeat;
     background-position: center center;
     cursor: pointer;
-    color: rgb(138, 138, 229);
-    font-size: 1.2rem;
-    padding: 10px 0 0 40px;
-    letter-spacing: -0.10rem;
-    font-family: 'alarm_clock';
 }
 
 .HEALTH-POWERUP {
@@ -463,11 +508,6 @@ main {
     background-repeat: no-repeat;
     background-position: center center;
     cursor: pointer;
-    color: rgb(138, 138, 229);
-    font-size: 1.2rem;
-    padding: 10px 0 0 40px;
-    letter-spacing: -0.10rem;
-    font-family: 'alarm_clock';
 }
 
 .PLAYER-SPAWN-PAD {
@@ -478,11 +518,26 @@ main {
     background-repeat: no-repeat;
     background-position: center center;
     cursor: pointer;
-    color: rgb(138, 138, 229);
-    font-size: 1.2rem;
-    padding: 10px 0 0 40px;
-    letter-spacing: -0.10rem;
-    font-family: 'alarm_clock';
+}
+
+.CLASS-DESIGNER {
+    height: 125px;
+    width: 125px;
+    background-image: url(/Devices/class_designer.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    cursor: pointer;
+}
+
+.CLASS-SELECTOR {
+    height: 125px;
+    width: 125px;
+    background-image: url(/Devices/class_selector.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    cursor: pointer;
 }
 
 .marked-as-done {
