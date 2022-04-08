@@ -2,6 +2,7 @@ $(document).ready(function() {
     $("div.sec-devices > div").click(function(e) {
         $("div").removeClass("active");
         $(this).addClass("active");
+        checkIfMarkedAsDone();
         let deviceType = $(this).attr("class").split(" ")[0];
         loadSettings(
             $(this).parent().parent().attr("id"),
