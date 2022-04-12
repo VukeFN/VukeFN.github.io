@@ -1,6 +1,7 @@
 /* ============================== BASE ============================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ms+Madi&display=swap');
 @font-face {
     font-family: 'alarm_clock';
     src: url('../Fonts/alarm_clock-webfont.woff2');
@@ -33,7 +34,7 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    font-family: "Burbank", sans-serif;
+    font-family: "Montserrat", sans-serif;
     color: white;
 }
 
@@ -43,6 +44,7 @@ html {
 
 body {
     overflow: overlay;
+    background-color: var(--off-main-clr);
 }
 
 a {
@@ -151,58 +153,227 @@ li {
 /* ============================== HEADER ============================== */
 
 header {
-    min-height: 80px;
-    background-color: var(--main-clr);
-    background-image: url(../Images/Wigglie\ thing.png);
-    background-size: cover;
-    padding: 20px;
-    position: sticky;
+    height: 1000px;
+}
+
+header::before {
+    content: '';
+    height: 1000px;
+    position: absolute;
+    width: 95vw;
     top: 0;
-    z-index: 1;
-    box-shadow: 0 6px 4px -2px var(--main-clr);
+    right: 5vw;
+    z-index: -1;
+    background: var(--main-clr);
+    border-bottom-right-radius: 150px;
 }
 
-nav {
+.nav {
+    margin-right: 8vw;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+    height: 100%;
+}
+
+
+/* ===== NAV HEADER ===== */
+
+.nav-header {
+    display: flex;
+    justify-content: flex-start;
     align-items: center;
+    position: relative;
+    height: 80px;
+    width: 100%;
 }
 
-header .sidebar-button {
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-container .sidebar-button {
     font-size: 2rem;
-    margin: 0 1.5rem;
+    margin-left: 1.5rem;
 }
 
-.logo {
+.logo-container .logo {
     height: 40px;
     width: 180px;
-    flex-grow: 1;
     display: flex;
     align-items: center;
 }
 
-.logo:hover {
+.logo-container .logo:hover {
     cursor: pointer;
+}
+
+.nav-items-div {
+    display: flex;
+    width: 100%;
 }
 
 .nav-list {
     display: flex;
+    align-items: center;
     flex-direction: row;
+    flex-grow: 1;
 }
 
-.item {
-    padding: 0 40px;
-    font-size: 25px;
+.nav-list .item {
+    margin: 0 20px;
+    padding: 5px 20px;
+    font-size: 15px;
     list-style: none;
 }
 
-.item>a {
+.nav-list .item>a {
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
+    border-bottom: 3px solid transparent;
 }
 
-.nav-menu-button {
-    display: none;
+.nav-list .item>a:hover {
+    padding-bottom: 5px;
+    border-bottom: 3px solid white;
+}
+
+.get-started {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    gap: 15px;
+    padding: 15px;
+    height: 50px;
+    width: 250px;
+    font-size: 100%;
+    color: var(--main-clr);
+    border-radius: 5px;
+    background-color: var(--off-sec-clr);
+    transition: 0.3s;
+    white-space: nowrap;
+}
+
+.get-started img {
+    width: 18px;
+}
+
+.get-started:hover {
+    color: var(--main-clr);
+    background-color: var(--sec-clr);
+    box-shadow: rgba(255, 255, 255, 1) 0px 0px 8px;
+    transition: 0.3s;
+}
+
+
+/* ===== NAV CONTENT ===== */
+
+.content {
+    padding: 30px 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70%;
+    width: 100%;
+    gap: 3rem;
+}
+
+.content-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+}
+
+.content-text>img {
+    width: 100%;
+}
+
+.content-text p {
+    position: relative;
+    padding: 20px 0;
+    margin: 18px 0 0 18px;
+    font-size: 3vw;
+    font-family: 'Ms Madi', cursive;
+}
+
+.content-text .continue {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    gap: 15px;
+    padding: 15px;
+    height: 5vw;
+    width: 20vw;
+    font-size: 2vw;
+    color: var(--main-clr);
+    border-radius: 5px;
+    background-color: var(--off-sec-clr);
+    transition: 0.3s;
+    white-space: nowrap;
+}
+
+.content-text .continue img {
+    width: 2vw;
+}
+
+.content-text .continue:hover {
+    color: var(--main-clr);
+    background-color: var(--sec-clr);
+    box-shadow: rgba(255, 255, 255, 1) 0px 0px 8px;
+    transition: 0.3s;
+}
+
+.content-img {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.content-img video {
+    height: 100%;
+}
+
+
+/* ===== NAV FOOTER ===== */
+
+.header-social {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    bottom: 100px;
+    right: 15vw;
+}
+
+.header-social::before {
+    content: '';
+    width: 80vw;
+    height: 1px;
+    margin-right: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.header-social-item {
+    margin: 0 10px;
+}
+
+.header-social-item svg {
+    width: 30px;
+    fill: white;
 }
 
 
@@ -245,14 +416,16 @@ header .sidebar-button {
 
 .sidebar-header {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     padding: 20px;
+    padding-left: 0;
     border-bottom: 3px rgba(0, 0, 0, 0.1) solid;
 }
 
 .sidebar-header .sidebar-button {
     font-size: 2rem;
+    margin-left: 1.5rem;
 }
 
 .sidebar-header .sidebar-logo {
@@ -264,6 +437,10 @@ header .sidebar-button {
 
 
 /* ========== SIDEBAR BODY ========== */
+
+.sidebar-nav {
+    display: none;
+}
 
 .sidebar-playlists {
     padding: 20px;
@@ -347,110 +524,170 @@ header .sidebar-button {
 /* ============================== MAIN ============================== */
 
 main {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    background-color: var(--off-main-clr);
     padding: 100px 100px 0 100px;
 }
 
-.grid-item {
+main .container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 600px;
+    gap: 10rem;
+    margin-bottom: 150px;
 }
 
-.grid-item:first-child {
-    grid-column-start: 1;
-    grid-column-end: 3;
+.container .card {
     display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.grid-item h1 {
-    text-align: center;
-    font-size: 5rem;
-    margin-bottom: 10px;
-}
-
-.grid-item p {
-    text-align: center;
-    font-family: "Montserrat", sans-serif;
-    font-size: 2rem;
-    font-weight: 600;
-}
-
-.grid-item a {
+    justify-content: space-around;
     padding: 20px;
-    width: 140px;
+    gap: 2vw;
+    height: 40vw;
+    width: 100%;
+    background-color: var(--main-clr);
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.card-text-desktop {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    align-items: center;
+}
+
+.card-text-desktop h1 {
+    text-align: center;
+    font-size: 4vw;
+    font-family: "Burbank", sans-serif;
+}
+
+.card-text-desktop p {
+    text-align: center;
+    font-family: "Burbank", sans-serif;
+    font-size: 2.5vw;
+    font-weight: 400;
+}
+
+.card-text-desktop a {
+    padding: 1vw 2vw;
+    width: 6vw;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.2rem;
+    font-size: 1vw;
     margin-top: 20px;
     border: 2px white solid;
     border-radius: 5px;
     transition: 0.3s;
+    font-family: "Burbank", sans-serif;
 }
 
-.grid-item a:hover {
+.card-text-desktop a:hover {
     background-color: white;
-    color: var(--off-main-clr);
+    color: var(--main-clr);
     transition: 0.3s;
 }
 
-.grid-item img {
+.card-text-mobile {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+}
+
+.card-text-mobile h1 {
+    text-align: center;
+    font-size: 6vw;
+    font-family: "Burbank", sans-serif;
+}
+
+.card-text-mobile p {
+    text-align: center;
+    font-family: "Burbank", sans-serif;
+    font-size: 3vw;
+    font-weight: 400;
+}
+
+.card-text-mobile a {
+    padding: 2vw 4vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2vw;
+    margin-top: 20px;
     border: 2px white solid;
     border-radius: 5px;
-    width: 540px;
+    transition: 0.3s;
+    font-family: "Burbank", sans-serif;
 }
 
-.welcome {
-    border: none !important;
-    width: 70vw !important;
+.card-text-mobile a:hover {
+    background-color: white;
+    color: var(--main-clr);
+    transition: 0.3s;
 }
 
-@media screen and (max-width: 1100px) {
-    main {
-        grid-template-columns: repeat(1, 1fr);
-        grid-template-rows: repeat(auto, 1fr);
+.card-video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%
+}
+
+.card-video img {
+    border: 2px white solid;
+    border-radius: 5px;
+    width: 30vw;
+}
+
+@media screen and (max-width: 1000px) {
+    .nav-items-div {
+        display: none;
     }
-    .grid-item {
-        height: 400px;
+    .nav-header {
+        justify-content: space-between;
     }
-    .grid-item:nth-child(1) {
-        grid-row-start: 1;
-        grid-row-end: 2;
+    .get-started {
+        width: 200px;
     }
-    .grid-item:nth-child(2) {
-        grid-row-start: 3;
-        grid-row-end: 4;
+    .sidebar-nav {
+        display: block;
+        padding: 20px;
+        border-bottom: 3px rgba(0, 0, 0, 0.1) solid;
+    }
+    .sidebar-nav-list {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .sidebar-nav-list .item {
+        display: flex;
         justify-content: flex-start;
+        align-items: center;
+        gap: 1rem;
     }
-    .grid-item:nth-child(3) {
-        grid-row-start: 2;
-        grid-row-end: 3;
+    .sidebar-nav-list .item a {
+        font-size: 1.5rem;
+        color: white;
+        font-weight: 900;
     }
-    .grid-item:nth-child(4) {
-        grid-row-start: 4;
-        grid-row-end: 5;
+    main .container .card {
+        flex-direction: column;
+        height: 60vw;
     }
-    .grid-item:nth-child(5) {
-        grid-row-start: 5;
-        grid-row-end: 6;
-        justify-content: flex-start;
+    .card-video {
+        width: 100%;
     }
-    .grid-item:nth-child(6) {
-        grid-row-start: 7;
-        grid-row-end: 8;
-        justify-content: flex-start;
+    .card-video img {
+        width: 70%;
     }
-    .grid-item:nth-child(7) {
-        grid-row-start: 6;
-        grid-row-end: 7;
+    .card .card-text-desktop {
+        display: none;
+    }
+    .card .card-text-mobile {
+        display: flex;
     }
 }
 
@@ -458,32 +695,56 @@ main {
     #website-intro img {
         width: 50vw;
     }
-    .nav-items-div {
-        display: none;
+    header {
+        height: 600px;
+    }
+    header::before {
+        height: 600px;
+        border-bottom-right-radius: 80px;
+    }
+    .get-started {
+        width: 120px;
+        height: 30px;
+        font-size: 10px;
+    }
+    .get-started img {
+        width: 10%;
+    }
+    header .content {
+        height: 70%;
+        padding-left: 20px;
+        padding-right: 20px;
+        gap: 1rem;
+    }
+    .header-social {
+        bottom: 50px;
+        right: 40px;
+    }
+    .header-social::before {
+        margin-right: 20px;
+    }
+    .header-social-item {
+        margin: 0 5px;
+    }
+    .header-social-item svg {
+        width: 20px;
+    }
+    main .container {
+        gap: 5rem;
     }
     main {
-        padding: 10vw;
+        padding: 150px 50px 50px 50px;
     }
-    .grid-item {
-        height: 200px;
+    .logo-container {
+        gap: 1rem;
     }
-    .grid-item img {
-        width: 270px;
+    .logo-container .sidebar-button {
+        font-size: 1.5rem;
     }
-    .grid-item h1 {
-        text-align: center;
-        font-size: 9vw;
-        margin-bottom: 10px;
-    }
-    .grid-item p {
-        text-align: center;
-        font-family: "Montserrat", sans-serif;
-        font-size: 4vw;
-        font-weight: 600;
-    }
-    .grid-item a {
+    .logo-container .logo {
         width: 100px;
-        height: 50px;
-        font-size: 1rem;
+    }
+    .logo-container .logo img {
+        width: 100px;
     }
 }

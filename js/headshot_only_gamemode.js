@@ -1,3 +1,14 @@
+/* =============== GEAR POPUP =============== */
+function openGearPopup() {
+    $("#gear-popup").css({ display: "flex" });
+    $("#gear-btn").attr("onclick", "closeGearPopup()");
+}
+
+function closeGearPopup() {
+    $("#gear-popup").css({ display: "none" });
+    $("#gear-btn").attr("onclick", "openGearPopup()");
+}
+
 $(document).ready(function() {
     $("div.sec-devices > div").click(function(e) {
         $("div").removeClass("active");
@@ -12,6 +23,7 @@ $(document).ready(function() {
     });
     $(".close").click(function() {
         $(".settings").css({ width: "0px" });
+        $("body").css({ overflow: "overlay", height: "" });
         $("div").removeClass("active");
         $(".lower-opacity").css({ width: "0" });
         closeGearPopup();
@@ -44,32 +56,17 @@ $(document).ready(function() {
         });
 });
 
-/* =============== GEAR POPUP =============== */
-function openGearPopup() {
-    document.getElementById("gear-popup").style.display = "flex";
-    document
-        .getElementById("gear-btn")
-        .setAttribute("onclick", "closeGearPopup()");
-}
-
-function closeGearPopup() {
-    document.getElementById("gear-popup").style.display = "none";
-    document
-        .getElementById("gear-btn")
-        .setAttribute("onclick", "openGearPopup()");
-}
-
 function loadSettings(parent, trigger, deviceType) {
     var width = $(window).width();
 
     $(".settings ul").html("");
     $(`<li class="settings-title">
     <h2>CUSTOMIZE</h2>
-    <span class="device-name">${deviceType}</span>
-</li>`)
+    <span class="device-name">${deviceType}</span></li>`)
         .appendTo(".settings ul")
         .slideDown("fast");
     $(".settings").css({ width: "50vw" });
+    $("body").css({ overflow: "hidden", height: "100%" });
     $(".lower-opacity").css({ width: "100vw" });
     if (width < 900) {
         $(".settings").css({ width: "100vw" });
@@ -87,11 +84,11 @@ function loadSettings(parent, trigger, deviceType) {
 }
 
 const settings = {
-    //Player COUNTING
+    //OUTSIDE PLAYING AREA
     settings1: {
         one: {
-            Modify: "BOTH",
-            Effect: "SET TO",
+            "Modify ": "BOTH",
+            "Effect ": "SET TO",
             "Effect Magnitude": "200",
             "Effect Duration": "INFINITE",
             "Show Visual Effect on Player": "NO",
@@ -100,6 +97,7 @@ const settings = {
             "Pick Up Audio": "OFF",
             "Apply To": "ALL PLAYERS",
             "Pickup when Received From": "CHANNEL 1",
+            link: "https://www.youtube.com/watch?v=vIFzcxy0jZ8&t=12s",
         },
         two: {
             "**DROP A GOLD PUMP SHOTGUN IN HERE**": "",
@@ -107,7 +105,7 @@ const settings = {
         },
     },
 
-    //SETTINGS Mutators
+    //INSIDE PLAYING AREA
     settings2: {
         one: {
             "***This mutator must cover the whole Playing Area***": "",
@@ -116,6 +114,7 @@ const settings = {
             "Zone Depth": "9",
             "Zone Height": "3",
             "On Player Entering Zone Transmit On": "CHANNEL 1",
+            link: "https://www.youtube.com/watch?v=vIFzcxy0jZ8&t=71s",
         },
         two: {
             "Use As Island Start": "NO",

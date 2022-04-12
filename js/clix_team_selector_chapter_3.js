@@ -1,4 +1,15 @@
-$(document).ready(function() {
+/* =============== GEAR POPUP =============== */
+function openGearPopup() {
+    $("#gear-popup").css({ display: "flex" });
+    $("#gear-btn").attr("onclick", "closeGearPopup()");
+}
+
+function closeGearPopup() {
+    $("#gear-popup").css({ display: "none" });
+    $("#gear-btn").attr("onclick", "openGearPopup()");
+}
+
+document.ready(function() {
     $("div.sec-devices > div").click(function(e) {
         $("div").removeClass("active");
         $(this).addClass("active");
@@ -12,6 +23,7 @@ $(document).ready(function() {
     });
     $(".close").click(function() {
         $(".settings").css({ width: "0px" });
+        $("body").css({ overflow: "overlay", height: "" });
         $("div").removeClass("active");
         $(".lower-opacity").css({ width: "0" });
         closeGearPopup();
@@ -44,21 +56,6 @@ $(document).ready(function() {
         });
 });
 
-/* =============== GEAR POPUP =============== */
-function openGearPopup() {
-    document.getElementById("gear-popup").style.display = "flex";
-    document
-        .getElementById("gear-btn")
-        .setAttribute("onclick", "closeGearPopup()");
-}
-
-function closeGearPopup() {
-    document.getElementById("gear-popup").style.display = "none";
-    document
-        .getElementById("gear-btn")
-        .setAttribute("onclick", "openGearPopup()");
-}
-
 function loadSettings(parent, trigger, deviceType) {
     var width = $(window).width();
 
@@ -70,6 +67,7 @@ function loadSettings(parent, trigger, deviceType) {
         .appendTo(".settings ul")
         .slideDown("fast");
     $(".settings").css({ width: "50vw" });
+    $("body").css({ overflow: "hidden", height: "100%" });
     $(".lower-opacity").css({ width: "100vw" });
     if (width < 900) {
         $(".settings").css({ width: "100vw" });

@@ -321,7 +321,7 @@ main {
     flex-grow: 1;
     font-family: "Montserrat";
     font-weight: 900;
-    font-size: 3vw;
+    font-size: 2.5vw;
     white-space: wrap;
 }
 
@@ -334,7 +334,7 @@ main {
 
 .watch-on-yt>* {
     font-family: "Montserrat";
-    font-size: 1.5vw;
+    font-size: 1vw;
 }
 
 
@@ -670,15 +670,17 @@ section.settings {
 
 .settings .settings-list .item h2 {
     color: var(--settings-font-clr);
-    font-size: 60%;
+    font-size: 80%;
     overflow-x: visible;
 }
 
 .settings .settings-list .item>span {
-    font-size: 60%;
+    font-size: 80%;
     margin-left: auto;
     color: white;
     overflow-x: visible;
+    min-width: 110px;
+    text-align: center;
 }
 
 .settings-buttons {
@@ -848,5 +850,14 @@ section.settings {
     }
     .gear-popup h3 {
         font-size: 1rem;
+    }
+    .island-settings .tab h2 {
+        font-size: 6vw;
+    }
+    .island-settings .tab h3 {
+        font-size: 4vw;
+    }
+    .island-settings .tab span {
+        font-size: 4vw;
     }
 }

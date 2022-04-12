@@ -12,6 +12,7 @@ $(document).ready(function() {
     });
     $(".close").click(function() {
         $(".settings").css({ width: "0px" });
+        $("body").css({ overflow: "overlay", height: "" });
         $("div").removeClass("active");
         $(".lower-opacity").css({ width: "0" });
         closeGearPopup();
@@ -70,6 +71,7 @@ function loadSettings(parent, trigger, deviceType) {
         .appendTo(".settings ul")
         .slideDown("fast");
     $(".settings").css({ width: "50vw" });
+    $("body").css({ overflow: "hidden", height: "100%" });
     $(".lower-opacity").css({ width: "100vw" });
     if (width < 900) {
         $(".settings").css({ width: "100vw" });

@@ -10,7 +10,7 @@ $(document).ready(function() {
         const currentParent = $(this).parent([0]).attr("id");
         console.log(currentParent);
         $(`#${currentParent} .sec-devices`).scrollLeft(
-            $(`#${currentParent} .sec-devices`).scrollLeft() - 500
+            $(`#${currentParent} .sec-devices`).scrollLeft() - 300
         );
     });
 
@@ -18,7 +18,7 @@ $(document).ready(function() {
         const currentParent = $(this).parent([0]).attr("id");
         console.log(currentParent);
         $(`#${currentParent} .sec-devices`).scrollLeft(
-            $(`#${currentParent} .sec-devices`).scrollLeft() + 500
+            $(`#${currentParent} .sec-devices`).scrollLeft() + 300
         );
     });
 });

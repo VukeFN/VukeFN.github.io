@@ -24,6 +24,4 @@ $(document).ready(function() {
             $(".tooltip").fadeIn(500).delay(3000).fadeOut(500);
         });
     }
-
-    $("ion-icon").remove("title");
 });

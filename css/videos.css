@@ -52,7 +52,7 @@ li {
     width: 10px;
 }
 
- ::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
     background: transparent;
 }
 
@@ -62,7 +62,7 @@ li {
     border-radius: 100vw;
 }
 
- ::-webkit-scrollbar-thumb:hover {
+::-webkit-scrollbar-thumb:hover {
     background: rgb(0, 0, 0);
     transition: 0.2s;
 }
@@ -171,19 +171,15 @@ header .sidebar-button {
     flex-direction: row;
 }
 
-.item {
+.nav-list .item {
     padding: 0 40px;
     font-size: 25px;
     list-style: none;
 }
 
-.item>a {
+.nav-list .item>a {
     font-family: 'Montserrat';
     font-weight: bold;
-}
-
-.nav-menu-button {
-    display: none;
 }
 
 
@@ -476,15 +472,18 @@ main {
 /* ========== RESPONSIVE DESIGN ========== */
 
 @media screen and (max-width: 1000px) {
-    .search-bar {
+    .nav-list {
         display: none;
     }
-    .sidebar-search {
-        display: flex;
+    .logo-container {
+        flex-grow: 1;
     }
 }
 
 @media screen and (max-width: 800px) {
+    .sidebar-search {
+        display: flex;
+    }
     .content {
         grid-template-columns: repeat(3, 1fr);
     }
