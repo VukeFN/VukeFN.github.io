@@ -1,111 +1,3 @@
-/* ==================== BASE ==================== */
-
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
-@font-face {
-    font-family: 'alarm_clock';
-    src: url('../Fonts/alarm_clock-webfont.woff2');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Burbank';
-    src: url('../Fonts/BurbankBigRegular-Black.woff2');
-    font-weight: 900;
-    font-style: normal;
-}
-
-:root {
-    font-size: 16px;
-    --main-clr: #0B090A;
-    --off-main-clr: #121011;
-    --sec-clr: white;
-    --off-sec-clr: #d3d3d3;
-    --settings-clr: #09123C;
-    --settings-item-clr: #2A2E55;
-    --settings-font-clr: #97DCFE;
-    --island-bg-clr: #106DDD;
-}
-
-*,
-*::after,
-*::before {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    font-family: "Burbank", sans-serif;
-    color: white;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    overflow: overlay;
-    overflow-x: hidden;
-}
-
-a {
-    color: var(--off-sec-clr);
-    text-decoration: none;
-    transition: 0.2s;
-}
-
-a:hover {
-    cursor: pointer;
-    color: var(--sec-clr);
-    transition: 0.2s;
-}
-
-li {
-    list-style: none;
-}
-
-
-/* ==================== WEBSITE ==================== */
-
-::-webkit-scrollbar {
-    width: 10px;
-}
-
- ::-webkit-scrollbar-track {
-    background: transparent;
-}
-
-::-webkit-scrollbar-thumb {
-    background: rgba(5, 5, 5, 0.7);
-    transition: 0.2s;
-    border-radius: 100vw;
-}
-
- ::-webkit-scrollbar-thumb:hover {
-    background: rgb(0, 0, 0);
-    transition: 0.2s;
-}
-
-::-webkit-scrollbar-button {
-    display: none;
-}
-
-#preloader {
-    width: 100%;
-    height: 100vh;
-    background: var(--off-main-clr);
-    text-align: center;
-    z-index: 100;
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 3rem;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 900;
-    text-transform: uppercase;
-    transition: 2s;
-}
-
-
 /* ============================== HEADER ============================== */
 
 header {
@@ -164,141 +56,6 @@ header .sidebar-button {
 }
 
 
-/* ============================== SIDEBAR ============================== */
-
-
-/* ========== SIDEBAR BASE ========== */
-
-.sidebar-button {
-    cursor: pointer;
-}
-
-.sidebar {
-    width: 0px;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    top: 0;
-    left: 0;
-    position: fixed;
-    background-color: var(--off-main-clr);
-    z-index: 5;
-    overflow-x: hidden;
-    transition: 0.2s;
-    box-shadow: 3px 10px 10px black;
-}
-
-.lower-opacity {
-    position: fixed;
-    left: 0;
-    width: 0;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.4);
-    z-index: 2;
-}
-
-
-/* ========== SIDEBAR HEADER ========== */
-
-.sidebar-header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    border-bottom: 3px rgba(0, 0, 0, 0.1) solid;
-}
-
-.sidebar-header .sidebar-button {
-    font-size: 2rem;
-}
-
-.sidebar-header .sidebar-logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 40px;
-}
-
-
-/* ========== SIDEBAR BODY ========== */
-
-.sidebar-playlists {
-    padding: 20px;
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    border-bottom: 3px rgba(0, 0, 0, 0.1) solid;
-    overflow-y: scroll;
-}
-
-.sidebar-playlists>h2 {
-    font-size: 2rem;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 900;
-}
-
-.sidebar-playlist {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 1rem;
-    padding: 10px;
-}
-
-.sidebar-playlist h3 {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 900;
-    font-size: 1rem;
-}
-
-.sidebar-unfinished-videos {
-    padding: 20px;
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    overflow-y: scroll;
-}
-
-.sidebar-unfinished-videos>h2 {
-    font-size: 2rem;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 900;
-}
-
-.sidebar-unfinished-video {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 1rem;
-    padding: 10px;
-}
-
-.sidebar-unfinished-video h3 {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 900;
-    font-size: .75rem;
-}
-
-.sidebar-unfinished-video img {
-    border: 2px solid white;
-    border-radius: 3px;
-}
-
-
-/* ========== SIDEBAR FOOTER ========== */
-
-.sidebar-footer {
-    margin-top: auto;
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    padding: 20px;
-    border-top: 3px rgba(0, 0, 0, 0.1) solid;
-}
-
-.social-media {
-    width: 30px;
-}
-
-
 /* ========== MAIN ========== */
 
 main {
@@ -347,11 +104,33 @@ main {
     background-color: var(--off-main-clr);
 }
 
+.devices-sec1 h2 {
+    font-family: "Burbank", sans-serif;
+}
+
 .devices-sec2 {
     height: 230px;
     padding: 20px;
     position: relative;
     background-color: var(--main-clr);
+}
+
+.devices-sec2 h2 {
+    font-family: "Burbank", sans-serif;
+}
+
+.devices-sec1 .dividor {
+    width: 4px;
+    height: 80%;
+    margin: 0 10px;
+    background-color: var(--main-clr);
+}
+
+.devices-sec2 .dividor {
+    width: 4px;
+    height: 80%;
+    margin: 0 10px;
+    background-color: var(--off-main-clr);
 }
 
 .sec-devices {
@@ -586,20 +365,6 @@ main {
     opacity: 0.2;
 }
 
-.devices-sec1 .dividor {
-    width: 4px;
-    height: 80%;
-    margin: 0 10px;
-    background-color: var(--main-clr);
-}
-
-.devices-sec2 .dividor {
-    width: 4px;
-    height: 80%;
-    margin: 0 10px;
-    background-color: var(--off-main-clr);
-}
-
 
 /* ===== DEVICE SETTINGS POP-UP ===== */
 
@@ -617,6 +382,10 @@ section.settings {
     background-color: var(--settings-clr);
     z-index: 3;
     transition: 0.3s;
+}
+
+section.settings * {
+    font-family: "Burbank", sans-serif;
 }
 
 .settings-title {
@@ -743,7 +512,7 @@ section.settings {
     justify-content: center;
     gap: 1rem;
     align-items: center;
-    height: 20%;
+    height: 180px;
     width: 255px;
     position: absolute;
     bottom: 100px;
@@ -767,6 +536,10 @@ section.settings {
     background-color: var(--settings-clr);
     padding: 20px;
     border-top: 2px white solid;
+}
+
+.island-settings * {
+    font-family: "Burbank", sans-serif;
 }
 
 .island-settings .tab {

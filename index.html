@@ -5,7 +5,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/home.css" />
+    <link rel="stylesheet" href="/css/home.css" />
+    <link rel="stylesheet" href="/css/base.css" />
     <link rel="icon" href="./Images/Website Icon.png" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
@@ -30,7 +31,7 @@
             <div class="nav-header">
                 <div class="logo-container">
                     <ion-icon name="menu-outline" class="sidebar-button" onclick="openSideBar()"></ion-icon>
-                    <a href="https://vukefn.github.io/" class="logo">
+                    <a href="/" class="logo">
                         <img src="/Images/Website Logo.png" class="website-logo-light" alt="Website's Logo" width="180" />
                         <img src="/Images/Website Logo Dark.png" class="website-logo-dark" alt="Website's Logo" width="180" />
                     </a>
@@ -42,16 +43,16 @@
                             <a href="https://youtube.com/c/VukeFN/About">ABOUT</a>
                         </li>
                         <li class="item">
-                            <a href="https://vukefn.github.io/Videos/">VIDEOS</a>
+                            <a href="/Videos">VIDEOS</a>
                         </li>
                         <li class="item">
-                            <a href="https://VukeFN.github.io/Playlists/">PLAYLISTS</a>
+                            <a href="/Playlists">PLAYLISTS</a>
                         </li>
                     </ul>
                 </div>
 
                 <div>
-                    <a href="https://vukefn.github.io/Videos/" class="get-started">GET STARTED
+                    <a href="/Videos" class="get-started">GET STARTED
               <ion-icon name="chevron-forward-outline"></ion-icon>
             </a>
                 </div>
@@ -107,7 +108,7 @@
                 <div class="sidebar-header">
                     <ion-icon name="menu-outline" class="sidebar-button" id="sidebar-button" onclick="closeSideBar()"></ion-icon>
                     <div class="sidebar-logo">
-                        <a href="https://vukefn.github.io/">
+                        <a href="/">
                             <img src="/Images/Website Logo.png" class="website-logo-light" alt="Website's Logo" width="180" />
                             <img src="/Images/Website Logo Dark.png" class="website-logo-dark" alt="Website's Logo" width="180" />
                         </a>
@@ -122,7 +123,7 @@
                         </li>
                         <li class="item">
                             <ion-icon name="videocam-outline"></ion-icon>
-                            <a href="https://vukefn.github.io/Videos/">VIDEOS</a>
+                            <a href="/Videos">VIDEOS</a>
                         </li>
                         <li class="item">
                             <?xml version="1.0" ?><svg id="Layer_1" style="enable-background: new 0 0 32 32" version="1.1" viewBox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -159,7 +160,7 @@
                     </g>
                   </g>
                 </svg>
-                            <a href="https://VukeFN.github.io/Playlists/">PLAYLISTS</a>
+                            <a href="/Playlists">PLAYLISTS</a>
                         </li>
                     </ul>
                 </div>
@@ -278,11 +279,11 @@
 
     <main id="main">
         <div class="container" data-aos="fade-in">
-            <div id="card1" class="card" data-aos="fade-up" data-aos-offset="400">
+            <div id="card1" class="card" data-aos="fade-up" data-aos-offset="500">
                 <section class="card-text-desktop">
                     <h1>GETTING STARTED!</h1>
                     <p>Go to the Videos Page.</p>
-                    <a href="https://VukeFN.github.io/Videos/">VIDEOS</a>
+                    <a href="/Videos">VIDEOS</a>
                 </section>
                 <section class="card-video">
                     <img src="../Thumbnails/How to Make BHE 1v1 Map (Part 3).png" alt="Thumbnail" class="video-thumbnail" autoplay loop muted />
@@ -290,14 +291,18 @@
                 <section class="card-text-mobile">
                     <h1>GETTING STARTED!</h1>
                     <p>Go to the Videos Page.</p>
-                    <a href="https://VukeFN.github.io/Videos/">VIDEOS</a>
+                    <a href="/Videos">VIDEOS</a>
                 </section>
                 <a href="#card2">
                     <ion-icon name="caret-down-outline"></ion-icon>
                 </a>
+
+                <img src="/Devices/mutator.png" alt="" class="extra-image1" />
+                <img src="/Devices/player_spawn_pad.png" alt="" class="extra-image2" />
+                <img src="/Devices/switch.png" alt="" class="extra-image3" />
             </div>
 
-            <div id="card2" class="card" data-aos="fade-up" data-aos-offset="300">
+            <div id="card2" class="card" data-aos="fade-up" data-aos-offset="400">
                 <section class="card-video">
                     <img src="../Thumbnails/How to Make BHE 1v1 Map (Part 3).png" alt="Thumbnail" class="video-thumbnail" autoplay loop muted />
                 </section>
@@ -312,6 +317,10 @@
                 <a href="#card3">
                     <ion-icon name="caret-down-outline"></ion-icon>
                 </a>
+
+                <img src="/Devices/health_powerup.png" alt="" class="extra-image1" />
+                <img src="/Devices/class_selector.png" alt="" class="extra-image2" />
+                <img src="/Devices/sequencer.png" alt="" class="extra-image3" />
             </div>
 
             <div id="card3" class="card" data-aos="fade-up" data-aos-offset="400">
@@ -326,6 +335,10 @@
                     <h1>NO MORE PROBLEMS!</h1>
                     <p>Easily check the solution for your problem.</p>
                 </section>
+
+                <img src="/Devices/timer.png" alt="" class="extra-image1" />
+                <img src="/Devices/class_designer.png" alt="" class="extra-image2" />
+                <img src="/Devices/score.png" alt="" class="extra-image3" />
             </div>
         </div>
     </main>
