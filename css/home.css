@@ -351,7 +351,7 @@ main .container {
     display: flex;
     justify-content: space-around;
     padding: 20px;
-    gap: 2vw;
+    gap: 4rem;
     height: 40vw;
     width: 100%;
     background-color: var(--main-clr);
@@ -472,6 +472,7 @@ main .container {
     width: 150px;
     z-index: -1;
     left: -70px;
+    overflow: hidden;
 }
 
 .card img.extra-image2 {
@@ -480,6 +481,7 @@ main .container {
     width: 150px;
     transform: rotate(-20deg);
     left: -60px;
+    overflow: hidden;
 }
 
 .card img.extra-image3 {
@@ -487,7 +489,8 @@ main .container {
     bottom: 30%;
     width: 150px;
     transform: rotate(20deg);
-    right: -100px;
+    right: -75px;
+    overflow: hidden;
 }
 
 @media screen and (max-width: 1000px) {
@@ -536,9 +539,10 @@ main .container {
         border-bottom: 3px solid var(--sec-clr);
         transition: 0.3s;
     }
-    main .container .card {
+    .container .card {
         flex-direction: column;
         height: 60vw;
+        justify-content: center;
     }
     .card>a {
         position: relative;
@@ -597,11 +601,15 @@ main .container {
     .header-social-item svg {
         width: 20px;
     }
-    main .container {
-        gap: 5rem;
-    }
     main {
         padding: 150px 50px 50px 50px;
+    }
+    main .container {
+        gap: 7rem;
+        margin-bottom: 50px;
+    }
+    .container .card {
+        justify-content: center;
     }
     .card>a {
         display: none;
@@ -620,6 +628,45 @@ main .container {
     }
     .content-text .continue {
         padding: 10px;
+    }
+    .card img.extra-image1 {
+        position: absolute;
+        top: -40px;
+        width: 70px;
+        z-index: -1;
+        left: -35px;
+    }
+    .card img.extra-image2 {
+        position: absolute;
+        bottom: -30px;
+        width: 70px;
+        transform: rotate(-20deg);
+        left: -30px;
+    }
+    .card img.extra-image3 {
+        position: absolute;
+        bottom: 30%;
+        width: 70px;
+        transform: rotate(20deg);
+        right: -40px;
+    }
+    .choose-theme {
+        font-size: .5rem;
+        padding: 20px;
+        padding-top: 25px;
+        background-color: var(--off-main-clr);
+        position: absolute;
+        top: 70px;
+        left: 20px;
+        z-index: 3;
+        box-shadow: black 0px 5px 25px;
+    }
+    .choose-theme ion-icon {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: .75rem;
+        fill: var(--sec-clr);
     }
 }
 

@@ -275,8 +275,9 @@ li {
 
 .sidebar-footer {
     margin-top: auto;
+    padding-left: 15px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 100%;
     border-top: 3px rgba(0, 0, 0, 0.1) solid;
 }
@@ -338,6 +339,65 @@ li {
 
 .color-theme .dark-mode:hover {
     cursor: pointer;
+}
+
+@media screen and (max-width: 1000px) {
+    /* ========== SIDEBAR HEADER ========== */
+    .sidebar-header .sidebar-button {
+        font-size: 1.5rem;
+        margin: 0 1.5rem;
+    }
+    .sidebar-header .sidebar-logo {
+        width: 100px;
+    }
+    .sidebar-header .sidebar-logo img {
+        width: 100px;
+    }
+    /* ========== SIDEBAR BODY ========== */
+    .sidebar-nav {
+        display: block;
+    }
+    .sidebar-playlists>h2 {
+        font-size: 1.5rem;
+    }
+    .sidebar-playlist {
+        padding: 5px 0 5px 20px;
+        gap: .5rem;
+    }
+    .sidebar-playlist ion-icon {
+        font-size: 1rem;
+    }
+    .sidebar-playlist h3 {
+        font-size: .75rem;
+    }
+    .sidebar-unfinished-videos>h2 {
+        font-size: 1.5rem;
+    }
+    .sidebar-unfinished-video {
+        gap: .5rem;
+    }
+    .sidebar-unfinished-video img {
+        width: 30px;
+    }
+    .sidebar-unfinished-video h3 {
+        font-size: .75rem;
+    }
+    .social-media {
+        margin: 10px;
+        width: 20px;
+    }
+    .color-theme .light-mode {
+        font-size: 20px;
+    }
+    .color-theme .dark-mode {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .sidebar-nav {
+        display: block;
+    }
 }
 
 @media (prefers-color-scheme: dark) {

@@ -1,8 +1,12 @@
 $(document).ready(function() {
+    width = $(document).width();
     $(document).scrollTop(0);
     $(".choose-theme ion-icon").on("click", function() {
         $(".choose-theme").hide();
     });
+    if (width < 800) {
+        $(".card").attr("data-aos-offset", "300");
+    }
     /* ============================== LOADING SCREEN ============================== */
     $("#preloader").css({ display: "none" });
 
@@ -110,10 +114,18 @@ $(document).ready(function() {
 
 /* ============================== SIDEBAR ============================== */
 function openSideBar() {
-    $("#sidebar").css({ width: "300px" });
-    $("#body").css({ overflow: "hidden" });
-    $("#body").css({ height: "100%" });
-    $("#lower-opacity").css({ display: "block" });
+    const width = $(window).width();
+    if (width < 801) {
+        $("#sidebar").css({ width: "250px" });
+        $("#body").css({ overflow: "hidden" });
+        $("#body").css({ height: "100%" });
+        $("#lower-opacity").css({ display: "block" });
+    } else {
+        $("#sidebar").css({ width: "300px" });
+        $("#body").css({ overflow: "hidden" });
+        $("#body").css({ height: "100%" });
+        $("#lower-opacity").css({ display: "block" });
+    }
 }
 
 function closeSideBar() {
