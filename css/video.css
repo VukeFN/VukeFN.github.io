@@ -441,6 +441,7 @@ section.settings * {
     color: var(--settings-font-clr);
     font-size: 80%;
     overflow-x: visible;
+    letter-spacing: .75px;
 }
 
 .settings .settings-list .item>span {
@@ -527,6 +528,11 @@ section.settings * {
     border: rgba(19, 115, 215, 0.4) 5px solid;
     text-align: center;
     cursor: pointer;
+}
+
+#lower-opacity-settings {
+    z-index: 2;
+    display: none;
 }
 
 
