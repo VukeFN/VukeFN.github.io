@@ -357,18 +357,24 @@ main .container {
     border-radius: 20px;
 }
 
+
+/* Gets 1st child of the element with "container" class */
+
 .container>*:nth-child(1) {
     background-image: url(/Images/getting_started_picture__with_text2.png);
     background-repeat: no-repeat;
     background-size: 55%;
     background-position: bottom left -40px;
     height: 37vw;
-    box-shadow: rgba(255, 84, 4, 0.25) 0px 0px 70px;
+    box-shadow: rgba(255, 84, 4, 0.5) 0px 0px 70px;
 }
 
-.container>*:nth-child(1) img {
+.container>*:nth-child(1) video {
     border: 2px rgb(255, 84, 4) solid;
 }
+
+
+/* Gets 2nd child of the element with "container" class */
 
 .container>*:nth-child(2) {
     background-image: url(/Images/just_one_click_picture__with_text2.png);
@@ -376,12 +382,15 @@ main .container {
     background-size: 57%;
     background-position: bottom right -60px;
     height: 37vw;
-    box-shadow: rgba(0, 197, 253, 0.25) 0px 0px 70px;
+    box-shadow: rgba(0, 197, 253, 0.5) 0px 0px 70px;
 }
 
-.container>*:nth-child(2) img {
+.container>*:nth-child(2) video {
     border: 2px rgb(0, 197, 253) solid;
 }
+
+
+/* Gets 3rd child of the element with "container" class */
 
 .container>*:nth-child(3) {
     background-image: url(/Images/no_more_problems__with_text2.png);
@@ -389,10 +398,10 @@ main .container {
     background-size: 55%;
     background-position: bottom left -40px;
     height: 37vw;
-    box-shadow: rgba(238, 1, 1, 0.25) 0px 0px 70px;
+    box-shadow: rgba(238, 1, 1, 0.5) 0px 0px 70px;
 }
 
-.container>*:nth-child(3) img {
+.container>*:nth-child(3) video {
     border: 2px rgb(238, 1, 1) solid;
 }
 
@@ -405,11 +414,7 @@ main .container {
     width: 100%;
 }
 
-.card ion-icon {
-    font-size: 2rem;
-}
-
-.card-text-desktop {
+.card-filler {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -417,37 +422,16 @@ main .container {
     align-items: center;
 }
 
-.card-text-desktop h1 {
-    text-align: center;
-    font-size: 4vw;
-    font-family: "Burbank", sans-serif;
-}
-
-.card-text-desktop p {
-    text-align: center;
-    font-family: "Burbank", sans-serif;
-    font-size: 2.5vw;
-    font-weight: 400;
-}
-
-.card-text-desktop a {
-    padding: 1vw 2vw;
-    width: 6vw;
+.card-video {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1vw;
-    margin-top: 20px;
-    border: 2px var(--sec-clr) solid;
-    border-radius: 5px;
-    transition: 0.3s;
-    font-family: "Burbank", sans-serif;
+    width: 50%
 }
 
-.card-text-desktop a:hover {
-    background-color: var(--sec-clr);
-    color: var(--main-clr);
-    transition: 0.3s;
+.card-video video {
+    border-radius: 5px;
+    width: 30vw;
 }
 
 .card-text-mobile {
@@ -488,45 +472,6 @@ main .container {
     background-color: var(--sec-clr);
     color: var(--main-clr);
     transition: 0.3s;
-}
-
-.card-video {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50%
-}
-
-.card-video img {
-    border-radius: 5px;
-    width: 30vw;
-}
-
-.card img.extra-image1 {
-    position: absolute;
-    top: -100px;
-    width: 150px;
-    z-index: -1;
-    left: -70px;
-    overflow: hidden;
-}
-
-.card img.extra-image2 {
-    position: absolute;
-    bottom: -70px;
-    width: 150px;
-    transform: rotate(-20deg);
-    left: -60px;
-    overflow: hidden;
-}
-
-.card img.extra-image3 {
-    position: absolute;
-    bottom: 30%;
-    width: 150px;
-    transform: rotate(20deg);
-    right: -75px;
-    overflow: hidden;
 }
 
 @media screen and (max-width: 1000px) {
@@ -764,6 +709,15 @@ main .container {
     .color-theme .dark-mode {
         display: none;
     }
+    .container>*:nth-child(1) {
+        box-shadow: rgba(255, 84, 4, 0.25) 0px 0px 70px;
+    }
+    .container>*:nth-child(2) {
+        box-shadow: rgba(0, 197, 253, 0.25) 0px 0px 70px;
+    }
+    .container>*:nth-child(3) {
+        box-shadow: rgba(238, 1, 1, 0.25) 0px 0px 70px;
+    }
 }
 
 @media (prefers-color-scheme: light) {
@@ -797,5 +751,14 @@ main .container {
     }
     .color-theme .dark-mode {
         display: block;
+    }
+    .container>*:nth-child(1) {
+        box-shadow: rgba(255, 84, 4, 0.5) 0px 0px 70px;
+    }
+    .container>*:nth-child(2) {
+        box-shadow: rgba(0, 197, 253, 0.5) 0px 0px 70px;
+    }
+    .container>*:nth-child(3) {
+        box-shadow: rgba(238, 1, 1, 0.5) 0px 0px 70px;
     }
 }
