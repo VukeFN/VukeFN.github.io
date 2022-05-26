@@ -254,21 +254,25 @@ header::before {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: 900;
     gap: 15px;
     padding: 15px;
-    height: 5vw;
-    width: 20vw;
-    font-size: 2vw;
-    color: var(--main-clr);
+    height: 60px;
+    width: 200px;
     border-radius: 5px;
     background-color: var(--off-sec-clr);
     transition: 0.3s;
     white-space: nowrap;
 }
 
+.content-text .continue h1 {
+    font-size: 20px;
+    color: var(--main-clr);
+    font-weight: 900;
+}
+
 .content-text .continue ion-icon {
-    width: 2vw;
+    width: 20px;
+    height: 100%;
     color: var(--main-clr);
 }
 
@@ -579,6 +583,50 @@ main .container {
         padding-right: 20px;
         gap: 1rem;
     }
+    .logo-container {
+        gap: 1rem;
+    }
+    .logo-container .sidebar-button {
+        font-size: 1.5rem;
+    }
+    .logo-container .logo {
+        width: 100px;
+    }
+    .logo-container .logo img {
+        width: 100px;
+    }
+    .content-text .continue {
+        height: 40px;
+        width: 150px;
+    }
+    .content-text .continue h1 {
+        font-size: 15px;
+        color: var(--main-clr);
+        font-weight: 900;
+    }
+    .content-text .continue ion-icon {
+        width: 15px;
+        height: 100%;
+        color: var(--main-clr);
+    }
+    .choose-theme {
+        font-size: .5rem;
+        padding: 20px;
+        padding-top: 25px;
+        background-color: var(--off-main-clr);
+        position: absolute;
+        top: 70px;
+        left: 20px;
+        z-index: 3;
+        box-shadow: black 0px 5px 25px;
+    }
+    .choose-theme ion-icon {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: .75rem;
+        fill: var(--sec-clr);
+    }
     .header-social {
         bottom: 50px;
         right: 40px;
@@ -606,10 +654,13 @@ main .container {
     .card>a {
         display: none;
     }
+    .card-filler {
+        display: none;
+    }
     .card-video {
         width: 100%;
     }
-    .card-video img {
+    .card-video video {
         width: 70%;
     }
     .card .card-text-desktop {
@@ -621,59 +672,26 @@ main .container {
     .card-text-mobile>a {
         margin-top: 5px;
     }
-    .logo-container {
-        gap: 1rem;
-    }
-    .logo-container .sidebar-button {
-        font-size: 1.5rem;
-    }
-    .logo-container .logo {
-        width: 100px;
-    }
-    .logo-container .logo img {
-        width: 100px;
-    }
+}
+
+@media screen and (max-width: 500px) {
     .content-text .continue {
-        padding: 10px;
+        padding: 8px;
+        height: 30px;
+        width: 100px;
     }
-    .card img.extra-image1 {
-        position: absolute;
-        top: -40px;
-        width: 70px;
-        z-index: -1;
-        left: -35px;
+    .content-text .continue h1 {
+        font-size: 10px;
+        color: var(--main-clr);
+        font-weight: 900;
     }
-    .card img.extra-image2 {
-        position: absolute;
-        bottom: -30px;
-        width: 70px;
-        transform: rotate(-20deg);
-        left: -30px;
+    .content-text .continue ion-icon {
+        width: 10px;
+        height: 100%;
+        color: var(--main-clr);
     }
-    .card img.extra-image3 {
-        position: absolute;
-        bottom: 30%;
-        width: 70px;
-        transform: rotate(20deg);
-        right: -40px;
-    }
-    .choose-theme {
-        font-size: .5rem;
-        padding: 20px;
-        padding-top: 25px;
-        background-color: var(--off-main-clr);
-        position: absolute;
-        top: 70px;
-        left: 20px;
-        z-index: 3;
-        box-shadow: black 0px 5px 25px;
-    }
-    .choose-theme ion-icon {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        font-size: .75rem;
-        fill: var(--sec-clr);
+    main {
+        padding-top: 70px;
     }
 }
 
