@@ -470,6 +470,10 @@ section.settings * {
   overflow-x: visible;
   letter-spacing: 0.75px;
   white-space: nowrap;
+  color: var(--settings-font-clr);
+  font-size: 80%;
+  overflow-x: visible;
+  letter-spacing: 0.75px;
 }
 
 .settings .settings-list .item > span {

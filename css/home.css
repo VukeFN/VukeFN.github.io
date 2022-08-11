@@ -87,7 +87,7 @@ header::before {
     background-color: var(--off-main-clr);
     position: absolute;
     top: 70px;
-    left: 20px;
+    left: 17px;
     z-index: 3;
     box-shadow: black 0px 5px 25px;
 }
@@ -154,14 +154,13 @@ header::before {
 
 .nav-items-div {
     display: flex;
-    width: 100%;
+    flex-grow: 1;
 }
 
 .nav-list {
     display: flex;
     align-items: center;
     flex-direction: row;
-    flex-grow: 1;
 }
 
 .nav-list .item {
@@ -190,7 +189,7 @@ header::before {
     gap: 15px;
     padding: 10px 15px;
     height: 50px;
-    width: 250px;
+    width: 220px;
     font-size: 100%;
     color: var(--main-clr);
     border-radius: 5px;
@@ -255,21 +254,25 @@ header::before {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: 900;
     gap: 15px;
     padding: 15px;
-    height: 5vw;
-    width: 20vw;
-    font-size: 2vw;
-    color: var(--main-clr);
+    height: 60px;
+    width: 200px;
     border-radius: 5px;
     background-color: var(--off-sec-clr);
     transition: 0.3s;
     white-space: nowrap;
 }
 
+.content-text .continue h1 {
+    font-size: 20px;
+    color: var(--main-clr);
+    font-weight: 900;
+}
+
 .content-text .continue ion-icon {
-    width: 2vw;
+    width: 20px;
+    height: 100%;
     color: var(--main-clr);
 }
 
@@ -342,7 +345,7 @@ main .container {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 20rem;
+    gap: 10rem;
     margin-bottom: 150px;
 }
 
@@ -356,7 +359,54 @@ main .container {
     width: 100%;
     background-color: var(--main-clr);
     border-radius: 20px;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+
+/* Gets 1st child of the element with "container" class */
+
+.container>*:nth-child(1) {
+    background-image: url(/Images/getting_started_picture__with_text2.png);
+    background-repeat: no-repeat;
+    background-size: 55%;
+    background-position: bottom left -40px;
+    height: 37vw;
+    box-shadow: rgba(255, 84, 4, 0.5) 0px 0px 70px;
+}
+
+.container>*:nth-child(1) video {
+    border: 2px rgb(255, 84, 4) solid;
+}
+
+
+/* Gets 2nd child of the element with "container" class */
+
+.container>*:nth-child(2) {
+    background-image: url(/Images/just_one_click_picture__with_text2.png);
+    background-repeat: no-repeat;
+    background-size: 57%;
+    background-position: bottom right -60px;
+    height: 37vw;
+    box-shadow: rgba(0, 197, 253, 0.5) 0px 0px 70px;
+}
+
+.container>*:nth-child(2) video {
+    border: 2px rgb(0, 197, 253) solid;
+}
+
+
+/* Gets 3rd child of the element with "container" class */
+
+.container>*:nth-child(3) {
+    background-image: url(/Images/no_more_problems__with_text2.png);
+    background-repeat: no-repeat;
+    background-size: 55%;
+    background-position: bottom left -40px;
+    height: 37vw;
+    box-shadow: rgba(238, 1, 1, 0.5) 0px 0px 70px;
+}
+
+.container>*:nth-child(3) video {
+    border: 2px rgb(238, 1, 1) solid;
 }
 
 .card>a {
@@ -368,11 +418,7 @@ main .container {
     width: 100%;
 }
 
-.card ion-icon {
-    font-size: 2rem;
-}
-
-.card-text-desktop {
+.card-filler {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -380,37 +426,16 @@ main .container {
     align-items: center;
 }
 
-.card-text-desktop h1 {
-    text-align: center;
-    font-size: 4vw;
-    font-family: "Burbank", sans-serif;
-}
-
-.card-text-desktop p {
-    text-align: center;
-    font-family: "Burbank", sans-serif;
-    font-size: 2.5vw;
-    font-weight: 400;
-}
-
-.card-text-desktop a {
-    padding: 1vw 2vw;
-    width: 6vw;
+.card-video {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1vw;
-    margin-top: 20px;
-    border: 2px var(--sec-clr) solid;
-    border-radius: 5px;
-    transition: 0.3s;
-    font-family: "Burbank", sans-serif;
+    width: 50%
 }
 
-.card-text-desktop a:hover {
-    background-color: var(--sec-clr);
-    color: var(--main-clr);
-    transition: 0.3s;
+.card-video video {
+    border-radius: 5px;
+    width: 30vw;
 }
 
 .card-text-mobile {
@@ -453,46 +478,6 @@ main .container {
     transition: 0.3s;
 }
 
-.card-video {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50%
-}
-
-.card-video img {
-    border: 2px var(--sec-clr) solid;
-    border-radius: 5px;
-    width: 30vw;
-}
-
-.card img.extra-image1 {
-    position: absolute;
-    top: -100px;
-    width: 150px;
-    z-index: -1;
-    left: -70px;
-    overflow: hidden;
-}
-
-.card img.extra-image2 {
-    position: absolute;
-    bottom: -70px;
-    width: 150px;
-    transform: rotate(-20deg);
-    left: -60px;
-    overflow: hidden;
-}
-
-.card img.extra-image3 {
-    position: absolute;
-    bottom: 30%;
-    width: 150px;
-    transform: rotate(20deg);
-    right: -75px;
-    overflow: hidden;
-}
-
 @media screen and (max-width: 1000px) {
     .nav-items-div {
         display: none;
@@ -501,7 +486,7 @@ main .container {
         justify-content: space-between;
     }
     .get-started {
-        width: 200px;
+        width: 220px;
     }
     .sidebar-nav {
         display: block;
@@ -544,6 +529,15 @@ main .container {
         height: 60vw;
         justify-content: center;
     }
+    .container>*:nth-child(1) {
+        background-image: url();
+    }
+    .container>*:nth-child(2) {
+        background-image: url();
+    }
+    .container>*:nth-child(3) {
+        background-image: url();
+    }
     .card>a {
         position: relative;
         bottom: 0;
@@ -578,6 +572,7 @@ main .container {
         height: 30px;
         font-size: 10px;
         padding: 10px;
+        border-radius: 3px;
     }
     .get-started img {
         width: 10%;
@@ -587,6 +582,50 @@ main .container {
         padding-left: 20px;
         padding-right: 20px;
         gap: 1rem;
+    }
+    .logo-container {
+        gap: 1rem;
+    }
+    .logo-container .sidebar-button {
+        font-size: 1.5rem;
+    }
+    .logo-container .logo {
+        width: 100px;
+    }
+    .logo-container .logo img {
+        width: 100px;
+    }
+    .content-text .continue {
+        height: 40px;
+        width: 150px;
+    }
+    .content-text .continue h1 {
+        font-size: 15px;
+        color: var(--main-clr);
+        font-weight: 900;
+    }
+    .content-text .continue ion-icon {
+        width: 15px;
+        height: 100%;
+        color: var(--main-clr);
+    }
+    .choose-theme {
+        font-size: .5rem;
+        padding: 20px;
+        padding-top: 25px;
+        background-color: var(--off-main-clr);
+        position: absolute;
+        top: 70px;
+        left: 20px;
+        z-index: 3;
+        box-shadow: black 0px 5px 25px;
+    }
+    .choose-theme ion-icon {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: .75rem;
+        fill: var(--sec-clr);
     }
     .header-social {
         bottom: 50px;
@@ -610,63 +649,49 @@ main .container {
     }
     .container .card {
         justify-content: center;
+        gap: 1rem;
     }
     .card>a {
         display: none;
     }
-    .logo-container {
-        gap: 1rem;
+    .card-filler {
+        display: none;
     }
-    .logo-container .sidebar-button {
-        font-size: 1.5rem;
+    .card-video {
+        width: 100%;
     }
-    .logo-container .logo {
-        width: 100px;
+    .card-video video {
+        width: 70%;
     }
-    .logo-container .logo img {
-        width: 100px;
+    .card .card-text-desktop {
+        display: none;
     }
+    .card .card-text-mobile {
+        display: flex;
+    }
+    .card-text-mobile>a {
+        margin-top: 5px;
+    }
+}
+
+@media screen and (max-width: 500px) {
     .content-text .continue {
-        padding: 10px;
+        padding: 8px;
+        height: 30px;
+        width: 100px;
     }
-    .card img.extra-image1 {
-        position: absolute;
-        top: -40px;
-        width: 70px;
-        z-index: -1;
-        left: -35px;
+    .content-text .continue h1 {
+        font-size: 10px;
+        color: var(--main-clr);
+        font-weight: 900;
     }
-    .card img.extra-image2 {
-        position: absolute;
-        bottom: -30px;
-        width: 70px;
-        transform: rotate(-20deg);
-        left: -30px;
+    .content-text .continue ion-icon {
+        width: 10px;
+        height: 100%;
+        color: var(--main-clr);
     }
-    .card img.extra-image3 {
-        position: absolute;
-        bottom: 30%;
-        width: 70px;
-        transform: rotate(20deg);
-        right: -40px;
-    }
-    .choose-theme {
-        font-size: .5rem;
-        padding: 20px;
-        padding-top: 25px;
-        background-color: var(--off-main-clr);
-        position: absolute;
-        top: 70px;
-        left: 20px;
-        z-index: 3;
-        box-shadow: black 0px 5px 25px;
-    }
-    .choose-theme ion-icon {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        font-size: .75rem;
-        fill: var(--sec-clr);
+    main {
+        padding-top: 70px;
     }
 }
 
@@ -702,6 +727,15 @@ main .container {
     .color-theme .dark-mode {
         display: none;
     }
+    .container>*:nth-child(1) {
+        box-shadow: rgba(255, 84, 4, 0.25) 0px 0px 70px;
+    }
+    .container>*:nth-child(2) {
+        box-shadow: rgba(0, 197, 253, 0.25) 0px 0px 70px;
+    }
+    .container>*:nth-child(3) {
+        box-shadow: rgba(238, 1, 1, 0.25) 0px 0px 70px;
+    }
 }
 
 @media (prefers-color-scheme: light) {
@@ -735,5 +769,14 @@ main .container {
     }
     .color-theme .dark-mode {
         display: block;
+    }
+    .container>*:nth-child(1) {
+        box-shadow: rgba(255, 84, 4, 0.5) 0px 0px 70px;
+    }
+    .container>*:nth-child(2) {
+        box-shadow: rgba(0, 197, 253, 0.5) 0px 0px 70px;
+    }
+    .container>*:nth-child(3) {
+        box-shadow: rgba(238, 1, 1, 0.5) 0px 0px 70px;
     }
 }

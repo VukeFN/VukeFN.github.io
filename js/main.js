@@ -7,6 +7,10 @@ $(document).ready(function() {
     if (width < 800) {
         $(".card").attr("data-aos-offset", "300");
     }
+    /* ============================== FADE ANIMATIONS ============================== */
+    if (width < 501) {
+        $(".card").attr("data-aos-offset", 200);
+    }
     /* ============================== LOADING SCREEN ============================== */
     $("#preloader").css({ display: "none" });
 

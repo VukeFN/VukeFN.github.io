@@ -38,13 +38,18 @@
     color: var(--sec-clr);
 }
 
+*::selection {
+    background-color: var(--sec-clr);
+    color: var(--main-clr);
+}
+
 html {
     scroll-behavior: smooth;
-    user-select: none;
+    /* user-select: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
     -moz-user-select: none;
-    -ms-user-select: none;
+    -ms-user-select: none; */
 }
 
 body {

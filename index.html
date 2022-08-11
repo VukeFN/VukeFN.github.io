@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6373919257226739" crossorigin="anonymous"></script>
-    <script src="./js/main.js"></script>
+
     <title>VukeFN | Home</title>
 </head>
 
@@ -51,11 +51,9 @@
                     </ul>
                 </div>
 
-                <div>
-                    <a href="/Videos" class="get-started">GET STARTED
-              <ion-icon name="chevron-forward-outline"></ion-icon>
-            </a>
-                </div>
+                <a href="/Videos" class="get-started">GET STARTED
+            <ion-icon name="chevron-forward-outline"></ion-icon>
+          </a>
             </div>
 
             <div class="content">
@@ -65,9 +63,10 @@
                     <p>
                         "Creativity doesn’t wait for that perfect moment. It fashions its own perfect moments out of ordinary ones."
                     </p>
-                    <a href="#main" class="continue">CONTINUE
-              <ion-icon name="chevron-forward-outline"></ion-icon>
-            </a>
+                    <a href="#main" class="continue">
+                        <h1>CONTINUE</h1>
+                        <ion-icon name="chevron-forward-outline"></ion-icon>
+                    </a>
                 </div>
                 <div class="content-img">
                     <video src="/Images/idk2.mp4" alt="" autoplay loop muted></video>
@@ -279,54 +278,34 @@
 
     <main id="main">
         <div class="container" data-aos="fade-in">
-            <div id="card1" class="card" data-aos="fade-up" data-aos-offset="500">
-                <section class="card-text-desktop">
-                    <h1>GETTING STARTED!</h1>
-                    <a href="/Videos">VIDEOS</a>
-                </section>
+            <div id="card1" class="card" data-aos="fade-up" data-aos-offset="280">
+                <section class="card-filler"></section>
                 <section class="card-video">
-                    <img src="../Thumbnails/How to Make BHE 1v1 Map (Part 3).png" alt="Thumbnail" class="video-thumbnail" autoplay loop muted />
+                    <video src="/Images/Getting Started Video.mp4" alt="Thumbnail" class="video-thumbnail" autoplay loop muted></video>
                 </section>
                 <section class="card-text-mobile">
                     <h1>GETTING STARTED!</h1>
-                    <a href="/Videos">VIDEOS</a>
                 </section>
-
-                <img src="/Devices/mutator.png" alt="" class="extra-image1" />
-                <img src="/Devices/player_spawn_pad.png" alt="" class="extra-image2" />
-                <img src="/Devices/switch.png" alt="" class="extra-image3" />
             </div>
 
-            <div id="card2" class="card" data-aos="fade-up" data-aos-offset="400">
+            <div id="card2" class="card" data-aos="fade-up" data-aos-offset="230">
                 <section class="card-video">
-                    <img src="../Thumbnails/How to Make BHE 1v1 Map (Part 3).png" alt="Thumbnail" class="video-thumbnail" autoplay loop muted />
+                    <video src="/Images/Just One Click Video.mp4" alt="Thumbnail" class="video-thumbnail" autoplay loop muted></video>
                 </section>
-                <section class="card-text-desktop">
-                    <h1>JUST ONE CLICK!</h1>
-                </section>
+                <section class="card-filler"></section>
                 <section class="card-text-mobile">
                     <h1>JUST ONE CLICK!</h1>
                 </section>
-
-                <img src="/Devices/health_powerup.png" alt="" class="extra-image1" />
-                <img src="/Devices/class_selector.png" alt="" class="extra-image2" />
-                <img src="/Devices/sequencer.png" alt="" class="extra-image3" />
             </div>
 
-            <div id="card3" class="card" data-aos="fade-up" data-aos-offset="400">
-                <section class="card-text-desktop">
-                    <h1>NO MORE PROBLEMS!</h1>
-                </section>
+            <div id="card3" class="card" data-aos="fade-up" data-aos-offset="180">
+                <section class="card-filler"></section>
                 <section class="card-video">
-                    <img src="../Thumbnails/How to Make BHE 1v1 Map (Part 3).png" alt="Thumbnail" class="video-thumbnail" autoplay loop muted />
+                    <video src="/Images/Just One Click Video.mp4" alt="Thumbnail" class="video-thumbnail" autoplay loop muted></video>
                 </section>
                 <section class="card-text-mobile">
                     <h1>NO MORE PROBLEMS!</h1>
                 </section>
-
-                <img src="/Devices/timer.png" alt="" class="extra-image1" />
-                <img src="/Devices/class_designer.png" alt="" class="extra-image2" />
-                <img src="/Devices/score.png" alt="" class="extra-image3" />
             </div>
         </div>
     </main>
@@ -337,6 +316,7 @@
     <script>
         AOS.init();
     </script>
+    <script src="./js/main.js"></script>
 </body>
 
 </html>
