@@ -1,4 +1,19 @@
 $(document).ready(function () {
+  $(".section-devices > div:not(#scroll)").on("click", function (e) {
+    $("div").removeClass("active");
+    $(this).addClass("active");
+    checkIfMarkedAsDone();
+    let deviceType = $(this).attr("class").split(" ")[0];
+    loadSettings($(this).parent().parent().parent().attr("id"), $(this).attr("data-channel"), deviceType);
+  });
+  $(".close").on("click", function () {
+    $(".settings").css({ width: "0px" });
+    $("body").css({ overflow: "overlay", height: "" });
+    $("div").removeClass("active");
+    $(".lower-opacity").css({ width: "0" });
+    closeGearPopup();
+  });
+
   $("div.sec-devices > div").click(function (e) {
     $("div").removeClass("active");
     $(this).addClass("active");
@@ -51,15 +66,14 @@ function closeGearPopup() {
   document.getElementById("gear-popup").style.display = "none";
   document.getElementById("gear-btn").setAttribute("onclick", "openGearPopup()");
 }
+/* =============== GEAR POPUP =============== */
 
+/* =============== SETTINGS MENU =============== */
 function loadSettings(parent, trigger, deviceType) {
   var width = $(window).width();
 
   $(".settings ul").html("");
-  $(`<li class="settings-title">
-    <h2>CUSTOMIZE</h2>
-    <span class="device-name">${deviceType.split("-").join(" ")}</span>
-</li>`)
+  $(`<li class="settings-title"><h2>CUSTOMIZE</h2><span class="device-name">${deviceType.split("-").join(" ")}</span></li>`)
     .appendTo(".settings ul")
     .slideDown("fast");
   $(".settings").css({ width: "50vw" });
@@ -319,3 +333,4 @@ const settings = {
     },
   },
 };
+/* =============== SETTINGS MENU =============== */

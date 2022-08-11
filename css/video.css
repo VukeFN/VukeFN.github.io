@@ -57,6 +57,10 @@ header .sidebar-button {
 
 /* ========== MAIN ========== */
 
+.AD {
+  border-top: 2px solid white;
+}
+
 main {
   background-color: var(--off-main-clr);
 }
@@ -95,119 +99,93 @@ main {
 
 /* ===== DEVICES SECTION ===== */
 
-.devices-sec1 {
-  height: 230px;
+/* ==================== NEW SECTION ==================== */
+
+.settings-section {
   padding: 20px;
-  position: relative;
-  background-color: var(--off-main-clr);
+  overflow-x: scroll;
 }
 
-.devices-sec1 h2 {
-  font-family: "Burbank", sans-serif;
+.settings-section::-webkit-scrollbar {
+  height: 5px;
 }
 
-.devices-sec2 {
-  height: 230px;
-  padding: 20px;
-  position: relative;
+.settings-section::-webkit-scrollbar-thumb {
+  background-color: white;
+}
+
+.dark {
   background-color: var(--main-clr);
 }
 
-.devices-sec2 h2 {
-  font-family: "Burbank", sans-serif;
-}
-
-.devices-sec1 .dividor {
-  width: 4px;
-  height: 80%;
-  margin: 0 10px;
-  background-color: var(--main-clr);
-}
-
-.devices-sec2 .dividor {
-  width: 4px;
-  height: 80%;
-  margin: 0 10px;
+.light {
   background-color: var(--off-main-clr);
 }
 
-.sec-devices {
+.section-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
   height: 100%;
+  gap: 30px;
+}
+
+.section-title {
+  font-family: "Burbank", sans-serif;
+  font-size: 1.7rem;
+}
+
+.section-devices {
   display: flex;
-  flex-wrap: nowrap;
-  justify-content: left;
+  justify-content: flex-start;
   align-items: center;
-  gap: 3rem;
-  overflow-x: auto;
-  margin: 0 50px;
-  -webkit-overflow-scrolling: touch;
-  -ms-overflow-style: -ms-autohiding-scrollbar;
-  scroll-behavior: smooth;
+  height: 100%;
+  gap: 2rem;
 }
 
-.sec-devices::-webkit-scrollbar {
-  display: none;
+#scroll:hover {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
-.sec-devices > * {
-  flex: 0 0 auto;
-}
-
-.scroll-left {
+.left-scroll {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  left: 15px;
-  bottom: 30%;
   border-radius: 50%;
-  transition: 0.3s;
-  width: 55px;
-  height: 55px;
+  min-width: 35px;
+  height: 35px;
+  transition: all 0.3s;
 }
 
-.scroll-left > * {
+.left-scroll > * {
   opacity: 0.5;
-  font-size: 2.5rem;
+  font-size: 1.5rem;
 }
 
-.scroll-left:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-  color: white;
-  opacity: 1;
-  border-radius: 50%;
-  transition: 0.3s;
-  cursor: pointer;
-  border: 1px white solid;
-}
-
-.scroll-right {
+.right-scroll {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  right: 15px;
-  bottom: 30%;
   border-radius: 50%;
-  transition: 0.3s;
-  width: 55px;
-  height: 55px;
+  min-width: 35px;
+  height: 35px;
+  transition: all 0.3s;
+  margin-left: auto;
 }
 
-.scroll-right > * {
+.right-scroll > * {
   opacity: 0.5;
-  font-size: 2.5rem;
+  font-size: 1.5rem;
 }
 
-.scroll-right:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-  color: white;
-  opacity: 1;
-  border-radius: 50%;
-  transition: 0.3s;
-  cursor: pointer;
-  border: 1px white solid;
+.dividor {
+  width: 4px;
+  height: 80%;
 }
+
+/* ========== DEVICES ========== */
 
 .TRIGGER {
   height: 120px;
@@ -226,7 +204,7 @@ main {
 .TRACKER {
   height: 120px;
   width: 125px;
-  background-image: url(/Devices/);
+  background-image: url(/Devices/tracker.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -237,7 +215,9 @@ main {
   height: 120px;
   width: 120px;
   background-image: url(/Devices/mutator.png);
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
   cursor: pointer;
 }
 
@@ -389,8 +369,229 @@ main {
   cursor: pointer;
 }
 
+@media screen and (max-width: 540px) {
+  .settings-section {
+    padding: 15px;
+  }
+  .section-title {
+    font-size: 1rem;
+  }
+  .section-devices {
+    gap: 1.2rem;
+  }
+  .dividor {
+    height: 60px;
+  }
+
+  .TRIGGER {
+    height: 40px;
+    width: 40px;
+    font-size: 0.5rem;
+    padding-left: 15px;
+    padding-top: 4px;
+  }
+
+  .TRACKER {
+    height: 60px;
+    width: 60px;
+  }
+
+  .MUTATOR-ZONE {
+    height: 60px;
+    width: 60px;
+  }
+
+  .SEQUENCER {
+    height: 60px;
+    width: 60px;
+  }
+
+  .SCORE-MANAGER {
+    height: 60px;
+    width: 60px;
+  }
+
+  .HUD-MESSAGE-DEVICE {
+    height: 60px;
+    width: 60px;
+  }
+
+  .TEAM-SETTINGS {
+    height: 60px;
+    width: 60px;
+  }
+
+  .HEALTH-POWERUP {
+    height: 60px;
+    width: 60px;
+  }
+
+  .PLAYER-SPAWN-PAD {
+    height: 60px;
+    width: 60px;
+  }
+
+  .CLASS-DESIGNER {
+    height: 60px;
+    width: 60px;
+  }
+
+  .CLASS-SELECTOR {
+    height: 60px;
+    width: 60px;
+  }
+
+  .TIMER {
+    height: 60px;
+    width: 60px;
+  }
+
+  .BARRIER {
+    height: 60px;
+    width: 60px;
+  }
+
+  .MATCHMAKING-PORTAL {
+    height: 60px;
+    width: 60px;
+  }
+
+  .SWITCH {
+    height: 60px;
+    width: 60px;
+  }
+
+  .TELEPORTER {
+    height: 60px;
+    width: 60px;
+  }
+
+  .ROUND-SETTINGS {
+    height: 60px;
+    width: 60px;
+  }
+
+  .PLAYER-COUNTER {
+    height: 60px;
+    width: 60px;
+  }
+}
+
+/* ========== DEVICES ========== */
+/* ==================== NEW SECTION ==================== */
+
 .marked-as-done {
   opacity: 0.2;
+}
+
+.devices-sec1 {
+  height: 230px;
+  padding: 20px;
+  position: relative;
+  background-color: var(--off-main-clr);
+}
+
+.devices-sec1 h2 {
+  font-family: "Burbank", sans-serif;
+}
+
+.devices-sec2 {
+  height: 230px;
+  padding: 20px;
+  position: relative;
+  background-color: var(--main-clr);
+}
+
+.devices-sec2 h2 {
+  font-family: "Burbank", sans-serif;
+}
+
+.devices-sec1 .dividor {
+  width: 4px;
+  height: 80%;
+  margin: 0 10px;
+  background-color: var(--main-clr);
+}
+
+.devices-sec2 .dividor {
+  width: 4px;
+  height: 80%;
+  margin: 0 10px;
+  background-color: var(--off-main-clr);
+}
+
+.sec-devices {
+  height: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: left;
+  align-items: center;
+  gap: 3rem;
+  overflow-x: auto;
+  margin: 0 50px;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  scroll-behavior: smooth;
+}
+
+.sec-devices::-webkit-scrollbar {
+  display: none;
+}
+
+.sec-devices > * {
+  flex: 0 0 auto;
+}
+
+.scroll-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 15px;
+  bottom: 30%;
+}
+
+.scroll-left > * {
+  opacity: 0.5;
+  font-size: 2.5rem;
+}
+
+.scroll-left:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  opacity: 1;
+  border-radius: 50%;
+  transition: 0.3s;
+  cursor: pointer;
+  border: 1px white solid;
+}
+
+.scroll-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 15px;
+  bottom: 30%;
+  border-radius: 50%;
+  transition: 0.3s;
+  width: 55px;
+  height: 55px;
+}
+
+.scroll-right > * {
+  opacity: 0.5;
+  font-size: 2.5rem;
+}
+
+.scroll-right:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  opacity: 1;
+  border-radius: 50%;
+  transition: 0.3s;
+  cursor: pointer;
+  border: 1px white solid;
 }
 
 /* ===== DEVICE SETTINGS POP-UP ===== */
