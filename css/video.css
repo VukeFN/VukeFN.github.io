@@ -1,636 +1,669 @@
 /* ============================== HEADER ============================== */
 
 header {
-    min-height: 80px;
-    background-color: var(--main-clr);
-    background-image: url(../Images/Wigglie\ thing.png);
-    background-size: cover;
-    padding: 20px;
-    position: sticky;
-    top: 0;
-    z-index: 3;
-    box-shadow: 0 6px 4px -2px var(--main-clr);
+  min-height: 80px;
+  background-color: var(--main-clr);
+  background-image: url(../Images/Wigglie\ thing.png);
+  background-size: cover;
+  padding: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  box-shadow: 0 6px 4px -2px var(--main-clr);
 }
 
 nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 header .sidebar-button {
-    font-size: 2rem;
-    margin: 0 1.5rem;
+  font-size: 2rem;
+  margin: 0 1.5rem;
 }
 
 .logo {
-    height: 40px;
-    width: 180px;
-    flex-grow: 1;
-    display: flex;
-    align-items: center;
+  height: 40px;
+  width: 180px;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
 }
 
 .logo:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .nav-list {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 .item {
-    padding: 0 40px;
-    font-size: 25px;
-    list-style: none;
+  padding: 0 40px;
+  font-size: 25px;
+  list-style: none;
 }
 
-.item>a {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: bold;
+.item > a {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
 }
 
 .nav-menu-button {
-    display: none;
+  display: none;
 }
-
 
 /* ========== MAIN ========== */
 
 main {
-    background-color: var(--off-main-clr);
+  background-color: var(--off-main-clr);
 }
 
 .page-header {
-    display: flex;
-    width: 100vw;
-    position: relative;
-    padding: 33px;
-    display: flex;
-    align-items: center;
-    background-color: var(--main-clr);
-    z-index: 1;
-    box-shadow: 0px 2px 15px 0px #000000;
+  display: flex;
+  width: 100vw;
+  position: relative;
+  padding: 33px;
+  display: flex;
+  align-items: center;
+  background-color: var(--main-clr);
+  z-index: 1;
+  box-shadow: 0px 2px 15px 0px #000000;
 }
 
 .page-title {
-    flex-grow: 1;
-    font-family: "Montserrat";
-    font-weight: 900;
-    font-size: 2.5vw;
-    white-space: wrap;
+  flex-grow: 1;
+  font-family: "Montserrat";
+  font-weight: 900;
+  font-size: 2.5vw;
+  white-space: wrap;
 }
 
 .watch-on-yt {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: .5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
 }
 
-.watch-on-yt>* {
-    font-family: "Montserrat";
-    font-size: 1vw;
+.watch-on-yt > * {
+  font-family: "Montserrat";
+  font-size: 1vw;
 }
-
 
 /* ===== DEVICES SECTION ===== */
 
 .devices-sec1 {
-    height: 230px;
-    padding: 20px;
-    position: relative;
-    background-color: var(--off-main-clr);
+  height: 230px;
+  padding: 20px;
+  position: relative;
+  background-color: var(--off-main-clr);
 }
 
 .devices-sec1 h2 {
-    font-family: "Burbank", sans-serif;
+  font-family: "Burbank", sans-serif;
 }
 
 .devices-sec2 {
-    height: 230px;
-    padding: 20px;
-    position: relative;
-    background-color: var(--main-clr);
+  height: 230px;
+  padding: 20px;
+  position: relative;
+  background-color: var(--main-clr);
 }
 
 .devices-sec2 h2 {
-    font-family: "Burbank", sans-serif;
+  font-family: "Burbank", sans-serif;
 }
 
 .devices-sec1 .dividor {
-    width: 4px;
-    height: 80%;
-    margin: 0 10px;
-    background-color: var(--main-clr);
+  width: 4px;
+  height: 80%;
+  margin: 0 10px;
+  background-color: var(--main-clr);
 }
 
 .devices-sec2 .dividor {
-    width: 4px;
-    height: 80%;
-    margin: 0 10px;
-    background-color: var(--off-main-clr);
+  width: 4px;
+  height: 80%;
+  margin: 0 10px;
+  background-color: var(--off-main-clr);
 }
 
 .sec-devices {
-    height: 100%;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: left;
-    align-items: center;
-    gap: 3rem;
-    overflow-x: auto;
-    margin: 0 50px;
-    -webkit-overflow-scrolling: touch;
-    -ms-overflow-style: -ms-autohiding-scrollbar;
-    scroll-behavior: smooth;
+  height: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: left;
+  align-items: center;
+  gap: 3rem;
+  overflow-x: auto;
+  margin: 0 50px;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  scroll-behavior: smooth;
 }
 
 .sec-devices::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
-.sec-devices>* {
-    flex: 0 0 auto;
+.sec-devices > * {
+  flex: 0 0 auto;
 }
 
 .scroll-left {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    left: 15px;
-    bottom: 30%;
-    border-radius: 50%;
-    transition: 0.3s;
-    width: 55px;
-    height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 15px;
+  bottom: 30%;
+  border-radius: 50%;
+  transition: 0.3s;
+  width: 55px;
+  height: 55px;
 }
 
-.scroll-left>* {
-    opacity: .5;
-    font-size: 2.5rem;
+.scroll-left > * {
+  opacity: 0.5;
+  font-size: 2.5rem;
 }
 
 .scroll-left:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-    color: white;
-    opacity: 1;
-    border-radius: 50%;
-    transition: 0.3s;
-    cursor: pointer;
-    border: 1px white solid;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  opacity: 1;
+  border-radius: 50%;
+  transition: 0.3s;
+  cursor: pointer;
+  border: 1px white solid;
 }
 
 .scroll-right {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    right: 15px;
-    bottom: 30%;
-    border-radius: 50%;
-    transition: 0.3s;
-    width: 55px;
-    height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 15px;
+  bottom: 30%;
+  border-radius: 50%;
+  transition: 0.3s;
+  width: 55px;
+  height: 55px;
 }
 
-.scroll-right>* {
-    opacity: .5;
-    font-size: 2.5rem;
+.scroll-right > * {
+  opacity: 0.5;
+  font-size: 2.5rem;
 }
 
 .scroll-right:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-    color: white;
-    opacity: 1;
-    border-radius: 50%;
-    transition: 0.3s;
-    cursor: pointer;
-    border: 1px white solid;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  opacity: 1;
+  border-radius: 50%;
+  transition: 0.3s;
+  cursor: pointer;
+  border: 1px white solid;
 }
 
 .TRIGGER {
-    height: 120px;
-    width: 125px;
-    background-image: url(/Devices/trigger.png);
-    background-size: cover;
-    cursor: pointer;
-    color: rgb(138, 138, 229);
-    font-size: 1.2rem;
-    padding: 10px 0 0 40px;
-    letter-spacing: -0.10rem;
-    font-family: 'alarm_clock';
-    z-index: 1;
+  height: 120px;
+  width: 125px;
+  background-image: url(/Devices/trigger.png);
+  background-size: cover;
+  cursor: pointer;
+  color: rgb(138, 138, 229);
+  font-size: 1.2rem;
+  padding: 10px 0 0 40px;
+  letter-spacing: -0.1rem;
+  font-family: "alarm_clock";
+  z-index: 1;
 }
 
 .TRACKER {
-    height: 120px;
-    width: 125px;
-    background-image: url(/Devices/);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    cursor: pointer;
+  height: 120px;
+  width: 125px;
+  background-image: url(/Devices/);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
 }
 
 .MUTATOR-ZONE {
-    height: 120px;
-    width: 120px;
-    background-image: url(/Devices/mutator.png);
-    background-size: cover;
-    cursor: pointer;
+  height: 120px;
+  width: 120px;
+  background-image: url(/Devices/mutator.png);
+  background-size: cover;
+  cursor: pointer;
 }
 
 .SEQUENCER {
-    height: 120px;
-    width: 120px;
-    background-image: url(/Devices/sequencer.png);
-    background-size: cover;
-    cursor: pointer;
+  height: 120px;
+  width: 120px;
+  background-image: url(/Devices/sequencer.png);
+  background-size: cover;
+  cursor: pointer;
 }
 
 .SCORE-MANAGER {
-    height: 120px;
-    width: 120px;
-    background-image: url(/Devices/score.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center center;
-    cursor: pointer;
+  height: 120px;
+  width: 120px;
+  background-image: url(/Devices/score.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  cursor: pointer;
 }
 
 .HUD-MESSAGE-DEVICE {
-    height: 120px;
-    width: 120px;
-    background-image: url(/Devices/);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center center;
-    cursor: pointer;
+  height: 120px;
+  width: 120px;
+  background-image: url(/Devices/);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  cursor: pointer;
 }
 
 .TEAM-SETTINGS {
-    height: 125px;
-    width: 125px;
-    background-image: url(/Devices/team.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center center;
-    cursor: pointer;
+  height: 125px;
+  width: 125px;
+  background-image: url(/Devices/team.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  cursor: pointer;
 }
 
 .HEALTH-POWERUP {
-    height: 125px;
-    width: 125px;
-    background-image: url(/Devices/health_powerup.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center center;
-    cursor: pointer;
+  height: 125px;
+  width: 125px;
+  background-image: url(/Devices/health_powerup.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  cursor: pointer;
 }
 
 .PLAYER-SPAWN-PAD {
-    height: 125px;
-    width: 125px;
-    background-image: url(/Devices/player_spawn_pad.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center center;
-    cursor: pointer;
+  height: 125px;
+  width: 125px;
+  background-image: url(/Devices/player_spawn_pad.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  cursor: pointer;
 }
 
 .CLASS-DESIGNER {
-    height: 125px;
-    width: 125px;
-    background-image: url(/Devices/class_designer.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center center;
-    cursor: pointer;
+  height: 125px;
+  width: 125px;
+  background-image: url(/Devices/class_designer.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  cursor: pointer;
 }
 
 .CLASS-SELECTOR {
-    height: 125px;
-    width: 125px;
-    background-image: url(/Devices/class_selector.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center center;
-    cursor: pointer;
+  height: 125px;
+  width: 125px;
+  background-image: url(/Devices/class_selector.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  cursor: pointer;
 }
 
 .TIMER {
-    height: 125px;
-    width: 125px;
-    background-image: url(/Devices/timer.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center center;
-    cursor: pointer;
+  height: 125px;
+  width: 125px;
+  background-image: url(/Devices/timer.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  cursor: pointer;
 }
 
 .BARRIER {
-    height: 125px;
-    width: 125px;
-    background-image: url(/Devices/barrier.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center center;
-    cursor: pointer;
+  height: 125px;
+  width: 125px;
+  background-image: url(/Devices/barrier.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  cursor: pointer;
 }
 
 .MATCHMAKING-PORTAL {
-    height: 125px;
-    width: 125px;
-    background-image: url(/Devices/matchmaking_portal.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center center;
-    cursor: pointer;
+  height: 125px;
+  width: 125px;
+  background-image: url(/Devices/matchmaking_portal.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  cursor: pointer;
 }
 
 .SWITCH {
-    height: 125px;
-    width: 125px;
-    background-image: url(/Devices/switch.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center center;
-    cursor: pointer;
+  height: 125px;
+  width: 125px;
+  background-image: url(/Devices/switch.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  cursor: pointer;
+}
+
+.TELEPORTER {
+  height: 125px;
+  width: 125px;
+  background-image: url(/Devices/teleporter.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  cursor: pointer;
+}
+
+.ROUND-SETTINGS {
+  height: 125px;
+  width: 125px;
+  background-image: url(/Devices/round_settings.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  cursor: pointer;
+}
+
+.PLAYER-COUNTER {
+  height: 125px;
+  width: 125px;
+  background-image: url(/Devices/player_counter.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  cursor: pointer;
 }
 
 .marked-as-done {
-    opacity: 0.2;
+  opacity: 0.2;
 }
-
 
 /* ===== DEVICE SETTINGS POP-UP ===== */
 
 section.settings {
-    overflow: visible;
-    width: 0;
-    position: fixed;
-    display: flex;
-    flex-direction: column;
-    left: 0;
-    top: 80px;
-    height: calc(100vh - 80px);
-    overflow-y: hidden;
-    padding: 0;
-    background-color: var(--settings-clr);
-    z-index: 3;
-    transition: 0.3s;
+  overflow: visible;
+  width: 0;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  left: 0;
+  top: 80px;
+  height: calc(100vh - 80px);
+  overflow-y: hidden;
+  padding: 0;
+  background-color: var(--settings-clr);
+  z-index: 3;
+  transition: 0.3s;
 }
 
 section.settings * {
-    font-family: "Burbank", sans-serif;
+  font-family: "Burbank", sans-serif;
 }
 
 .settings-title {
-    padding: 40px;
-    padding-right: 10%;
-    display: flex;
-    align-items: center;
-    height: 160px;
-    background-color: var(--island-bg-clr);
+  padding: 40px;
+  padding-right: 10%;
+  display: flex;
+  align-items: center;
+  height: 160px;
+  background-color: var(--island-bg-clr);
 }
 
 .settings-title h2 {
-    font-size: 200%;
-    flex-grow: 1;
+  font-size: 200%;
+  flex-grow: 1;
 }
 
 .device-name {
-    font-size: 90%;
-    margin-left: auto;
-    background-color: #00AAFF;
-    padding-left: 35px;
-    padding-right: 35px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    transform: rotate(-0.5deg);
-    white-space: nowrap;
+  font-size: 90%;
+  margin-left: auto;
+  background-color: #00aaff;
+  padding-left: 35px;
+  padding-right: 35px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  transform: rotate(-0.5deg);
+  white-space: nowrap;
 }
 
 .settings .settings-list {
-    position: relative;
-    flex-grow: 1;
-    overflow-y: auto;
-    overflow-x: hidden;
+  position: relative;
+  flex-grow: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .settings .settings-list::-webkit-scrollbar-thumb {
-    width: 10px;
-    background-color: white;
-    border: 1px solid black;
-    border-radius: 2px;
+  width: 10px;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 2px;
 }
 
 .settings .settings-list .item {
-    display: flex;
-    align-items: center;
-    margin: 10px 20px 0 20px;
-    background-color: var(--settings-item-clr);
-    display: flex;
-    padding: 15px 30px 15px 20px;
+  display: flex;
+  align-items: center;
+  margin: 10px 20px 0 20px;
+  background-color: var(--settings-item-clr);
+  display: flex;
+  padding: 15px 30px 15px 20px;
 }
 
 .settings .settings-list .item h2 {
-    color: var(--settings-font-clr);
-    font-size: 80%;
-    overflow-x: visible;
+  color: var(--settings-font-clr);
+  font-size: 80%;
+  overflow-x: visible;
+  letter-spacing: 0.75px;
+  white-space: nowrap;
 }
 
-.settings .settings-list .item>span {
-    font-size: 80%;
-    margin-left: auto;
-    color: white;
-    overflow-x: visible;
-    min-width: 110px;
-    text-align: center;
+.settings .settings-list .item > span {
+  font-size: 80%;
+  margin-left: auto;
+  color: white;
+  overflow-x: visible;
+  min-width: 110px;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .settings-buttons {
-    position: relative;
-    display: flex;
-    padding: 20px;
+  position: relative;
+  display: flex;
+  padding: 20px;
 }
 
 .settings-buttons .gear-btn {
-    margin-right: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background-color: #054AA5;
-    color: #83C7F1;
-    width: 100px;
-    padding: 5px 0;
-    border: rgba(19, 115, 215, 0.4) 5px solid;
-    cursor: pointer;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #054aa5;
+  color: #83c7f1;
+  width: 100px;
+  padding: 5px 0;
+  border: rgba(19, 115, 215, 0.4) 5px solid;
+  cursor: pointer;
 }
 
-.settings-buttons .gear-btn>* {
-    font-size: 2.5rem;
+.settings-buttons .gear-btn > * {
+  font-size: 2.5rem;
 }
 
 .settings-buttons .ok-btn {
-    font-size: 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background-color: gold;
-    color: black;
-    width: 100px;
-    padding: 5px 0;
-    border: rgba(255, 215, 150, 0.8) 3px solid;
-    cursor: pointer;
-    margin-right: 7px;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: gold;
+  color: black;
+  width: 100px;
+  padding: 5px 0;
+  border: rgba(255, 215, 150, 0.8) 3px solid;
+  cursor: pointer;
+  margin-right: 7px;
 }
 
 .settings-buttons .cancel-btn {
-    font-size: 1.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background-color: #054AA5;
-    color: white;
-    width: 100px;
-    padding: 5px 0;
-    border: rgba(19, 115, 215, 0.4) 5px solid;
-    cursor: pointer;
-    margin-left: 7px;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #054aa5;
+  color: white;
+  width: 100px;
+  padding: 5px 0;
+  border: rgba(19, 115, 215, 0.4) 5px solid;
+  cursor: pointer;
+  margin-left: 7px;
 }
 
 .gear-popup {
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    gap: 1rem;
-    align-items: center;
-    height: 180px;
-    width: 255px;
-    position: absolute;
-    bottom: 100px;
-    left: 20px;
-    background-color: #054AA5;
-    border: rgba(19, 115, 215, 0.4) 5px solid;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  align-items: center;
+  height: 180px;
+  width: 255px;
+  position: absolute;
+  bottom: 100px;
+  left: 20px;
+  background-color: #054aa5;
+  border: rgba(19, 115, 215, 0.4) 5px solid;
 }
 
 .gear-popup a {
-    padding: 15px 20px;
-    width: 80%;
-    border: rgba(19, 115, 215, 0.4) 5px solid;
-    text-align: center;
-    cursor: pointer;
+  padding: 15px 20px;
+  width: 80%;
+  border: rgba(19, 115, 215, 0.4) 5px solid;
+  text-align: center;
+  cursor: pointer;
 }
 
+#lower-opacity-settings {
+  z-index: 2;
+  display: none;
+}
 
 /* ===== ISLAND SETTINGS SECTION ===== */
 
 .island-settings {
-    background-color: var(--settings-clr);
-    padding: 20px;
-    border-top: 2px white solid;
+  background-color: var(--settings-clr);
+  padding: 20px;
+  border-top: 2px white solid;
 }
 
 .island-settings * {
-    font-family: "Burbank", sans-serif;
+  font-family: "Burbank", sans-serif;
 }
 
 .island-settings .tab {
-    display: flex;
-    flex-direction: column;
-    gap: .3rem;
-    margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  margin-bottom: 40px;
 }
 
-.island-settings .tab>div {
-    display: flex;
-    background-color: var(--settings-item-clr);
-    padding: 10px 20px;
-    justify-content: space-between;
+.island-settings .tab > div {
+  display: flex;
+  background-color: var(--settings-item-clr);
+  padding: 10px 20px;
+  justify-content: space-between;
 }
 
 .island-settings .tab h2 {
-    background-color: var(--island-bg-clr);
-    padding: 10px;
-    font-size: 2rem;
-    margin-bottom: 10px;
+  background-color: var(--island-bg-clr);
+  padding: 10px;
+  font-size: 2rem;
+  margin-bottom: 10px;
 }
 
 .island-settings .tab h3 {
-    color: var(--settings-font-clr);
-    font-size: 1.3rem;
+  color: var(--settings-font-clr);
+  font-size: 1.3rem;
 }
 
 .island-settings .tab span {
-    color: white;
-    font-size: 1.3rem;
+  color: white;
+  font-size: 1.3rem;
 }
-
 
 /* ========== RESPONSIVE DESIGN ========== */
 
 @media screen and (max-width: 900px) {
-    .nav-items-div {
-        display: none;
-    }
-    .settings .items .item h2 {
-        font-size: 70%;
-    }
-    .settings .items .item>span {
-        font-size: 70%;
-    }
-    .settings-buttons .gear-btn {
-        width: 75px;
-    }
-    .settings-buttons .gear-btn>* {
-        font-size: 1.25rem;
-    }
-    .settings-buttons .ok-btn {
-        font-size: 1rem;
-        width: 75px;
-    }
-    .settings-buttons .cancel-btn {
-        font-size: .75rem;
-        width: 75px;
-    }
-    .gear-popup {
-        display: none;
-        flex-direction: column;
-        justify-content: center;
-        gap: .5rem;
-        align-items: center;
-        height: 125px;
-        width: 175px;
-        position: absolute;
-        bottom: 80px !important;
-        left: 20px;
-        background-color: #054AA5;
-        border: rgba(19, 115, 215, 0.4) 5px solid;
-    }
-    .gear-popup a {
-        padding: 7.5px 10px;
-        width: 80%;
-        border: rgba(19, 115, 215, 0.4) 5px solid;
-        text-align: center;
-        cursor: pointer;
-    }
-    .gear-popup h3 {
-        font-size: 1rem;
-    }
-    .island-settings .tab h2 {
-        font-size: 6vw;
-    }
-    .island-settings .tab h3 {
-        font-size: 4vw;
-    }
-    .island-settings .tab span {
-        font-size: 4vw;
-    }
+  .nav-items-div {
+    display: none;
+  }
+  .settings .items .item h2 {
+    font-size: 70%;
+  }
+  .settings .items .item > span {
+    font-size: 70%;
+  }
+  .settings-buttons .gear-btn {
+    width: 75px;
+  }
+  .settings-buttons .gear-btn > * {
+    font-size: 1.25rem;
+  }
+  .settings-buttons .ok-btn {
+    font-size: 1rem;
+    width: 75px;
+  }
+  .settings-buttons .cancel-btn {
+    font-size: 0.75rem;
+    width: 75px;
+  }
+  .gear-popup {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
+    align-items: center;
+    height: 125px;
+    width: 175px;
+    position: absolute;
+    bottom: 80px !important;
+    left: 20px;
+    background-color: #054aa5;
+    border: rgba(19, 115, 215, 0.4) 5px solid;
+  }
+  .gear-popup a {
+    padding: 7.5px 10px;
+    width: 80%;
+    border: rgba(19, 115, 215, 0.4) 5px solid;
+    text-align: center;
+    cursor: pointer;
+  }
+  .gear-popup h3 {
+    font-size: 1rem;
+  }
+  .island-settings .tab h2 {
+    font-size: 6vw;
+  }
+  .island-settings .tab h3 {
+    font-size: 4vw;
+  }
+  .island-settings .tab span {
+    font-size: 4vw;
+  }
 }

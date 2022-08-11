@@ -21,11 +21,12 @@ $(document).ready(function() {
             deviceType
         );
     });
+
     $(".close").click(function() {
         $(".settings").css({ width: "0px" });
         $("body").css({ overflow: "overlay", height: "" });
         $("div").removeClass("active");
-        $(".lower-opacity").css({ width: "0" });
+        $(".lower-opacity").css({ display: "none" });
         closeGearPopup();
     });
 
@@ -47,6 +48,7 @@ $(document).ready(function() {
             $(".mark-as-done-btn").parent().css({ display: "none" });
             $(".unmark-as-done-btn").parent().css({ display: "block" });
         });
+
     $(".unmark-as-done-btn")
         .parent()
         .click(function() {
@@ -67,7 +69,7 @@ function loadSettings(parent, trigger, deviceType) {
         .slideDown("fast");
     $(".settings").css({ width: "50vw" });
     $("body").css({ overflow: "hidden", height: "100%" });
-    $(".lower-opacity").css({ width: "100vw" });
+    $("#lower-opacity-settings").css({ display: "block" });
     if (width < 900) {
         $(".settings").css({ width: "100vw" });
     }
