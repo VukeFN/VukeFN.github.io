@@ -14,21 +14,6 @@ $(document).ready(function () {
     closeGearPopup();
   });
 
-  $("div.sec-devices > div").click(function (e) {
-    $("div").removeClass("active");
-    $(this).addClass("active");
-    checkIfMarkedAsDone();
-    let deviceType = $(this).attr("class").split(" ")[0];
-    loadSettings($(this).parent().parent().attr("id"), $(this).attr("data-channel"), deviceType);
-  });
-  $(".close").click(function () {
-    $(".settings").css({ width: "0px" });
-    $("body").css({ overflow: "overlay", height: "" });
-    $("div").removeClass("active");
-    $(".lower-opacity").css({ width: "0" });
-    closeGearPopup();
-  });
-
   function checkIfMarkedAsDone() {
     if ($("div.active").hasClass("marked-as-done")) {
       $(".mark-as-done-btn").parent().css({ display: "none" });
